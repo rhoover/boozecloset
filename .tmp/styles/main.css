@@ -1,0 +1,416 @@
+@font-face {
+  font-family: "MerriweatherSans";
+  src: url('/styles/fonts/merriweathersans-light.eot');
+  src: url('/styles/fonts/merriweathersans-light.eot?#iefix') format('embedded-opentype'), url('/styles/fonts/merriweathersans-light.woff') format('woff'), url('/styles/fonts/merriweathersans-light.ttf') format('truetype'), url('/styles/fonts/merriweathersans-light.svg') format('svg');
+}
+/* line 106, ../../../../../.rvm/gems/ruby-2.1.0@sassthreepointthree/gems/compass-core-1.0.0.alpha.19/stylesheets/compass/typography/_vertical_rhythm.scss */
+html {
+  font-size: 100%;
+  line-height: 1.5em;
+}
+
+/* line 67, ../../app/styles/helpers/_typography.scss */
+.beerlist, .whiskeylist, .brewsearch, .whiskeysearch, .nav-item, .input-choose-beer, .input-choose-whiskey, .input-type-text, .input-submit {
+  font-size: 1em;
+  line-height: 1.5em;
+}
+@media (min-width: 37.5em) and (max-width: 64em) {
+  /* line 67, ../../app/styles/helpers/_typography.scss */
+  .beerlist, .whiskeylist, .brewsearch, .whiskeysearch, .nav-item, .input-choose-beer, .input-choose-whiskey, .input-type-text, .input-submit {
+    font-size: 1em;
+    line-height: 1.5em;
+  }
+}
+
+/* line 76, ../../app/styles/helpers/_typography.scss */
+.header-title {
+  font-size: 1.75em;
+  line-height: 1.5231428571em;
+}
+@media (min-width: 37.5em) and (max-width: 64em) {
+  /* line 76, ../../app/styles/helpers/_typography.scss */
+  .header-title {
+    font-size: 2.375em;
+    line-height: 1.4962105263em;
+  }
+}
+
+/* line 86, ../../app/styles/helpers/_typography.scss */
+.input-preview-header {
+  font-weight: 400;
+}
+
+/* line 11, ../../../../../.rvm/gems/ruby-2.1.0@sassthreepointthree/gems/susy-2.1.1/sass/susy/language/susy/_box-sizing.scss */
+*, *::before, *::after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 1, ../../app/styles/helpers/_placeholders.scss */
+.beerlist, .whiskeylist {
+  padding-top: 7.5em;
+}
+
+/* line 5, ../../app/styles/helpers/_placeholders.scss */
+.beerlist-item, .whiskeylist-item {
+  width: 100%;
+  float: left;
+  margin-bottom: 0.75em;
+  padding: 0 8.3333333333% 0.75em 8.3333333333%;
+  border-bottom: 0.1em solid #527692;
+  color: #4b4b4b;
+  text-decoration: none;
+}
+
+/* line 13, ../../app/styles/helpers/_placeholders.scss */
+.beerlist-item-detail, .whiskeylist-item-detail {
+  position: relative;
+  width: 100%;
+  float: left;
+  margin: 0;
+  text-overflow: ellipsis;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* line 23, ../../app/styles/helpers/_placeholders.scss */
+.beerlist-item-detail-right, .whiskeylist-item-detail-right {
+  font-size: 0.875em;
+  line-height: 1.7142857143em;
+}
+
+/* line 27, ../../app/styles/helpers/_placeholders.scss */
+.beerlist-item-detail-left, .whiskeylist-item-detail-left {
+  color: rgba(75, 75, 75, 0.65);
+}
+
+/* line 30, ../../app/styles/helpers/_placeholders.scss */
+.brewsearch, .whiskeysearch {
+  width: 100%;
+  height: 3em;
+  padding-left: 8.3333333333%;
+  margin-bottom: 0.75em;
+  background: #fdfdfd;
+  border-style: solid;
+  border-color: #527692;
+  border-width: 0.1em 0 .1em 0;
+}
+/* line 40, ../../app/styles/helpers/_placeholders.scss */
+.brewsearch:active, .whiskeysearch:active {
+  border-width: 0.15em 0 0.15em 0;
+}
+/* line 43, ../../app/styles/helpers/_placeholders.scss */
+.brewsearch:focus, .whiskeysearch:focus {
+  border-width: 0.15em 0 0.15em 0;
+}
+
+/* line 48, ../../app/styles/helpers/_placeholders.scss */
+.beercloset, .whiskeycloset {
+  margin: 0 4.1666666667% 0.75em 4.1666666667%;
+  padding: 0.375em 2.0833333333%;
+  text-align: center;
+  color: #4b4b4b;
+  border: 0.1em solid #75589a;
+  border-radius: .25em;
+  background-color: rgba(227, 201, 121, 0.25);
+}
+
+/* line 1, ../../app/styles/components/_body.scss */
+body {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin: 0;
+  height: 100%;
+  font-family: "MerriweatherSans", helvetica, arial, sans-serif;
+  @extent %weight-ultralight;
+  background-color: #f0f0f0;
+}
+/* line 12, ../../../../../.rvm/gems/ruby-2.1.0@sassthreepointthree/gems/susy-2.1.1/sass/susy/output/support/_clearfix.scss */
+body::after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+/* line 1, ../../app/styles/components/_header.scss */
+.header {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  float: left;
+  overflow: hidden;
+  *zoom: 1;
+  z-index: 100;
+  text-align: center;
+  background-color: #527692;
+  color: #f0f0f0;
+}
+/* line 11, ../../app/styles/components/_header.scss */
+.header-title {
+  margin: 0;
+  padding: 0.375em 0;
+}
+@media (min-width: 64em) {
+  /* line 1, ../../app/styles/components/_header.scss */
+  .header {
+    width: 100%;
+    float: left;
+    top: 0px;
+  }
+}
+
+/* line 1, ../../app/styles/components/_nav.scss */
+.nav {
+  position: fixed;
+  top: 3.96em;
+  width: 100%;
+  float: left;
+  overflow: hidden;
+  *zoom: 1;
+  z-index: 100;
+  background-color: #f0f0f0;
+  border-bottom: 0.1em solid #75589a;
+  border-top: 0.1em solid #75589a;
+}
+/* line 10, ../../app/styles/components/_nav.scss */
+.nav-item {
+  width: 33.3333333333%;
+  float: left;
+  padding: 0.75em 0;
+  border-right: 0.1em solid #75589a;
+  text-align: center;
+  text-decoration: none;
+  color: #4b4b4b;
+  background: rgba(227, 201, 121, 0.5);
+}
+/* line 19, ../../app/styles/components/_nav.scss */
+.nav-item:first-of-type {
+  border-left: 0.1em solid #75589a;
+}
+
+/* line 25, ../../app/styles/components/_nav.scss */
+.navActive {
+  outline: none;
+  background-color: rgba(227, 201, 121, 0.9);
+  -moz-box-shadow: inset 0 -0.3em 0 0 rgba(82, 118, 146, 0.6);
+  -webkit-box-shadow: inset 0 -0.3em 0 0 rgba(82, 118, 146, 0.6);
+  box-shadow: inset 0 -0.3em 0 0 rgba(82, 118, 146, 0.6);
+}
+
+/* line 1, ../../app/styles/components/_content.scss */
+.content {
+  width: 100%;
+  float: left;
+  overflow: hidden;
+  *zoom: 1;
+  padding: 0 0 1.5em;
+  z-index: 50;
+}
+@media (min-width: 64em) {
+  /* line 1, ../../app/styles/components/_content.scss */
+  .content {
+    width: 100%;
+    float: left;
+    padding-left: 25.4820010249%;
+    padding-right: 25.4820010249%;
+  }
+}
+
+/* line 20, ../../app/styles/components/_beerlist.scss */
+.beercloset-color {
+  color: #75589a;
+  font-weight: 700;
+}
+
+/* line 20, ../../app/styles/components/_whiskeylist.scss */
+.whiskeycloset-color {
+  color: #75589a;
+  font-weight: 700;
+}
+
+/* line 1, ../../app/styles/components/_input.scss */
+.input {
+  width: 100%;
+  float: left;
+  -moz-transform: translateZ(50);
+  -webkit-transform: translateZ(50);
+  transform: translateZ(50);
+  margin-bottom: 0.75em;
+  padding: 8.25em 8.3333333333% 0.75em 8.3333333333%;
+  color: #4b4b4b;
+}
+/* line 7, ../../app/styles/components/_input.scss */
+.input-choose {
+  border-radius: .25em;
+  margin-bottom: 4.5em;
+}
+/* line 10, ../../app/styles/components/_input.scss */
+.input-choose-header {
+  margin: 0;
+}
+/* line 13, ../../app/styles/components/_input.scss */
+.input-choose-beer, .input-choose-whiskey {
+  width: 50%;
+  float: left;
+  text-align: center;
+  padding: 0.375em 0;
+  margin-top: 0;
+  border: 0.1em solid #527692;
+  border-right: none;
+  border-radius: .25em 0 0 .25em;
+  background-color: #fdfdfd;
+}
+/* line 24, ../../app/styles/components/_input.scss */
+.input-choose-whiskey {
+  border-right: 0.1em solid #527692;
+  border-radius: 0 .25em .25em 0;
+}
+/* line 30, ../../app/styles/components/_input.scss */
+.input-label {
+  width: 100%;
+  float: left;
+}
+/* line 34, ../../app/styles/components/_input.scss */
+.input-type-text {
+  width: 100%;
+  padding: 0.375em 0 0.375em 0.375em;
+  margin-bottom: 0.75em;
+  border: 0.1em solid #527692;
+  border-radius: .25em;
+  color: #4b4b4b;
+}
+/* line 42, ../../app/styles/components/_input.scss */
+.input-type-text:focus {
+  -moz-box-shadow: 0 0 0.7em rgba(82, 118, 146, 0.6);
+  -webkit-box-shadow: 0 0 0.7em rgba(82, 118, 146, 0.6);
+  box-shadow: 0 0 0.7em rgba(82, 118, 146, 0.6);
+}
+/* line 47, ../../app/styles/components/_input.scss */
+.input-preview {
+  color: #4b4b4b;
+}
+/* line 49, ../../app/styles/components/_input.scss */
+.input-preview-header {
+  padding: 0.375em 0;
+  border-top: 0.05em solid #527692;
+  border-bottom: 0.05em solid #527692;
+}
+/* line 55, ../../app/styles/components/_input.scss */
+.input-preview-item {
+  margin: 0.375em 0;
+}
+/* line 59, ../../app/styles/components/_input.scss */
+.input-submit {
+  width: 100%;
+  float: left;
+  color: #4b4b4b;
+  padding: 0.75em;
+  text-align: center;
+  background-color: #e3c979;
+  border: 0.1em solid #527692;
+  border-radius: .25em;
+}
+
+/* line 71, ../../app/styles/components/_input.scss */
+.typeActive {
+  background-color: #e3c979;
+}
+
+/* line 1, ../../app/styles/animations/_content.scss */
+.content {
+  -moz-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -o-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -webkit-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -moz-transition-duration: 0.75s;
+  -o-transition-duration: 0.75s;
+  -webkit-transition-duration: 0.75s;
+  transition-duration: 0.75s;
+}
+
+/* line 6, ../../app/styles/animations/_content.scss */
+.content.ng-enter {
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -moz-transform: translate3d(-100%, 0, 0);
+  -webkit-transform: translate3d(-100%, 0, 0);
+  transform: translate3d(-100%, 0, 0);
+  -moz-transition-delay: 0.75s;
+  -o-transition-delay: 0.75s;
+  -webkit-transition-delay: 0.75s;
+  transition-delay: 0.75s;
+}
+
+/* line 11, ../../app/styles/animations/_content.scss */
+.content.ng-enter.ng-enter-active {
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -moz-transform: translate3d(0%, 0, 0);
+  -webkit-transform: translate3d(0%, 0, 0);
+  transform: translate3d(0%, 0, 0);
+}
+
+/* line 15, ../../app/styles/animations/_content.scss */
+.content.ng-leave {
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -moz-transform: translate3d(0%, 0, 0);
+  -webkit-transform: translate3d(0%, 0, 0);
+  transform: translate3d(0%, 0, 0);
+}
+
+/* line 19, ../../app/styles/animations/_content.scss */
+.content.ng-leave.ng-leave-active {
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -moz-transform: translate3d(-100%, 0, 0);
+  -webkit-transform: translate3d(-100%, 0, 0);
+  transform: translate3d(-100%, 0, 0);
+}
+
+/* line 1, ../../app/styles/animations/_input-form.scss */
+.input-animate {
+  -moz-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -o-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -webkit-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -moz-transition-duration: 0.75s;
+  -o-transition-duration: 0.75s;
+  -webkit-transition-duration: 0.75s;
+  transition-duration: 0.75s;
+}
+
+/* line 5, ../../app/styles/animations/_input-form.scss */
+.input-animate.ng-enter {
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  -webkit-transition-property: all;
+  transition-property: all;
+  opacity: 0;
+}
+
+/* line 9, ../../app/styles/animations/_input-form.scss */
+.input-animate.ng-enter.ng-enter-active {
+  opacity: 1;
+}
+
+/* line 12, ../../app/styles/animations/_input-form.scss */
+.input-animate.ng-leave {
+  opacity: 1;
+}
+
+/* line 15, ../../app/styles/animations/_input-form.scss */
+.input-animate.ng-leave-active {
+  opacity: 0;
+}
