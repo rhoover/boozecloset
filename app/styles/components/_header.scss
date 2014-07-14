@@ -1,0 +1,20 @@
+.header {
+    position: fixed;
+    top: 0px;
+    @include span(12 of 12 no-gutters);
+    @include clearfix;
+    z-index: 100;
+    text-align: center;
+    background-color: $cyan;
+    color: $white;
+    // border-bottom: .1em solid darken($blue, 25%);
+    &-title {
+        @extend %xlarge-font;
+        margin: 0;
+        padding: rhythm(.25, 16px) 0;
+    }
+    @include susy-breakpoint($bp-large, $columns-large) {
+        @include span(24 of 24 no-gutters);
+        top: 0px;
+    }
+}

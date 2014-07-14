@@ -1,0 +1,14 @@
+<section class="whiskeylist">
+    <div>
+        <input type="text" placeholder="Instant Whiskey Name Search" ng-model="whiskeySearch.name" class="whiskeysearch">
+    </div>
+    <p class="beercloset">You have <span class="beercloset-color">{{whiskeyList.length}}</span> whiskeys in your closet.</p>
+    <a ng-href="#/whiskey/{{whiskey.id}}"ng-repeat="whiskey in whiskeyList | filter:whiskeySearch track by $index" class="whiskeylist-item">
+    <p class="whiskeylist-item-detail"><span class="whiskeylist-item-detail-left">Distiller:</span>  <span class="whiskeylist-item-detail-right">{{whiskey.company}}</span></p>
+    <p class="whiskeylist-item-detail"><span class="whiskeylist-item-detail-left">Whiskey:</span>  <span class="whiskeylist-item-detail-right">{{whiskey.name}}</span></p>
+    <p class="whiskeylist-item-detail"><span class="whiskeylist-item-detail-left">Purchased From:</span>  <span class="whiskeylist-item-detail-right">{{whiskey.purchasedfrom}}</span></p>
+    <p class="whiskeylist-item-detail"><span class="whiskeylist-item-detail-left">Purchase Price:</span> <span class="whiskeylist-item-detail-right">${{whiskey.price}}</span></p>
+    <p class="whiskeylist-item-detail"><span class="whiskeylist-item-detail-left">Purchase Date:</span> <span class="whiskeylist-item-detail-right">{{whiskey.purchasedon | date: MM-dd-yyyy}}</span></p>
+    <p class="whiskeylist-item-detail"><span class="whiskeylist-item-detail-left">Status:</span> <span class="whiskeylist-item-detail-right">{{whiskey.status}}</span></p>
+    </a>
+</section>

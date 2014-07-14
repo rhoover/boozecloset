@@ -1,0 +1,6 @@
+$bp-small : max-width 37.5em;
+// $bp-medium : (min-width 37.5em) (max-width 64em);
+// $bp-large : 64em;
+$bp-medium : (min-width 37.5em) (max-width 64em);
+// $bp-large : 74em;
+$bp-large : min-width 64em;

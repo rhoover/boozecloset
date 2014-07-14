@@ -1,0 +1,10 @@
+.content {
+    @include span(12 of 12 no-gutters);
+    @include clearfix;
+    padding: 0 0 rhythm(1, 16px);
+    z-index: 50;
+    @include susy-breakpoint($bp-large, $columns-large) {
+        @include span(24 of 24 no-gutters);
+        @include pad(6, 6);
+    }
+}

@@ -1,0 +1,73 @@
+.input {
+    @include span(12 of 12 no-gutters);
+    @include translateZ(50); //hack to create composite layer
+    margin-bottom: rhythm(.5, 16px);
+    padding: rhythm(5.5, 16px) span(1) rhythm(.5, 16px) span(1);
+    color: $black;
+    &-choose {
+        border-radius: .25em;
+        margin-bottom: rhythm(3, 16px);
+        &-header {
+            margin: 0;
+        }
+        &-beer {
+            @include span(6 of 12 no-gutters);
+            text-align: center;
+            @extend %base-font;
+            padding: rhythm(.25, 16px) 0;
+            margin-top: 0;
+            border: .1em solid $cyan;
+            border-right: none;
+            border-radius: .25em 0 0 .25em;
+            background-color: lighten($white, 5%);
+        }
+        &-whiskey {
+            @extend .input-choose-beer;
+            border-right: .1em solid $cyan;
+            border-radius: 0 .25em .25em 0;
+        }
+    }
+    &-label {
+        @include span(12 of 12 no-gutters);
+    }
+    &-type {
+        &-text {
+            @extend %base-font;
+            width: 100%;
+            padding: rhythm(.25, 16px) 0 rhythm(.25, 16px) .375em;
+            margin-bottom: rhythm(.5, 16px);
+            border: .1em solid $cyan;
+            border-radius: .25em;
+            color: $black;
+            &:focus {
+                @include box-shadow(0 0 .7em rgba($cyan, .6));
+            }
+        }
+    }
+    &-preview {
+        color: $black;
+        &-header {
+            padding: rhythm(.25, 16px) 0;
+            border-top: .05em solid $cyan;
+            border-bottom: .05em solid $cyan;
+            @extend %weight-regular;
+        }
+        &-item {
+            margin: rhythm(.25, 16px) 0;
+        }
+    }
+    &-submit {
+        @include span(12 of 12 no-gutters);
+        @extend %base-font;
+        color: $black;
+        padding: rhythm(.5, 16px);
+        text-align: center;
+        background-color: $yellow;
+        border: .1em solid $cyan;
+        border-radius: .25em;
+    }
+}
+
+.typeActive {
+    background-color: $yellow;
+}

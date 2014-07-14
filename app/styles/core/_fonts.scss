@@ -1,0 +1,6 @@
+@include font-face('MerriweatherSans', font-files(
+    'merriweathersans-light.woff',woff,
+    'merriweathersans-light.ttf', ttf,
+    'merriweathersans-light.svg', svg),
+    'merriweathersans-light.eot');
+    $MerriweatherSans: 'MerriweatherSans', helvetica, arial, sans-serif;

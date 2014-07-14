@@ -1,0 +1,24 @@
+.whiskeylist {
+    @extend %base-font;
+    @extend %lists;
+    &-item {
+        @extend %lists-item;
+        &-detail {
+            @extend %lists-detail;
+            &-right {
+                @extend %lists-right;
+            }
+            &-left {
+                @extend %lists-left;
+            }
+        }
+    }
+}
+
+.whiskeycloset {
+    @extend %closet;
+    &-color {
+        color: $purple;
+        font-weight: 700;
+    }
+}

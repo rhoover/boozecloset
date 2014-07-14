@@ -1,0 +1,14 @@
+<section class="beerlist">
+    <div>
+        <input type="text" placeholder="Instant Brew Name Search" ng-model="beerSearch.name" class="brewsearch">
+    </div>
+    <p class="beercloset">You have <span class="beercloset-color">{{beerList.length}}</span> beers in your closet.</p>
+    <a ng-href="#/beer/{{beer.id}}"ng-repeat="beer in beerList | filter:beerSearch track by $index" class="beerlist-item">
+    <p class="beerlist-item-detail"><span class="beerlist-item-detail-left">Brewer:</span>  <span class="beerlist-item-detail-right">{{beer.company}}</span></p>
+    <p class="beerlist-item-detail"><span class="beerlist-item-detail-left">Brew:</span>  <span class="beerlist-item-detail-right">{{beer.name}}</span></p>
+    <p class="beerlist-item-detail"><span class="beerlist-item-detail-left">Purchased From:</span>  <span class="beerlist-item-detail-right">{{beer.purchasedfrom}}</span></p>
+    <p class="beerlist-item-detail"><span class="beerlist-item-detail-left">Purchase Price:</span> <span class="beerlist-item-detail-right">${{beer.price}}</span></p>
+    <p class="beerlist-item-detail"><span class="beerlist-item-detail-left">Purchase Date:</span> <span class="beerlist-item-detail-right">{{beer.purchasedon | date: MM-dd-yyyy}}</span></p>
+    <p class="beerlist-item-detail"><span class="beerlist-item-detail-left">Status:</span> <span class="beerlist-item-detail-right">{{beer.status}}</span></p>
+    </a>
+</section>

@@ -1,0 +1,56 @@
+%lists {
+    padding-top: rhythm(5, 16px);
+    @extend %base-font;
+}
+%lists-item {
+    @include span(12 of 12 no-gutters);
+    margin-bottom: rhythm(.5, 16px);
+    padding: 0 span(1) rhythm(.5, 16px) span(1);
+    border-bottom: .1em solid $cyan;
+    color: $black;
+    text-decoration: none;
+}
+%lists-detail {
+    position: relative;
+    @include span(12 of 12 no-gutters);
+    margin: 0;
+    text-overflow: ellipsis;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+%lists-right {
+    @include adjust-font-size-to(14px);
+}
+
+%lists-left {
+    color: rgba($black, .65);
+}
+%search {
+    @extend %base-font;
+    width: 100%;
+    height: rhythm(2, 16px);
+    padding-left: span(1);
+    margin-bottom: rhythm(.5, 16px);
+    background: lighten($white, 5%);
+    border-style: solid;
+    border-color: $cyan;
+    border-width: 0.1em 0 .1em 0;
+    &:active {
+        border-width: 0.15em 0 0.15em 0;
+    }
+    &:focus {
+        border-width: 0.15em 0 0.15em 0;
+    }
+}
+
+%closet {
+    margin: 0 span(.5) rhythm(.5, 16px) span(.5);
+    padding: rhythm(.25, 16px) span(.25);
+    text-align: center;
+    color: $black;
+    border: .1em solid $purple;
+    border-radius: .25em;
+    background-color: rgba($yellow, .25);
+}
