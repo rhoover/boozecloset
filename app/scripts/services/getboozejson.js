@@ -9,7 +9,7 @@
  */
 
 angular.module('boozeApp')
-    .factory('getboozejson', function ($http) {
+    .factory('getboozejson', function getboozejson ($http) {
 
         return {
             getBoozeData: function () {
@@ -18,8 +18,14 @@ angular.module('boozeApp')
 
                 return $http.get(serviceUrl)
 
+                //resolve everything here in the factory thanks to: http://toddmotto.com/rethinking-angular-js-controllers
                 .success(function (data) {
-                    return data;
+
+                    var boozeData = data;
+                    return boozeData;
+                })
+                .error(function () {
+                    alert('That\'s right Dude, they pee\'d on your fucking rug');
                 });
 
             }

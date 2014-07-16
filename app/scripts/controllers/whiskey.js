@@ -7,6 +7,7 @@
  * # WhiskeyCtrl
  * Controller of the boozeApp
  */
+
 angular.module('boozeApp')
   .controller('WhiskeyCtrl', function ($scope, getboozejson, storageFactory, listdataFilter, whiskeykey) {
 
@@ -19,15 +20,12 @@ angular.module('boozeApp')
         } else {
 
             getboozejson.getBoozeData()
+                .success(function (boozeData) {
 
-            .success(function (data) {
-                $scope.whiskeyList = listdataFilter.whiskey(data, whiskeykey);
-                storageFactory.storeGetBooze('booze-data-cache', data);
-            })
+                    $scope.whiskeyList = listdataFilter.whiskey(boozeData, whiskeykey);
+                    storageFactory.storeGetBooze('booze-data-cache', boozeData);
 
-            .error(function () {
-                alert('That\'s right Dude, they pee\'d on your fucking rug');
-            });
+                });
 
         } //end if-else
   });

@@ -20,15 +20,12 @@ angular.module('boozeApp')
         } else {
 
             getboozejson.getBoozeData()
+                .success(function (boozeData) {
 
-            .success(function (data) {
-                $scope.beerList = listdataFilter.beer(data, beerkey);
-                storageFactory.storeGetBooze('booze-data-cache', data);
-            })
+                    $scope.beerList = listdataFilter.beer(boozeData, beerkey);
+                    storageFactory.storeGetBooze('booze-data-cache', boozeData);
 
-            .error(function () {
-                alert('That\'s right Dude, they pee\'d on your fucking rug');
-            });
+                });
 
         } //end if-else
   });
