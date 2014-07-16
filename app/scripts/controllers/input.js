@@ -55,6 +55,6 @@ angular.module('boozeApp')
 
             storageFactory.storeBoozeLocal('booze-data-cache', boozeDataOld, boozeDataNew);
             storageFactory.saveBoozeRemote('booze-data-cache', boozeDataOld, boozeDataNew);
-            alert('Your New Booze:  ' + $scope.boozeForm.name + '\n\nFrom:  ' + $scope.boozeForm.company + '\n\nHas Been Added!!\n\nBoth Locally and To Your Server');
+            alert('Your New Booze:  ' + $scope.boozeForm.name + '\n\nFrom:  ' + $scope.boozeForm.company + '\n\nHas Been Added!!\n\nBoth Locally For Now');
         };
   });
