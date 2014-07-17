@@ -11,11 +11,11 @@
 angular.module('boozeApp')
   .controller('WhiskeyCtrl', function ($scope, getboozejson, storageFactory, listdataFilter, whiskeykey) {
 
-        var boozeDataCache = storageFactory.getBooze('booze-data-cache');
+        var boozeDataStorage = storageFactory.getBooze('booze-data-cache');
 
-        if(boozeDataCache !== null) {
+        if(boozeDataStorage !== null) {
 
-            $scope.whiskeyList = listdataFilter.whiskey(boozeDataCache, whiskeykey);
+            $scope.whiskeyList = listdataFilter.whiskey(boozeDataStorage, whiskeykey);
 
         } else {
 

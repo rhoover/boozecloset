@@ -9,7 +9,7 @@
  */
 
 angular.module('boozeApp')
-  .controller('InputCtrl', function ($scope, beerkey, whiskeykey, storageFactory) {
+  .controller('InputCtrl', function ($scope, beerkey, whiskeykey, randomnumber, storageFactory) {
 
         $scope.boozeForm = [];
 
@@ -33,10 +33,7 @@ angular.module('boozeApp')
 
         $scope.boozeForm.saveBooze = function () {
 
-            //Courtesy: http://stackoverflow.com/a/1527834
-            var min = 100000;
-            var max = 200000;
-            var randomId = Math.floor(Math.random() * (max - min + 1)) + min;
+            var randomId = randomnumber.randomid();
 
             var boozeDataNew = [
                 {

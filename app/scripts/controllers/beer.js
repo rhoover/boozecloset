@@ -11,11 +11,11 @@
 angular.module('boozeApp')
     .controller('BeerCtrl', function ($scope, getboozejson, storageFactory, listdataFilter, beerkey) {
 
-        var boozeDataCache = storageFactory.getBooze('booze-data-cache');
+        var boozeDataStorage = storageFactory.getBooze('booze-data-cache');
 
-        if(boozeDataCache !== null) {
+        if(boozeDataStorage !== null) {
 
-            $scope.beerList = listdataFilter.beer(boozeDataCache, beerkey);
+            $scope.beerList = listdataFilter.beer(boozeDataStorage, beerkey);
 
         } else {
 
