@@ -1,4 +1,4 @@
-<!doctype html> <html> <head> <meta charset="utf-8"> <title>Booze Closet</title> <!-- generic --> <meta name="description" content="Booze Closet, Your Craft Beer and Whiskey Inventory Manager"> <meta name="author" content="Robin Hoover - MooseDog Studios - Stowe, VT - www.moosedog.io - robin.hoover@gmail.com"> <meta name="robots" content="noindex, nofollow"> <!-- Mobile Stuff --> <meta name="HandheldFriendly" content="True"> <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no,width=device-width"> <!-- apple stuff --> <meta name="apple-mobile-web-app-capable" content="yes"> <meta name="apple-mobile-web-app-title" content="Booze Closet"> <meta name="apple-touch-fullscreen" content="yes"> <meta name="apple-mobile-web-app-status-bar-style" content="black"> <!-- because microsoft exists --> <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> <meta name="msapplication-TileColor" content="#00aba9"> <meta name="msapplication-TileImage" content="images/mstile-70x70.png"> <meta name="msapplication-TileImage" content="images/mstile-144x144.png"> <meta name="msapplication-TileImage" content="images/mstile-150x150.png"> <meta name="msapplication-TileImage" content="images/mstile-310x310.png"> <meta http-equiv="cleartype" content="on"> <!-- icons, favicons and Launch Image --> <!-- Courtesy of: http://realfavicongenerator.net/ --> <link rel="shortcut icon" href="images/favicon.ico"> <link rel="apple-touch-startup-image" href="images/startup.png"> <link rel="apple-touch-icon" sizes="57x57" href="images/apple-touch-icon-57x57.png"> <link rel="apple-touch-icon" sizes="60x60" href="images/apple-touch-icon-60x60.png"> <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png"> <link rel="apple-touch-icon" sizes="76x76" href="images/apple-touch-icon-76x76.png"> <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png"> <link rel="apple-touch-icon" sizes="120x120" href="images/apple-touch-icon-120x120.png"> <link rel="apple-touch-icon" sizes="144x144" href="images/apple-touch-icon-144x144.png"> <link rel="apple-touch-icon" sizes="152x152" href="images/apple-touch-icon-152x152.png"> <link rel="icon" type="image/png" href="images/favicon-16x16.png" sizes="16x16"> <link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32"> <link rel="icon" type="image/png" href="images/favicon-96x96.png" sizes="96x96"> <link rel="icon" type="image/png" href="images/favicon-160x160.png" sizes="160x160"> <link rel="icon" type="image/png" href="images/favicon-196x196.png" sizes="196x196"> <!-- icon actually for android --> <link rel="apple-touch-icon" href="images/apple-touch-icon-57x57.png"> <link rel="stylesheet" href="styles/main.839579e5.css">  <body ng-app="boozeApp"> <header class="header"> <h1 class="header-title">Booze Closet</h1> </header><!-- end .header --> <nav class="nav" ng-controller="NavCtrl"> <a ng-href="#/" class="nav-item" ng-class="{navActive: isActive(&apos;/&apos;)}">Beer</a> <a ng-href="#/whiskey" class="nav-item" ng-class="{navActive: isActive(&apos;/whiskey&apos;)}">Whiskey</a> <a ng-href="#/input" class="nav-item" ng-class="{navActive: isActive(&apos;/input&apos;)}">Add New</a> </nav><!-- end .nav --> <main ng-view="" class="content"></main><!-- end .content --> <!-- Google Analytics: change UA-XXXXX-X to be your site's ID
+<!doctype html> <html> <head> <meta charset="utf-8"> <title>Booze Closet</title> <!-- generic --> <meta name="description" content="Booze Closet, Your Craft Beer and Whiskey Inventory Manager"> <meta name="author" content="Robin Hoover - MooseDog Studios - Stowe, VT - www.moosedog.io - robin.hoover@gmail.com"> <meta name="robots" content="noindex, nofollow"> <!-- Mobile Stuff --> <meta name="HandheldFriendly" content="True"> <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no,width=device-width"> <!-- apple stuff --> <meta name="apple-mobile-web-app-capable" content="yes"> <meta name="apple-mobile-web-app-title" content="Booze Closet"> <meta name="apple-touch-fullscreen" content="yes"> <meta name="apple-mobile-web-app-status-bar-style" content="black"> <!-- because microsoft exists --> <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> <meta name="msapplication-TileColor" content="#00aba9"> <meta name="msapplication-TileImage" content="images/mstile-70x70.png"> <meta name="msapplication-TileImage" content="images/mstile-144x144.png"> <meta name="msapplication-TileImage" content="images/mstile-150x150.png"> <meta name="msapplication-TileImage" content="images/mstile-310x310.png"> <meta http-equiv="cleartype" content="on"> <!-- icons, favicons and Launch Image --> <!-- Courtesy of: http://realfavicongenerator.net/ --> <link rel="shortcut icon" href="images/favicon.ico"> <link rel="apple-touch-startup-image" href="images/startup.png"> <link rel="apple-touch-icon" sizes="57x57" href="images/apple-touch-icon-57x57.png"> <link rel="apple-touch-icon" sizes="60x60" href="images/apple-touch-icon-60x60.png"> <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png"> <link rel="apple-touch-icon" sizes="76x76" href="images/apple-touch-icon-76x76.png"> <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png"> <link rel="apple-touch-icon" sizes="120x120" href="images/apple-touch-icon-120x120.png"> <link rel="apple-touch-icon" sizes="144x144" href="images/apple-touch-icon-144x144.png"> <link rel="apple-touch-icon" sizes="152x152" href="images/apple-touch-icon-152x152.png"> <link rel="icon" type="image/png" href="images/favicon-16x16.png" sizes="16x16"> <link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32"> <link rel="icon" type="image/png" href="images/favicon-96x96.png" sizes="96x96"> <link rel="icon" type="image/png" href="images/favicon-160x160.png" sizes="160x160"> <link rel="icon" type="image/png" href="images/favicon-196x196.png" sizes="196x196"> <!-- icon actually for android --> <link rel="apple-touch-icon" href="images/apple-touch-icon-57x57.png"> <link rel="stylesheet" href="styles/main.74d5604b.css">  <body ng-app="boozeApp"> <header class="header"> <h1 class="header-title">Booze Closet</h1> </header><!-- end .header --> <nav class="nav" ng-controller="NavCtrl"> <a ng-href="#/" class="nav-item" ng-class="{navActive: isActive(&apos;/&apos;)}">Beer</a> <a ng-href="#/whiskey" class="nav-item" ng-class="{navActive: isActive(&apos;/whiskey&apos;)}">Whiskey</a> <a ng-href="#/input" class="nav-item" ng-class="{navActive: isActive(&apos;/input&apos;)}">Add New</a> </nav><!-- end .nav --> <main ng-view="" class="content"></main><!-- end .content --> <!-- Google Analytics: change UA-XXXXX-X to be your site's ID
      <script>
        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -8,81 +8,87 @@
        ga('create', 'UA-XXXXX-X');
        ga('send', 'pageview');
     </script>
-    --> <script src="scripts/vendor.9d4fbcdc.js"></script> <script src="scripts/scripts.506c3471.js"></script>  <!-- Begin Templates --> <script type="text/ng-template" id="views/beer.html"><section class="beerlist">
-    <div>
-        <input type="text" placeholder="Instant Brew Name Search" ng-model="beerSearch.name" class="brewsearch">
+    --> <script src="scripts/vendor.9d4fbcdc.js"></script> <script src="scripts/scripts.d9d19c43.js"></script>  <!-- Begin Templates --> <script type="text/ng-template" id="views/beer.html"><section>
+    <div class="search">
+        <input type="text" placeholder="Instant Brew Name Search" ng-model="beerSearch.name" class="search-beers">
     </div>
     <p class="beercloset">You have <span class="beercloset-color">{{beerList.length}}</span> beers in your closet.</p>
-    <a ng-href="#/beer/{{beer.id}}"ng-repeat="beer in beerList | filter:beerSearch track by $index" class="beerlist-item">
-    <p class="beerlist-item-detail"><span class="beerlist-item-detail-left">Brewer:</span>  <span class="beerlist-item-detail-right">{{beer.company}}</span></p>
-    <p class="beerlist-item-detail"><span class="beerlist-item-detail-left">Brew:</span>  <span class="beerlist-item-detail-right">{{beer.name}}</span></p>
-    <p class="beerlist-item-detail"><span class="beerlist-item-detail-left">Purchased From:</span>  <span class="beerlist-item-detail-right">{{beer.purchasedfrom}}</span></p>
-    <p class="beerlist-item-detail"><span class="beerlist-item-detail-left">Purchase Price:</span> <span class="beerlist-item-detail-right">${{beer.price}}</span></p>
-    <p class="beerlist-item-detail"><span class="beerlist-item-detail-left">Purchase Date:</span> <span class="beerlist-item-detail-right">{{beer.purchasedon | date: MM-dd-yyyy}}</span></p>
-    <p class="beerlist-item-detail"><span class="beerlist-item-detail-left">Status:</span> <span class="beerlist-item-detail-right">{{beer.status}}</span></p>
-    </a>
-</section></script> <script type="text/ng-template" id="views/beerdetails.html"><p>This is the beerdetails view.</p></script> <script type="text/ng-template" id="views/input.html"><form class="input">
-    <section class="input-alert-success" ng-if="messages" ng-bind="messages"></section>
-
-    <section class="input-choose">
+    <div class="beerlist">
+        <a ng-href="#/beer/{{beer.id}}"ng-repeat="beer in beerList | filter:beerSearch track by $index" class="beerlist-item">
+            <p class="beerlist-item-detail"><span class="beerlist-item-detail-left">Brewer:</span>  <span class="beerlist-item-detail-right">{{beer.company}}</span></p>
+            <p class="beerlist-item-detail"><span class="beerlist-item-detail-left">Brew:</span>  <span class="beerlist-item-detail-right">{{beer.name}}</span></p>
+            <p class="beerlist-item-detail"><span class="beerlist-item-detail-left">Purchased From:</span>  <span class="beerlist-item-detail-right">{{beer.purchasedfrom}}</span></p>
+            <p class="beerlist-item-detail"><span class="beerlist-item-detail-left">Purchase Price:</span> <span class="beerlist-item-detail-right">${{beer.price}}</span></p>
+            <p class="beerlist-item-detail"><span class="beerlist-item-detail-left">Purchase Date:</span> <span class="beerlist-item-detail-right">{{beer.purchasedon | date: MM-dd-yyyy}}</span></p>
+            <p class="beerlist-item-detail"><span class="beerlist-item-detail-left">Status:</span> <span class="beerlist-item-detail-right">{{beer.status}}</span></p>
+        </a>
+    </div>
+</section></script> <script type="text/ng-template" id="views/details.html"><p>This is the details view.</p></script> <script type="text/ng-template" id="views/input.html"><section>
+    <div class="input-choose">
         <p class="input-choose-header">Pick One:</p>
         <button class="input-choose-beer"  ng-model="boozeform.type" name="type" ng-click="beerToggle()" ng-class="{'typeActive': !beerVisible, 'typeActive': beerVisible}">Beer</button>
         <button class="input-choose-whiskey" ng-model="boozeform.type" name="type" ng-click="whiskeyToggle()" ng-class="{'typeActive': !whiskeyVisible, 'typeActive': whiskeyVisible}">Whiskey</button>
-    </section>
+    </div>
 
-    <section ng-if="allVisible" class="input-animate">
+    <form class="input">
+        <section class="input-alert-success" ng-if="messages" ng-bind="messages"></section>
 
-        <label for="brewer" class="input-label input-animate" ng-if="beerVisible">Brewer:</label>
-        <input type="text" name="company" ng-model="boozeForm.company" placeholder="Type Name Here" class="input-type-text" ng-if="beerVisible">
+        <div ng-if="allVisible" class="input-animate">
 
-        <label for="distiller" class="input-label input-animate" ng-if="whiskeyVisible">Distiller:</label>
-        <input type="text" name="company" ng-model="boozeForm.company" placeholder="Type Name Here" class="input-type-text" ng-if="whiskeyVisible">
+            <label for="brewer" class="input-label input-animate" ng-if="beerVisible">Brewer:</label>
+            <input type="text" name="company" ng-model="boozeForm.company" placeholder="Type Name Here" class="input-type-text" ng-if="beerVisible">
 
-        <label for="booze-name" class="input-label input-animate" ng-if="beerVisible">Beer Name:</label>
-        <input type="text" name="name" ng-model="boozeForm.name" placeholder="Type Beer Name Here" class="input-type-text" ng-if="beerVisible">
+            <label for="distiller" class="input-label input-animate" ng-if="whiskeyVisible">Distiller:</label>
+            <input type="text" name="company" ng-model="boozeForm.company" placeholder="Type Name Here" class="input-type-text" ng-if="whiskeyVisible">
 
-        <label for="booze-name" class="input-label input-animate" ng-if="whiskeyVisible">Whiskey Name:</label>
-        <input type="text" name="name" ng-model="boozeForm.name" placeholder="Type Whiskey Name Here" class="input-type-text" ng-if="whiskeyVisible">
+            <label for="booze-name" class="input-label input-animate" ng-if="beerVisible">Beer Name:</label>
+            <input type="text" name="name" ng-model="boozeForm.name" placeholder="Type Beer Name Here" class="input-type-text" ng-if="beerVisible">
 
-        <label for="purchasedfrom" class="input-label">Purchased From:</label>
-        <input type="text" name="purchasedfrom" ng-model="boozeForm.purchasedfrom" placeholder="Type Seller Name Here" class="input-type-text">
+            <label for="booze-name" class="input-label input-animate" ng-if="whiskeyVisible">Whiskey Name:</label>
+            <input type="text" name="name" ng-model="boozeForm.name" placeholder="Type Whiskey Name Here" class="input-type-text" ng-if="whiskeyVisible">
 
-        <label for="date" class="input-label">Purchased On:</label>
-        <input type="date" name="purchasedon" ng-model="boozeForm.purchasedon" class="input-type-text" value={{boozeForm.purchasedon}>
+            <label for="purchasedfrom" class="input-label">Purchased From:</label>
+            <input type="text" name="purchasedfrom" ng-model="boozeForm.purchasedfrom" placeholder="Type Seller Name Here" class="input-type-text">
 
-        <label for="purchased-amount" class="input-label">Purchase Amount:</label>
-        <input type="number" step="any" name="price" ng-model="boozeForm.price" placeholder="Type Dollar Amount Here" class="input-type-text">
+            <label for="date" class="input-label">Purchased On:</label>
+            <input type="date" name="purchasedon" ng-model="boozeForm.purchasedon" class="input-type-text" value={{boozeForm.purchasedon}>
 
-        <label for="status" class="input-label">Comments:</label>
-        <input type="textarea" name="status" ng-model="boozeForm.status" placeholder="Type Comments Here" class="input-type-text">
+            <label for="purchased-amount" class="input-label">Purchase Amount:</label>
+            <input type="number" step="any" name="price" ng-model="boozeForm.price" placeholder="Type Dollar Amount Here" class="input-type-text">
 
-        <section class="input-preview">
-            <h2 class="input-preview-header">Preview:</h2>
-            <p class="input-preview-item">Type: {{boozeForm.type}}</p>
-            <p class="input-preview-item input-animate" ng-if="beerVisible">Brewer: {{boozeForm.company}}</p>
-            <p class="input-preview-item input-animate" ng-if="whiskeyVisible">Distiller: {{boozeForm.company}}</p>
-            <p class="input-preview-item input-animate" ng-if="beerVisible">Beer Name: {{boozeForm.name}}</p>
-            <p class="input-preview-item input-animate" ng-if="whiskeyVisible">Whiskey Name: {{boozeForm.name}}</p>
-            <p class="input-preview-item">Purchased From: {{boozeForm.purchasedfrom}}</p>
-            <p class="input-preview-item">Purchased On: {{boozeForm.purchasedon | date: MM-dd-yyyy}}</p>
-            <p class="input-preview-item">Purchase Amount: ${{boozeForm.price}}</p>
-            <p class="input-preview-item">Comments: {{boozeForm.status}}</p>
-        </section>
-    </section>
+            <label for="status" class="input-label">Comments:</label>
+            <input type="textarea" name="status" ng-model="boozeForm.status" placeholder="Type Comments Here" class="input-type-text">
 
-    <input type="submit" value="Save New Booze" class="input-submit" ng-if="allVisible" ng-click="boozeForm.saveBooze()" />
+            <div class="input-preview">
+                <h2 class="input-preview-header">Preview:</h2>
+                <p class="input-preview-item">Type: {{boozeForm.type}}</p>
+                <p class="input-preview-item input-animate" ng-if="beerVisible">Brewer: {{boozeForm.company}}</p>
+                <p class="input-preview-item input-animate" ng-if="whiskeyVisible">Distiller: {{boozeForm.company}}</p>
+                <p class="input-preview-item input-animate" ng-if="beerVisible">Beer Name: {{boozeForm.name}}</p>
+                <p class="input-preview-item input-animate" ng-if="whiskeyVisible">Whiskey Name: {{boozeForm.name}}</p>
+                <p class="input-preview-item">Purchased From: {{boozeForm.purchasedfrom}}</p>
+                <p class="input-preview-item">Purchased On: {{boozeForm.purchasedon | date: MM-dd-yyyy}}</p>
+                <p class="input-preview-item">Purchase Amount: ${{boozeForm.price}}</p>
+                <p class="input-preview-item">Comments: {{boozeForm.status}}</p>
+            </div>
+        </div>
 
-</form></script> <script type="text/ng-template" id="views/whiskey.html"><section class="whiskeylist">
-    <div>
-        <input type="text" placeholder="Instant Whiskey Name Search" ng-model="whiskeySearch.name" class="whiskeysearch">
+        <input type="submit" value="Save New Booze" class="input-submit" ng-if="allVisible" ng-click="boozeForm.saveBooze()" />
+
+    </form>
+</section></script> <script type="text/ng-template" id="views/whiskey.html"><section>
+    <div class="search">
+        <input type="text" placeholder="Instant Whiskey Name Search" ng-model="whiskeySearch.name" class="search-whiskey">
     </div>
     <p class="beercloset">You have <span class="beercloset-color">{{whiskeyList.length}}</span> whiskeys in your closet.</p>
-    <a ng-href="#/whiskey/{{whiskey.id}}"ng-repeat="whiskey in whiskeyList | filter:whiskeySearch track by $index" class="whiskeylist-item">
-    <p class="whiskeylist-item-detail"><span class="whiskeylist-item-detail-left">Distiller:</span>  <span class="whiskeylist-item-detail-right">{{whiskey.company}}</span></p>
-    <p class="whiskeylist-item-detail"><span class="whiskeylist-item-detail-left">Whiskey:</span>  <span class="whiskeylist-item-detail-right">{{whiskey.name}}</span></p>
-    <p class="whiskeylist-item-detail"><span class="whiskeylist-item-detail-left">Purchased From:</span>  <span class="whiskeylist-item-detail-right">{{whiskey.purchasedfrom}}</span></p>
-    <p class="whiskeylist-item-detail"><span class="whiskeylist-item-detail-left">Purchase Price:</span> <span class="whiskeylist-item-detail-right">${{whiskey.price}}</span></p>
-    <p class="whiskeylist-item-detail"><span class="whiskeylist-item-detail-left">Purchase Date:</span> <span class="whiskeylist-item-detail-right">{{whiskey.purchasedon | date: MM-dd-yyyy}}</span></p>
-    <p class="whiskeylist-item-detail"><span class="whiskeylist-item-detail-left">Status:</span> <span class="whiskeylist-item-detail-right">{{whiskey.status}}</span></p>
-    </a>
-</section></script> <script type="text/ng-template" id="views/whiskeydetails.html"><p>This is the whiskeydetails view.</p></script> <!-- End Templates --> 
+    <div class="whiskeylist">
+        <a ng-href="#/whiskey/{{whiskey.id}}"ng-repeat="whiskey in whiskeyList | filter:whiskeySearch track by $index" class="whiskeylist-item">
+            <p class="whiskeylist-item-detail"><span class="whiskeylist-item-detail-left">Distiller:</span>  <span class="whiskeylist-item-detail-right">{{whiskey.company}}</span></p>
+            <p class="whiskeylist-item-detail"><span class="whiskeylist-item-detail-left">Whiskey:</span>  <span class="whiskeylist-item-detail-right">{{whiskey.name}}</span></p>
+            <p class="whiskeylist-item-detail"><span class="whiskeylist-item-detail-left">Purchased From:</span>  <span class="whiskeylist-item-detail-right">{{whiskey.purchasedfrom}}</span></p>
+            <p class="whiskeylist-item-detail"><span class="whiskeylist-item-detail-left">Purchase Price:</span> <span class="whiskeylist-item-detail-right">${{whiskey.price}}</span></p>
+            <p class="whiskeylist-item-detail"><span class="whiskeylist-item-detail-left">Purchase Date:</span> <span class="whiskeylist-item-detail-right">{{whiskey.purchasedon | date: MM-dd-yyyy}}</span></p>
+            <p class="whiskeylist-item-detail"><span class="whiskeylist-item-detail-left">Status:</span> <span class="whiskeylist-item-detail-right">{{whiskey.status}}</span></p>
+        </a>
+    </div>
+</section></script> <!-- End Templates --> 

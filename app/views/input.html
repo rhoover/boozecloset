@@ -1,4 +1,5 @@
 <section>
+
     <div class="input-choose">
         <p class="input-choose-header">Pick One:</p>
         <button class="input-choose-beer"  ng-model="boozeform.type" name="type" ng-click="beerToggle()" ng-class="{'typeActive': !beerVisible, 'typeActive': beerVisible}">Beer</button>
@@ -6,7 +7,6 @@
     </div>
 
     <form class="input">
-        <section class="input-alert-success" ng-if="messages" ng-bind="messages"></section>
 
         <div ng-if="allVisible" class="input-animate">
 
