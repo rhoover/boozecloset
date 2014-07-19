@@ -2,11 +2,12 @@
     @include span(12 of 12 no-gutters);
     @include translateZ(50); //hack to create composite layer
     margin-bottom: rhythm(.5, 16px);
-    padding: rhythm(5.5, 16px) span(1) rhythm(.5, 16px) span(1);
+    padding: rhythm(1, 16px) span(1 of 12) rhythm(.5, 16px) span(1 of 12);
     color: $black;
     &-choose {
         border-radius: .25em;
-        margin-bottom: rhythm(3, 16px);
+        margin-top: rhythm(6, 16px);
+        padding: 0 span(1 of 12);
         &-header {
             margin: 0;
         }

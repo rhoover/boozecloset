@@ -48,7 +48,7 @@ angular.module('boozeApp')
                 }
             ];
 
-            var boozeDataOld = storageFactory.getBooze('booze-data-cache');
+            var boozeDataOld = storageFactory.getBoozeData('booze-data-cache');
 
             storageFactory.storeBoozeLocal('booze-data-cache', boozeDataOld, boozeDataNew);
             storageFactory.saveBoozeRemote('booze-data-cache', boozeDataOld, boozeDataNew);

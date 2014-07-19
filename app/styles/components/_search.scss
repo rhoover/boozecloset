@@ -1,6 +1,9 @@
-.brewsearch {
-    @extend %search;
-}
-.whiskeysearch {
-    @extend %search;
+.search {
+    padding-top: rhythm(5, 16px);
+    &-beers {
+        @extend %search;
+    }
+    &-whiskey {
+        @extend %search;
+    }
 }

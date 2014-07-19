@@ -18,15 +18,13 @@ angular.module('boozeApp')
                 var boozeData = [];
 
                 return $http.get(serviceUrl)
-
-                .success(function (data) {
-                    boozeData = data;
-                    return boozeData;
-                })
-                .error(function () {
-                    alert('That\'s right Dude, they pee\'d on your fucking rug');
-                });
-
+                    .success(function (data) {
+                        boozeData = data;
+                        return boozeData;
+                    })
+                    .error(function () {
+                        alert('That\'s right Dude, they pee\'d on your fucking rug');
+                    });
             }
         };
     });
