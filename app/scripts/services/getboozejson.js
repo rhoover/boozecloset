@@ -15,15 +15,13 @@ angular.module('boozeApp')
             getBoozeData: function () {
 
                 var serviceUrl = 'data/booze.json';
+                var boozeData = [];
 
                 return $http.get(serviceUrl)
 
-                //resolve everything here in the factory thanks partly to: http://toddmotto.com/rethinking-angular-js-controllers
                 .success(function (data) {
-
-                    var boozeData = data;
+                    boozeData = data;
                     return boozeData;
-
                 })
                 .error(function () {
                     alert('That\'s right Dude, they pee\'d on your fucking rug');

@@ -9,23 +9,10 @@
  */
 
 angular.module('boozeApp')
-  .controller('WhiskeyCtrl', function ($scope, getboozejson, storageFactory, listdataFilter, whiskeykey) {
+  .controller('WhiskeyCtrl', function ($scope, listdataFilter, storageFactory, whiskeykey) {
 
-        var boozeDataStorage = storageFactory.getBooze('booze-data-cache');
+        var isDataStored = storageFactory.getBoozeData('booze-data-cache');
 
-        if(boozeDataStorage !== null) {
+        $scope.whiskeyList = listdataFilter.beer(isDataStored, whiskeykey);
 
-            $scope.whiskeyList = listdataFilter.whiskey(boozeDataStorage, whiskeykey);
-
-        } else {
-
-            getboozejson.getBoozeData()
-                .success(function (boozeData) {
-
-                    $scope.whiskeyList = listdataFilter.whiskey(boozeData, whiskeykey);
-                    storageFactory.storeGetBooze('booze-data-cache', boozeData);
-
-                });
-
-        } //end if-else
   });
