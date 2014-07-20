@@ -13,19 +13,16 @@ angular.module('boozeApp')
 
         $scope.boozeForm = [];
 
-        $scope.allVisible = false;
         $scope.beerVisible = false;
         $scope.whiskeyVisible = false;
 
         $scope.beerToggle = function () {
-            $scope.allVisible = true;
             $scope.beerVisible = true;
             $scope.whiskeyVisible = false;
             $scope.boozeForm.type = beerkey;
         };
 
         $scope.whiskeyToggle = function () {
-            $scope.allVisible = true;
             $scope.beerVisible = false;
             $scope.whiskeyVisible = true;
             $scope.boozeForm.type = whiskeykey;
@@ -52,6 +49,6 @@ angular.module('boozeApp')
 
             storageFactory.storeBoozeLocal('booze-data-cache', boozeDataOld, boozeDataNew);
             storageFactory.saveBoozeRemote('booze-data-cache', boozeDataOld, boozeDataNew);
-            alert('Your New Booze:  ' + $scope.boozeForm.name + '\n\nFrom:  ' + $scope.boozeForm.company + '\n\nHas Been Added!!\n\nBoth Locally For Now');
+            alert('Your New Booze:  ' + $scope.boozeForm.name + '\n\nFrom:  ' + $scope.boozeForm.company + '\n\nHas Been Added!!\n\n Locally For Now');
         };
   });
