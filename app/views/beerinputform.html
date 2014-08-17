@@ -1,7 +1,5 @@
 <form class="input input-animate">
 
-    <div>
-
         <label for="brewer" class="input-label">Brewer:</label>
         <input type="text" name="company" ng-model="boozeForm.company" placeholder="Type Name Here" class="input-type-text">
 
@@ -22,15 +20,14 @@
 
         <div class="input-preview">
             <h2 class="input-preview-header">Preview:</h2>
-            <p class="input-preview-item">Type: {{boozeForm.type}}</p>
-            <p class="input-preview-item">Brewer: {{boozeForm.company}}</p>
             <p class="input-preview-item">Beer Name: {{boozeForm.name}}</p>
+            <p class="input-preview-item">Brewer: {{boozeForm.company}}</p>
             <p class="input-preview-item">Purchased From: {{boozeForm.purchasedfrom}}</p>
             <p class="input-preview-item">Purchased On: {{boozeForm.purchasedon | date: MM-dd-yyyy}}</p>
             <p class="input-preview-item">Purchase Amount: ${{boozeForm.price}}</p>
+            <p class="input-preview-item">Type: {{boozeForm.type}}</p>
             <p class="input-preview-item">Comments: {{boozeForm.status}}</p>
         </div>
-    </div>
 
     <input type="submit" value="Save New Booze" class="input-submit" ng-click="boozeForm.saveBooze()" />
 

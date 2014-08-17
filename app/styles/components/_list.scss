@@ -1,4 +1,4 @@
-.whiskeylist {
+.list {
     @extend %base-font;
     @extend %lists;
     &-item {
@@ -15,7 +15,7 @@
     }
 }
 
-.whiskeycloset {
+.closet-summary {
     @extend %closet;
     &-color {
         color: $purple;

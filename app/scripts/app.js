@@ -21,10 +21,10 @@ angular.module('boozeApp', ['ngAnimate', 'ngCookies', 'ngResource', 'ngRoute', '
         });
 
         //bang the json file right into SessionStorage before anything happens!!  No more async and promise nightmares
-        getboozejson.getBoozeData()
-            .success(function (boozeData) {
-                storageFactory.storeGetBoozeData('booze-data-cache', boozeData);
-        });
+        // getboozejson.getBoozeData()
+        //     .success(function (boozeData) {
+        //         storageFactory.storeGetBoozeData('booze-data-cache', boozeData);
+        // });
 
     })
 
@@ -35,27 +35,45 @@ angular.module('boozeApp', ['ngAnimate', 'ngCookies', 'ngResource', 'ngRoute', '
         $httpProvider.defaults.headers.put['Content-Type'] = 'application/x-www-form-urlencoded';
         $httpProvider.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
 
+        var booze = function (getboozejson, storageFactory) {
+            var checking = storageFactory.getBoozeData('booze-data-cache');
+            if (checking !== null) {
+                return;
+            } else {
+                getboozejson.getBoozeData().success(function (data) {
+                    var storeThis = data;
+                    storageFactory.storeGetBoozeData('booze-data-cache', storeThis);
+                });
+            };
+        };
+
         //normal stuff
         $routeProvider
             .when('/', {
-            templateUrl: 'views/beer.html',
-            controller: 'BeerCtrl'
+                templateUrl: 'views/beer.html',
+                controller: 'BeerCtrl',
+                resolve: {
+                    boozejson: booze
+                }
             })
             .when('/whiskey', {
-            templateUrl: 'views/whiskey.html',
-            controller: 'WhiskeyCtrl'
+                templateUrl: 'views/whiskey.html',
+                controller: 'WhiskeyCtrl',
+                resolve: {
+                    boozejson: booze
+                }
             })
             .when('/input', {
-            templateUrl: 'views/input.html',
-            controller: 'InputCtrl'
+                templateUrl: 'views/input.html',
+                controller: 'InputCtrl'
             })
             .when('/beer/:id', {
-            templateUrl: 'views/details.html'
+                templateUrl: 'views/details.html'
             })
             .when('/whiskey/:id', {
-            templateUrl: 'views/details.html'
+                templateUrl: 'views/details.html'
             })
             .otherwise({
-            redirectTo: '/'
+                redirectTo: '/'
         });
     });
