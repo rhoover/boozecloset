@@ -13,18 +13,12 @@ angular.module('boozeApp', ['ngAnimate', 'ngCookies', 'ngResource', 'ngRoute', '
 
     // This is the key to view transition happiness! i.e scroll to top when view changes
     //Courtesy of: http://codepen.io/mike360/pen/kGsvK
-    .run(function ($rootScope, $timeout, $window, getboozejson, storageFactory) {
+    .run(function ($rootScope, $timeout, $window) {
         $rootScope.$on('$routeChangeSuccess', function () {
             $timeout(function () {
                 $window.scrollTo(0,0);
             }, 500);
         });
-
-        //bang the json file right into SessionStorage before anything happens!!  No more async and promise nightmares
-        // getboozejson.getBoozeData()
-        //     .success(function (boozeData) {
-        //         storageFactory.storeGetBoozeData('booze-data-cache', boozeData);
-        // });
 
     })
 
@@ -35,16 +29,8 @@ angular.module('boozeApp', ['ngAnimate', 'ngCookies', 'ngResource', 'ngRoute', '
         $httpProvider.defaults.headers.put['Content-Type'] = 'application/x-www-form-urlencoded';
         $httpProvider.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
 
-        var booze = function (getboozejson, storageFactory) {
-            var checking = storageFactory.getBoozeData('booze-data-cache');
-            if (checking !== null) {
-                return;
-            } else {
-                getboozejson.getBoozeData().success(function (data) {
-                    var storeThis = data;
-                    storageFactory.storeGetBoozeData('booze-data-cache', storeThis);
-                });
-            };
+        var booze = function(resolveFactory) {
+            return resolveFactory.boozeResolve();
         };
 
         //normal stuff

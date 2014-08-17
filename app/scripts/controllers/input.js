@@ -8,8 +8,9 @@
  * Controller of the boozeApp
  */
 
-angular.module('boozeApp')
-  .controller('InputCtrl', function ($scope, beerkey, whiskeykey, randomnumber, storageFactory) {
+angular
+    .module('boozeApp')
+    .controller('InputCtrl', function ($scope, beerkey, whiskeykey, randomnumber, storageFactory) {
 
         $scope.boozeForm = [];
 

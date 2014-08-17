@@ -8,11 +8,10 @@
  * Controller of the boozeApp
  */
 
-angular.module('boozeApp')
-    .controller('BeerCtrl', function ($scope, listdataFilter, storageFactory, beerkey) {
+angular
+    .module('boozeApp')
+    .controller('BeerCtrl', function ($scope,  storageFactory, listdataFilter, beerkey) {
 
-        var isDataStored = storageFactory.getBoozeData('booze-data-cache');
-
-        $scope.beerList = listdataFilter.beer(isDataStored, beerkey);
+        $scope.beerList = listdataFilter.beer(storageFactory.getBoozeData('booze-data-cache'), beerkey);
 
   });
