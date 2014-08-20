@@ -22,9 +22,12 @@ angular
                     var elseReturn = getBoozeFactory.getBoozeData()
                         .then(function (data) {
                             storageFactory.storeGetBoozeData('booze-data-cache', data);
+                        },
+                        function () {
+                            alert('They Peed on Your Fucking Rug Dude');
                         });
-                        return elseReturn;
-                };
+                    return elseReturn;
+                }
             }
         };
     });

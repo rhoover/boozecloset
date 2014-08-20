@@ -9,7 +9,7 @@
  */
 
 angular.module('boozeApp')
-    .factory('getBoozeFactory', function ($http, $q) {
+    .factory('getBoozeFactory', function ($http) {
 
         return {
             getBoozeData: function () {
