@@ -1,10 +1,11 @@
 .list {
-    @extend %base-font;
-    @extend %lists;
     &-item {
         @extend %lists-item;
         &-detail {
             @extend %lists-detail;
+            // margin-top: rhythm(.25, 16px);
+            // margin: 0;
+            // margin-bottom: rhythm(.25, 16px);
             &-right {
                 @extend %lists-right;
             }

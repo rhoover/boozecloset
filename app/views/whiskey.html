@@ -5,12 +5,12 @@
     <p class="closet-summary">You have <span class="closet-summary-color">{{whiskeyList.length}}</span> whiskeys in your closet.</p>
     <div class="list">
         <a ng-href="#/whiskey/{{whiskey.id}}"ng-repeat="whiskey in whiskeyList | filter:whiskeySearch track by $index" class="list-item">
-            <p class="whiskeylist-item-detail"><span class="whiskeylist-item-detail-left">Whiskey:</span>  <span class="list-item-detail-right">{{whiskey.name}}</span></p>
-            <p class="whiskeylist-item-detail"><span class="whiskeylist-item-detail-left">Distiller:</span>  <span class="list-item-detail-right">{{whiskey.company}}</span></p>
-            <p class="whiskeylist-item-detail"><span class="whiskeylist-item-detail-left">Purchased From:</span>  <span class="list-item-detail-right">{{whiskey.purchasedfrom}}</span></p>
-            <p class="whiskeylist-item-detail"><span class="whiskeylist-item-detail-left">Purchase Price:</span> <span class="list-item-detail-right">${{whiskey.price}}</span></p>
-            <p class="whiskeylist-item-detail"><span class="whiskeylist-item-detail-left">Purchase Date:</span> <span class="list-item-detail-right">{{whiskey.purchasedon | date: MM-dd-yyyy}}</span></p>
-            <p class="whiskeylist-item-detail"><span class="whiskeylist-item-detail-left">Status:</span> <span class="list-item-detail-right">{{whiskey.status}}</span></p>
+            <p class="list-item-detail"><span class="list-item-detail-left">Whiskey:</span>  <span class="list-item-detail-right">{{whiskey.name}}</span></p>
+            <p class="list-item-detail"><span class="list-item-detail-left">Distiller:</span>  <span class="list-item-detail-right">{{whiskey.company}}</span></p>
+            <p class="list-item-detail"><span class="list-item-detail-left">Purchased From:</span>  <span class="list-item-detail-right">{{whiskey.purchasedfrom}}</span></p>
+            <p class="list-item-detail"><span class="list-item-detail-left">Purchase Price:</span> <span class="list-item-detail-right">${{whiskey.price}}</span></p>
+            <p class="list-item-detail"><span class="list-item-detail-left">Purchase Date:</span> <span class="list-item-detail-right">{{whiskey.purchasedon | date: MM-dd-yyyy}}</span></p>
+            <p class="list-item-detail"><span class="list-item-detail-left">Status:</span> <span class="list-item-detail-right">{{whiskey.status}}</span></p>
         </a>
     </div>
 </section>
