@@ -7,7 +7,6 @@
     text-align: center;
     background-color: $cyan;
     color: $white;
-    // border-bottom: .1em solid darken($blue, 25%);
     &-title {
         @extend %xlarge-font;
         margin: 0;
