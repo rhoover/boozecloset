@@ -1,8 +1,8 @@
-    <div class="input-choose">
+    <section class="input-choose">
         <p class="input-choose-header">Pick One:</p>
         <button class="input-choose-beer"  ng-model="boozeform.type" name="type" ng-click="beerToggle()" ng-class="{'typeActive': !beerVisible, 'typeActive': beerVisible}">Beer</button>
         <button class="input-choose-whiskey" ng-model="boozeform.type" name="type" ng-click="whiskeyToggle()" ng-class="{'typeActive': !whiskeyVisible, 'typeActive': whiskeyVisible}">Whiskey</button>
-    </div>
+    </section>
 
-    <beer-input ng-if="beerVisible"></beer-input>
-    <whiskey-input ng-if="whiskeyVisible"></whiskey-input>
+    <section beer-input ng-if="beerVisible"></section beer-input>
+    <section whiskey-input ng-if="whiskeyVisible"></section whiskey-input>
