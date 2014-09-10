@@ -14,18 +14,13 @@ angular.module('boozeApp')
         // Public API here
         return {
             getBoozeData: function (key) {
-                var jsonFile = sessionStorage.getItem(key);
-                var parsedJsonFile = angular.fromJson(jsonFile);
-                return parsedJsonFile;
+                return angular.fromJson(sessionStorage.getItem(key));
             },
             storeGetBoozeData: function (key, retrievedData) {
-                var storeMe = angular.toJson(retrievedData);
-                sessionStorage.setItem(key, storeMe);
+                sessionStorage.setItem(key, angular.toJson(retrievedData));
             },
             storeBoozeLocal: function (key, oldData, newData) {
-                var joinedData = oldData.concat(newData); //concat-ing two arrays of object literals: json on record and boozeForm[]
-                var parsedJoinedData = angular.toJson(joinedData);
-                sessionStorage.setItem(key, parsedJoinedData);
+                sessionStorage.setItem(key, angular.toJson(oldData.concat(newData)));
             },
             saveBoozeRemote: function (key, oldData, newData) {
                 // var joinedData = oldData.concat(newData); //concat-ing two arrays of object literals: json on record and boozeForm[]
