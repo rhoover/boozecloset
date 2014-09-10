@@ -1,4 +1,4 @@
-<form class="input input-animate">
+<form name= "beerInput" class="input input-animate" ng-submit= "boozeForm.saveBooze()" novalidate>
 
         <label for="brewer" class="input-label">Brewer:</label>
         <input type="text" name="company" ng-model="boozeForm.company" placeholder="Type Name Here" class="input-type-text">
@@ -29,6 +29,6 @@
             <p class="input-preview-item">Comments: {{boozeForm.status}}</p>
         </div>
 
-    <input type="submit" value="Save New Booze" class="input-submit" ng-click="boozeForm.saveBooze()" />
+    <input type="submit" value="Save New Booze" class="input-submit"  ng-disabled="beerInput.$invalid" />
 
 </form>
