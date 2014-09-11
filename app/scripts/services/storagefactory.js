@@ -9,7 +9,7 @@
  */
 
 angular.module('boozeApp')
-    .factory('storageFactory', function () {
+    .factory('storageFactory', function ($http) {
 
         // Public API here
         return {
@@ -22,7 +22,18 @@ angular.module('boozeApp')
             storeBoozeLocal: function (key, oldData, newData) {
                 sessionStorage.setItem(key, angular.toJson(oldData.concat(newData)));
             },
-            storeBoozeRemote: function (key, oldData, newData) {
+            storeBoozeRemote: function (key, data) {
+                // return $http.post('data/booze.json', sessionStorage.getItem(key))
+                $http.post('/savejson.php', sessionStorage.getItem(key))
+                    // .then(function (response) {
+                    //     return response;
+                    // });
+                    .success(function (data, status, headers, config) {
+                        console.log(headers);
+                    })
+                    .error(function (data, status, headers, config) {
+                        console.log(status, data);
+                    });
                 // var joinedData = oldData.concat(newData); //concat-ing two arrays of object literals: json on record and boozeForm[]
                 // var parsedJoinedData = angular.toJson(joinedData);
 

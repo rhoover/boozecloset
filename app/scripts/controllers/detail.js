@@ -29,6 +29,7 @@ angular
             };
 
             storageFactory.updateBoozeLocal('booze-data-cache', all, boozeObjectNew);
+            storageFactory.storeBoozeRemote('booze-data-cache', all);
             alert('Your New Booze:  ' + $scope.boozeItem.name + '\n\nFrom:  ' + $scope.boozeItem.company + '\n\nHas Been Updated!!\n\n Locally For Now');
         };
 

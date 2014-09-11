@@ -14,9 +14,7 @@ angular.module('boozeApp')
         return {
             getBoozeData: function () {
 
-                var serviceUrl = 'data/booze.json';
-
-                return $http.get(serviceUrl)
+                return $http.get('data/booze.json')
                     .then(function (result) {
                         return result.data;
                     });
