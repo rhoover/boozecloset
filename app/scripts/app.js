@@ -9,8 +9,8 @@
  * Main module of the application.
  */
 
-angular.module('boozeApp', ['ngAnimate', 'ngCookies', 'ngResource', 'ngRoute', 'ngSanitize', 'ngTouch'])
-
+angular.module('boozeApp', ['ngAnimate',  'ngRoute', 'ngTouch'])
+//'ngCookies', 'ngResource', 'ngSanitize',
     // This is the key to view transition happiness! i.e scroll to top when view changes
     //Courtesy of: http://codepen.io/mike360/pen/kGsvK
     .run(function ($rootScope, $timeout, $window) {

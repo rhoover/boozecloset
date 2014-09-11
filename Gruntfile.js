@@ -227,7 +227,7 @@ module.exports = function (grunt) {
         flow: {
           html: {
             steps: {
-              js: ['concat', 'uglifyjs'],
+              js: ['concat'], //, 'uglifyjs' --rh
               css: ['cssmin']
             },
             post: {}
@@ -293,37 +293,38 @@ module.exports = function (grunt) {
     //   }
     // },
 
-    htmlmin: {
-      dist: {
-        options: {
-          collapseWhitespace: true,
-          conservativeCollapse: true,
-          collapseBooleanAttributes: true,
-          removeCommentsFromCDATA: true,
-          removeOptionalTags: true
-        },
-        files: [{
-          expand: true,
-          cwd: '<%= yeoman.dist %>',
-          src: ['*.html', 'views/{,*/}*.html'],
-          dest: '<%= yeoman.dist %>'
-        }]
-      }
-    },
+    // --rh
+    // htmlmin: {
+    //   dist: {
+    //     options: {
+    //       collapseWhitespace: true,
+    //       conservativeCollapse: true,
+    //       collapseBooleanAttributes: true,
+    //       removeCommentsFromCDATA: true,
+    //       removeOptionalTags: true
+    //     },
+    //     files: [{
+    //       expand: true,
+    //       cwd: '<%= yeoman.dist %>',
+    //       src: ['*.html', 'views/{,*/}*.html'],
+    //       dest: '<%= yeoman.dist %>'
+    //     }]
+    //   }
+    // },
 
     // ngmin tries to make the code safe for minification automatically by
     // using the Angular long form for dependency injection. It doesn't work on
     // things like resolve or inject so those have to be done manually.
-    ngmin: {
-      dist: {
-        files: [{
-          expand: true,
-          cwd: '.tmp/concat/scripts',
-          src: '*.js',
-          dest: '.tmp/concat/scripts'
-        }]
-      }
-    },
+    // ngmin: {
+    //   dist: {
+    //     files: [{
+    //       expand: true,
+    //       cwd: '.tmp/concat/scripts',
+    //       src: '*.js',
+    //       dest: '.tmp/concat/scripts'
+    //     }]
+    //   }
+    // },
 
     // Replace Google CDN references
     // cdnify: { --rh
@@ -345,7 +346,7 @@ module.exports = function (grunt) {
             '.htaccess',
             '*.html',
             // 'views/{,*/}*.html', --rh
-            'images/{,*/}*.{webp}',
+            // 'images/{,*/}*.{webp}', --rh
             'styles/fonts/*', //  --rh
             'data/*' //  --rh
           ]
@@ -439,15 +440,15 @@ module.exports = function (grunt) {
     'concurrent:dist',
     // 'autoprefixer',  --rh
     'concat',
-    'ngmin',
+    // 'ngmin', --rh
     'copy:dist',
     // 'cdnify',  --rh
+    // 'uglify', --rh
     'cssmin',
-    'uglify',
     'filerev',
     'usemin',
-    'inline_angular_templates',
-    'htmlmin'
+    'inline_angular_templates'
+    // 'htmlmin' --rh
   ]);
 
   grunt.registerTask('default', [
