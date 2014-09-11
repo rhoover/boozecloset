@@ -54,10 +54,12 @@ angular.module('boozeApp', ['ngAnimate', 'ngCookies', 'ngResource', 'ngRoute', '
                 controller: 'InputCtrl'
             })
             .when('/beer/:id', {
-                templateUrl: 'views/details.html'
+                templateUrl: 'views/details.html',
+                controller: 'DetailCtrl'
             })
             .when('/whiskey/:id', {
-                templateUrl: 'views/details.html'
+                templateUrl: 'views/details.html',
+                controller: 'DetailCtrl'
             })
             .otherwise({
                 redirectTo: '/'

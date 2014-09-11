@@ -45,6 +45,15 @@ angular.module('boozeApp')
                     }
                 }, outWhiskeyList);
                 return outWhiskeyList;
+            },
+            singleBooze: function (input, arg) {
+                var outBoozeItem = [];
+                angular.forEach(input, function (boozeItem) {
+                    if (boozeItem.id === arg) {
+                        this.push(boozeItem);
+                    }
+                }, outBoozeItem);
+                return outBoozeItem.shift();
             }
         }; //end return
   });

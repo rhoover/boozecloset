@@ -22,10 +22,18 @@ angular.module('boozeApp')
             storeBoozeLocal: function (key, oldData, newData) {
                 sessionStorage.setItem(key, angular.toJson(oldData.concat(newData)));
             },
-            saveBoozeRemote: function (key, oldData, newData) {
+            storeBoozeRemote: function (key, oldData, newData) {
                 // var joinedData = oldData.concat(newData); //concat-ing two arrays of object literals: json on record and boozeForm[]
                 // var parsedJoinedData = angular.toJson(joinedData);
 
+            },
+            updateBoozeLocal: function (key, originalCloset, newObject) {
+                for (var i = 0; i < originalCloset.length; i++) {
+                    if (newObject.id === originalCloset[i].id) {
+                        originalCloset[i] = newObject;
+                        sessionStorage.setItem(key, angular.toJson(originalCloset));
+                    }
+                };
             }
             //Leaving these here just in case.......
             // removeBooze: function (key) {

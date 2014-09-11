@@ -1,1 +1,27 @@
-<p>This is the details view.</p>
+<section class="input-choose">
+    <p class="input-choose-header">Pick One:</p>
+    <button class="input-choose-beer">Edit {{boozeItem.name}}</button>
+    <button class="input-choose-whiskey">Delete {{boozeItem.name}}</button>
+</section>
+<form name="boozeEdit" class="input" ng-submit="boozeItem.upDate()" novalidate>
+
+    <label class="input-label">Company:</label>
+    <input type="text" name="company" ng-model="boozeItem.company" class="input-type-text">
+
+    <label class="input-label">Name:</label>
+    <input type="text" name="name" ng-model="boozeItem.name" class="input-type-text">
+
+    <label for="purchasedfrom" class="input-label">Purchased From:</label>
+    <input type="text" name="purchasedfrom" ng-model="boozeItem.purchasedfrom" class="input-type-text">
+
+    <label for="date" class="input-label">Purchased On:</label>
+    <input type="date" name="purchasedon" ng-model="boozeItem.purchasedon" class="input-type-text">
+
+    <label for="purchased-amount" class="input-label">Purchase Amount:</label>
+    <input type="number" step="any" name="price" ng-model="boozeItem.price" class="input-type-text">
+
+    <label for="status" class="input-label">Comments:</label>
+    <input type="textarea" name="status" ng-model="boozeItem.status" class="input-type-text">
+
+    <input type="submit" value="Save Updated Booze" class="input-submit"  ng-disabled="boozeEdit.$invalid" />
+</form>
