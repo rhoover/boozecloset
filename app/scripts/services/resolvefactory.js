@@ -15,8 +15,7 @@ angular
         return {
 
             boozeResolve: function () {
-                var checking = storageFactory.getBoozeData('booze-data-cache');
-                if (checking !== null) {
+                if (storageFactory.getBoozeData('booze-data-cache') !== null) {
                     return;
                 } else {
                     var elseReturn = getBoozeFactory.getBoozeData()
