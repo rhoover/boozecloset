@@ -26,8 +26,8 @@ angular.module('boozeApp', ['ngAnimate',  'ngRoute', 'ngTouch'])
 
         //courtesy: https://gist.github.com/s9tpepper/3328010
         // The PHP $_POST expects data w/ a form content type, not a JSON payload that Angular delivers
-        $httpProvider.defaults.headers.put['Content-Type'] = 'application/x-www-form-urlencoded';
-        $httpProvider.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
+        $httpProvider.defaults.headers.put['Content-Type'] = 'application/x-www-form-urlencoded; charset=UTF-8';
+        $httpProvider.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded; charset=UTF-8';
 
         var booze = function(resolveFactory) {
             return resolveFactory.boozeResolve();
@@ -141,9 +141,7 @@ angular.module('boozeApp')
         return {
             getBoozeData: function () {
 
-                var serviceUrl = 'data/booze.json';
-
-                return $http.get(serviceUrl)
+                return $http.get('data/booze.json')
                     .then(function (result) {
                         return result.data;
                     });
@@ -162,7 +160,7 @@ angular.module('boozeApp')
  */
 
 angular.module('boozeApp')
-    .factory('storageFactory', function () {
+    .factory('storageFactory', function ($http) {
 
         // Public API here
         return {
@@ -175,7 +173,18 @@ angular.module('boozeApp')
             storeBoozeLocal: function (key, oldData, newData) {
                 sessionStorage.setItem(key, angular.toJson(oldData.concat(newData)));
             },
-            storeBoozeRemote: function (key, oldData, newData) {
+            storeBoozeRemote: function (key, data) {
+                // return $http.post('data/booze.json', sessionStorage.getItem(key))
+                $http.post('/data/booze.json', sessionStorage.getItem(key))
+                    // .then(function (response) {
+                    //     return response;
+                    // });
+                    .success(function (data, status, headers, config) {
+                        console.log(headers);
+                    })
+                    .error(function (data, status, headers, config) {
+                        console.log(status, data);
+                    });
                 // var joinedData = oldData.concat(newData); //concat-ing two arrays of object literals: json on record and boozeForm[]
                 // var parsedJoinedData = angular.toJson(joinedData);
 
@@ -186,7 +195,7 @@ angular.module('boozeApp')
                         originalCloset[i] = newObject;
                         sessionStorage.setItem(key, angular.toJson(originalCloset));
                     }
-                };
+                }
             }
             //Leaving these here just in case.......
             // removeBooze: function (key) {
@@ -463,6 +472,7 @@ angular
             };
 
             storageFactory.updateBoozeLocal('booze-data-cache', all, boozeObjectNew);
+            storageFactory.storeBoozeRemote('booze-data-cache', all);
             alert('Your New Booze:  ' + $scope.boozeItem.name + '\n\nFrom:  ' + $scope.boozeItem.company + '\n\nHas Been Updated!!\n\n Locally For Now');
         };
 

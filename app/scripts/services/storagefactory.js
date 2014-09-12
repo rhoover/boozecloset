@@ -24,7 +24,7 @@ angular.module('boozeApp')
             },
             storeBoozeRemote: function (key, data) {
                 // return $http.post('data/booze.json', sessionStorage.getItem(key))
-                $http.post('/savejson.php', sessionStorage.getItem(key))
+                $http.post('/data/booze.json', sessionStorage.getItem(key))
                     // .then(function (response) {
                     //     return response;
                     // });
@@ -44,7 +44,7 @@ angular.module('boozeApp')
                         originalCloset[i] = newObject;
                         sessionStorage.setItem(key, angular.toJson(originalCloset));
                     }
-                };
+                }
             }
             //Leaving these here just in case.......
             // removeBooze: function (key) {

@@ -26,8 +26,8 @@ angular.module('boozeApp', ['ngAnimate',  'ngRoute', 'ngTouch'])
 
         //courtesy: https://gist.github.com/s9tpepper/3328010
         // The PHP $_POST expects data w/ a form content type, not a JSON payload that Angular delivers
-        $httpProvider.defaults.headers.put['Content-Type'] = 'application/x-www-form-urlencoded';
-        $httpProvider.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
+        $httpProvider.defaults.headers.put['Content-Type'] = 'application/x-www-form-urlencoded; charset=UTF-8';
+        $httpProvider.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded; charset=UTF-8';
 
         var booze = function(resolveFactory) {
             return resolveFactory.boozeResolve();
