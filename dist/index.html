@@ -89,7 +89,7 @@
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
 -->
 
-    <script src="scripts/scripts.8030640d.js"></script>
+    <script src="scripts/scripts.7bba56df.js"></script>
 </body>
 
 <!-- Begin Templates -->
@@ -154,7 +154,7 @@
     <button class="input-choose-beer">Edit Booze Item</button>
     <button class="input-choose-whiskey">Delete Booze Item</button>
 </section>
-<form name="boozeEdit" class="input" ng-submit="boozeItem.upDate()" novalidate>
+<form name="boozeEdit" class="input" method="post" ng-submit="boozeItem.upDate()" novalidate>
 
     <label class="input-label">Company:</label>
     <input type="text" name="company" ng-model="boozeItem.company" class="input-type-text">

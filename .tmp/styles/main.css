@@ -9,14 +9,27 @@ html {
   line-height: 1.5em;
 }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/helpers\/_typography\.scss}line{font-family:\0000364}}
+.input-label, .input-type-text {
+  font-size: 0.75em;
+  line-height: 1.5em;
+}
+@media (min-width: 37.5em) and (max-width: 64em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/helpers\/_typography\.scss}line{font-family:\0000364}}
+  .input-label, .input-type-text {
+    font-size: 0.75em;
+    line-height: 1.5em;
+  }
+}
+
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/helpers\/_typography\.scss}line{font-family:\0000367}}
-.search-beers, .search-whiskey, .nav-item, .input-choose-beer, .input-choose-whiskey, .input-type-text, .input-submit {
+.search-beers, .search-whiskey, .nav-item, .input-choose-beer, .input-choose-whiskey, .input-submit {
   font-size: 1em;
   line-height: 1.5em;
 }
 @media (min-width: 37.5em) and (max-width: 64em) {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/helpers\/_typography\.scss}line{font-family:\0000367}}
-  .search-beers, .search-whiskey, .nav-item, .input-choose-beer, .input-choose-whiskey, .input-type-text, .input-submit {
+  .search-beers, .search-whiskey, .nav-item, .input-choose-beer, .input-choose-whiskey, .input-submit {
     font-size: 1em;
     line-height: 1.5em;
   }
@@ -239,10 +252,6 @@ body::after {
   padding: 0 8.3333333333%;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/components\/_input\.scss}line{font-family:\0000311}}
-.input-choose-header {
-  margin: 0;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/components\/_input\.scss}line{font-family:\0000314}}
 .input-choose-beer, .input-choose-whiskey {
   width: 50%;
   float: left;
@@ -254,46 +263,47 @@ body::after {
   border-radius: .25em 0 0 .25em;
   background-color: #fdfdfd;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/components\/_input\.scss}line{font-family:\0000325}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/components\/_input\.scss}line{font-family:\0000322}}
 .input-choose-whiskey {
   border-right: 0.1em solid #527692;
   border-radius: 0 .25em .25em 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/components\/_input\.scss}line{font-family:\0000331}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/components\/_input\.scss}line{font-family:\0000328}}
 .input-label {
-  width: 100%;
+  width: 41.6666666667%;
   float: left;
+  padding: 0.75em 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/components\/_input\.scss}line{font-family:\0000335}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/components\/_input\.scss}line{font-family:\0000334}}
 .input-type-text {
-  width: 100%;
+  width: 55%;
   padding: 0.375em 0 0.375em 0.375em;
-  margin-bottom: 0.75em;
+  margin-bottom: 1.5em;
   border: 0.1em solid #527692;
   border-radius: .25em;
   color: #4b4b4b;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/components\/_input\.scss}line{font-family:\0000343}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/components\/_input\.scss}line{font-family:\0000342}}
 .input-type-text:focus {
   -moz-box-shadow: 0 0 0.7em rgba(82, 118, 146, 0.6);
   -webkit-box-shadow: 0 0 0.7em rgba(82, 118, 146, 0.6);
   box-shadow: 0 0 0.7em rgba(82, 118, 146, 0.6);
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/components\/_input\.scss}line{font-family:\0000348}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/components\/_input\.scss}line{font-family:\0000347}}
 .input-preview {
   color: #4b4b4b;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/components\/_input\.scss}line{font-family:\0000350}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/components\/_input\.scss}line{font-family:\0000349}}
 .input-preview-header {
   padding: 0.375em 0;
   border-top: 0.05em solid #527692;
   border-bottom: 0.05em solid #527692;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/components\/_input\.scss}line{font-family:\0000356}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/components\/_input\.scss}line{font-family:\0000355}}
 .input-preview-item {
   margin: 0.375em 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/components\/_input\.scss}line{font-family:\0000360}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/components\/_input\.scss}line{font-family:\0000359}}
 .input-submit {
   width: 100%;
   float: left;
@@ -305,7 +315,7 @@ body::after {
   border-radius: .25em;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/components\/_input\.scss}line{font-family:\0000372}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/components\/_input\.scss}line{font-family:\0000371}}
 .typeActive {
   background-color: #e3c979;
 }

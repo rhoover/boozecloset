@@ -1,16 +1,13 @@
 .input {
-    @include span(12 of 12 no-gutters);
-    @include translateZ(50); //hack to create composite layer
-    margin-bottom: rhythm(.5, 16px);
-    padding: rhythm(1, 16px) span(1 of 12) rhythm(.5, 16px) span(1 of 12);
-    color: $black;
+        @include span(12 of 12 no-gutters);
+        @include translateZ(50); //hack to create composite layer
+        margin-bottom: rhythm(.5, 16px);
+        padding: rhythm(1, 16px) span(1 of 12) rhythm(.5, 16px) span(1 of 12);
+        color: $black;
     &-choose {
         border-radius: .25em;
         margin-top: rhythm(6, 16px);
         padding: 0 span(1 of 12);
-        &-header {
-            margin: 0;
-        }
         &-beer {
             @include span(6 of 12 no-gutters);
             text-align: center;
@@ -29,14 +26,16 @@
         }
     }
     &-label {
-        @include span(12 of 12 no-gutters);
+        @include span(5 of 12 no-gutters);
+        padding: rhythm(.5, 16px) 0;
+        @extend %small-font;
     }
     &-type {
         &-text {
-            @extend %base-font;
-            width: 100%;
+            @extend %small-font;
+            width: 55%;
             padding: rhythm(.25, 16px) 0 rhythm(.25, 16px) .375em;
-            margin-bottom: rhythm(.5, 16px);
+            margin-bottom: rhythm(1, 16px);
             border: .1em solid $cyan;
             border-radius: .25em;
             color: $black;

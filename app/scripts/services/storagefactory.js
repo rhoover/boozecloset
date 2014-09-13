@@ -24,12 +24,12 @@ angular.module('boozeApp')
             },
             storeBoozeRemote: function (key, data) {
                 // return $http.post('data/booze.json', sessionStorage.getItem(key))
-                $http.post('/data/booze.json', sessionStorage.getItem(key))
+                $http.post('jsonsave.php', sessionStorage.getItem(key))
                     // .then(function (response) {
                     //     return response;
                     // });
                     .success(function (data, status, headers, config) {
-                        console.log(headers);
+                        console.log(status, data);
                     })
                     .error(function (data, status, headers, config) {
                         console.log(status, data);

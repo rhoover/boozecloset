@@ -10,7 +10,7 @@
 
 angular
     .module('boozeApp')
-    .controller('InputCtrl', function ($scope, beerkey, whiskeykey, randomnumber, storageFactory) {
+    .controller('InputCtrl', function ($scope, $location, beerkey, whiskeykey, randomnumber, storageFactory) {
 
         $scope.boozeForm = [];
 
@@ -51,5 +51,6 @@ angular
             storageFactory.storeBoozeLocal('booze-data-cache', boozeDataOld, boozeDataNew);
             // storageFactory.saveBoozeRemote('booze-data-cache', boozeDataOld, boozeDataNew);
             alert('Your New Booze:  ' + $scope.boozeForm.name + '\n\nFrom:  ' + $scope.boozeForm.company + '\n\nHas Been Added!!\n\n Locally For Now');
+            $location.path('/');
         };
   });
