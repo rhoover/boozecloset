@@ -4,6 +4,14 @@
 </section>
 <form name="boozeEdit" class="input" ng-submit="boozeItem.upDate()" novalidate>
 
+    <label class="input-label">Booze Type:</label>
+    <div class="input-type-select">
+        <select ng-model="boozeItem.type">
+            <option value="beer">beer</option>
+            <option value="whiskey">whiskey</option>
+        </select>
+    </div>
+
     <label class="input-label">Company:</label>
     <input type="text" name="company" ng-model="boozeItem.company" class="input-type-text">
 
@@ -22,5 +30,5 @@
     <label for="status" class="input-label">Comments:</label>
     <input type="textarea" name="status" ng-model="boozeItem.status" class="input-type-text">
 
-    <input type="submit" value="Save Updated Booze" class="input-submit"  ng-disabled="boozeEdit.$invalid" />
+    <input type="submit" name="submit" value="Save Updated Booze" class="input-submit"  ng-disabled="boozeEdit.$invalid" />
 </form>

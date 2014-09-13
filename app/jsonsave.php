@@ -1,10 +1,11 @@
 <?php
 
     header('Content-Type: application/json');
-    $incomingBooze = json_encode($_POST);
+    // $incomingBooze = json_encode($_POST);
+    $incomingBooze = $_POST["submit"];
     // $originalBooze = dirname(__FILE__)."/data/booze.json";
     // file_put_contents($originalBooze, $incomingBooze);
-    file_put_contents('data/booze.json', $incomingBooze);
+    file_put_contents('/data/booze.json', $incomingBooze);
 ?>
 
 <!-- http://stackoverflow.com/questions/3921520/writing-json-object-to-json-file-on-server -->

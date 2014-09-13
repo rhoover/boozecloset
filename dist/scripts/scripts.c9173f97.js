@@ -24,11 +24,6 @@ angular.module('boozeApp', ['ngAnimate',  'ngRoute', 'ngTouch'])
 
     .config(function ($routeProvider) {
 
-        //courtesy: https://gist.github.com/s9tpepper/3328010
-        // The PHP $_POST expects data w/ a form content type, not a JSON payload that Angular delivers
-        // $httpProvider.defaults.headers.put['Content-Type'] = 'application/x-www-form-urlencoded; charset=UTF-8';
-        // $httpProvider.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded; charset=UTF-8';
-
         var booze = function(resolveFactory) {
             return resolveFactory.boozeResolve();
         };
@@ -78,38 +73,40 @@ angular.module('boozeApp', ['ngAnimate',  'ngRoute', 'ngTouch'])
         var param = function(obj) {
         var query = '', name, value, fullSubName, subName, subValue, innerObj, i;
 
-        for(name in obj) {
-          value = obj[name];
+        for (name in obj) {
+            value = obj[name];
 
-          if(value instanceof Array) {
-            for(i=0; i<value.length; ++i) {
-              subValue = value[i];
-              fullSubName = name + '[' + i + ']';
-              innerObj = {};
-              innerObj[fullSubName] = subValue;
-              query += param(innerObj) + '&';
+            if (value instanceof Array) {
+                for (i=0; i<value.length; ++i) {
+                    subValue = value[i];
+                    fullSubName = name + '[' + i + ']';
+                    innerObj = {};
+                    innerObj[fullSubName] = subValue;
+                    query += param(innerObj) + '&';
+                }
             }
-          }
-          else if(value instanceof Object) {
-            for(subName in value) {
-              subValue = value[subName];
-              fullSubName = name + '[' + subName + ']';
-              innerObj = {};
-              innerObj[fullSubName] = subValue;
-              query += param(innerObj) + '&';
+            else if (value instanceof Object) {
+                for (subName in value) {
+                    subValue = value[subName];
+                    fullSubName = name + '[' + subName + ']';
+                    innerObj = {};
+                    innerObj[fullSubName] = subValue;
+                    query += param(innerObj) + '&';
+                }
             }
-          }
-          else if(value !== undefined && value !== null)
-            query += encodeURIComponent(name) + '=' + encodeURIComponent(value) + '&';
+            else if (value !== undefined && value !== null) {
+                query += encodeURIComponent(name) + '=' + encodeURIComponent(value) + '&';
+            }
         }
-
         return query.length ? query.substr(0, query.length - 1) : query;
         };
 
         // Override $http service's default transformRequest
         $httpProvider.defaults.transformRequest = [function(data) {
-        return angular.isObject(data) && String(data) !== '[object File]' ? param(data) : data;
+            return angular.isObject(data) && String(data) !== '[object File]' ? param(data) : data;
         }];
+
+
     });
 
 'use strict';
@@ -306,7 +303,7 @@ angular
 
 angular
     .module('boozeApp')
-    .controller('InputCtrl', function ($scope, beerkey, whiskeykey, randomnumber, storageFactory) {
+    .controller('InputCtrl', function ($scope, $location, beerkey, whiskeykey, randomnumber, storageFactory) {
 
         $scope.boozeForm = [];
 
@@ -347,6 +344,7 @@ angular
             storageFactory.storeBoozeLocal('booze-data-cache', boozeDataOld, boozeDataNew);
             // storageFactory.saveBoozeRemote('booze-data-cache', boozeDataOld, boozeDataNew);
             alert('Your New Booze:  ' + $scope.boozeForm.name + '\n\nFrom:  ' + $scope.boozeForm.company + '\n\nHas Been Added!!\n\n Locally For Now');
+            $location.path('/');
         };
   });
 
