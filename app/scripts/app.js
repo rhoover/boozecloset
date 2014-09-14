@@ -50,11 +50,17 @@ angular.module('boozeApp', ['ngAnimate',  'ngRoute', 'ngTouch'])
             })
             .when('/beer/:id', {
                 templateUrl: 'views/details.html',
-                controller: 'DetailCtrl'
+                controller: 'DetailCtrl',
+                resolve: {
+                    boozejson: booze
+                }
             })
             .when('/whiskey/:id', {
                 templateUrl: 'views/details.html',
-                controller: 'DetailCtrl'
+                controller: 'DetailCtrl',
+                resolve: {
+                    boozejson: booze
+                }
             })
             .otherwise({
                 redirectTo: '/'

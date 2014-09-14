@@ -10,27 +10,36 @@
 
 angular
     .module('boozeApp')
-    .controller('DetailCtrl', function ($scope, $routeParams, storageFactory, listdataFilter) {
+    .controller('DetailCtrl', function ($scope, $routeParams, $location, $window, storageFactory, listdataFilter) {
 
-        $scope.boozeItem = listdataFilter.singleBooze(storageFactory.getBoozeData('booze-data-cache'), $routeParams.id);
+        $scope.boozeItem = listdataFilter.singleBooze(storageFactory.getBoozeData('booze-data-cache'), $routeParams.id); //aka: (input, arg)
 
         $scope.boozeItem.upDate = function () {
 
-            var all = storageFactory.getBoozeData('booze-data-cache');
             var boozeObjectNew = {
-                    id: $scope.boozeItem.id,
-                    type: $scope.boozeItem.type,
-                    purchasedfrom: $scope.boozeItem.purchasedfrom,
-                    purchasedon: $scope.boozeItem.purchasedon,
-                    price: $scope.boozeItem.price,
-                    name: $scope.boozeItem.name,
-                    company: $scope.boozeItem.company,
-                    status: $scope.boozeItem.status
+                id: $scope.boozeItem.id,
+                type: $scope.boozeItem.type,
+                purchasedfrom: $scope.boozeItem.purchasedfrom,
+                purchasedon: $scope.boozeItem.purchasedon,
+                price: $scope.boozeItem.price,
+                name: $scope.boozeItem.name,
+                company: $scope.boozeItem.company,
+                status: $scope.boozeItem.status
             };
 
-            storageFactory.updateBoozeLocal('booze-data-cache', all, boozeObjectNew);
-            storageFactory.storeBoozeRemote('booze-data-cache', all);
-            alert('Your New Booze:  ' + $scope.boozeItem.name + '\n\nFrom:  ' + $scope.boozeItem.company + '\n\nHas Been Updated!!\n\n Locally For Now');
-        };
+            storageFactory.updateBoozeLocal('booze-data-cache', storageFactory.getBoozeData('booze-data-cache'), boozeObjectNew); //aka: (key, originalCloset, newObject)
+            storageFactory.storeBoozeRemote('booze-data-cache', storageFactory.getBoozeData('booze-data-cache')); //aka (key, data)
+
+            $window.alert('Your New Booze:  ' + $scope.boozeItem.name + '\n\nFrom:  ' + $scope.boozeItem.company + '\n\nHas Been Updated!!\n\n Locally For Now');
+
+            var newUrl;
+            if (boozeObjectNew.type !== 'beer') {
+                newUrl = '/' + boozeObjectNew.type;
+            } else {
+                newUrl = '/';
+            }
+            $location.path(newUrl);
+
+        }; // end upDate
 
     });

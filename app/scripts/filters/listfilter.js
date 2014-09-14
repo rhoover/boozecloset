@@ -47,6 +47,7 @@ angular.module('boozeApp')
                 return outWhiskeyList;
             },
             singleBooze: function (input, arg) {
+
                 var outBoozeItem = [];
                 angular.forEach(input, function (boozeItem) {
                     if (boozeItem.id === arg) {

@@ -16,7 +16,8 @@ angular.module('boozeApp')
                 //Courtesy: http://stackoverflow.com/a/1527834
                 var min = 100000;
                 var max = 200000;
-                return Math.floor(Math.random() * (max - min + 1)) + min;
+                var stringMe = Math.floor(Math.random() * (max - min + 1)) + min;
+                return stringMe.toString();
             }
         };
     });

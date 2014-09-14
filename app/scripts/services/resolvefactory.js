@@ -10,7 +10,7 @@
 
 angular
     .module('boozeApp')
-    .factory('resolveFactory', function (storageFactory, getBoozeFactory) {
+    .factory('resolveFactory', function ($window, storageFactory, getBoozeFactory) {
 
         return {
 
@@ -23,7 +23,7 @@ angular
                             storageFactory.storeGetBoozeData('booze-data-cache', data);
                         },
                         function () {
-                            alert('They Peed on Your Fucking Rug Dude');
+                            $window.alert('They Peed on Your Fucking Rug Dude');
                         });
                     return elseReturn;
                 }
