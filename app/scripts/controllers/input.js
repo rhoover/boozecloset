@@ -48,6 +48,7 @@ angular
             ];
 
             storageFactory.storeBoozeLocal('booze-data-cache', storageFactory.getBoozeData('booze-data-cache'), boozeDataNew); //aka: (key, oldData, NewData)
+            storageFactory.storeBoozeRemote('booze-data-cache', storageFactory.getBoozeData('booze-data-cache')); //aka (key, data)
 
             $window.alert('Your New Booze:  ' + $scope.boozeForm.name + '\n\nFrom:  ' + $scope.boozeForm.company + '\n\nHas Been Added!!\n\n Locally For Now');
 

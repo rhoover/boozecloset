@@ -68,7 +68,7 @@ angular.module('boozeApp', ['ngAnimate',  'ngRoute', 'ngTouch'])
     })
 
     .config(function ($httpProvider) {
-        $httpProvider.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=utf-8';
+        $httpProvider.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
 
         /**
         * The workhorse; converts an object to x-www-form-urlencoded serialization.

@@ -30,7 +30,7 @@ angular
             storageFactory.updateBoozeLocal('booze-data-cache', storageFactory.getBoozeData('booze-data-cache'), boozeObjectNew); //aka: (key, originalCloset, newObject)
             storageFactory.storeBoozeRemote('booze-data-cache', storageFactory.getBoozeData('booze-data-cache')); //aka (key, data)
 
-            $window.alert('Your New Booze:  ' + $scope.boozeItem.name + '\n\nFrom:  ' + $scope.boozeItem.company + '\n\nHas Been Updated!!\n\n Locally For Now');
+            $window.alert('Your New Booze:  ' + $scope.boozeItem.name + '\n\nFrom:  ' + $scope.boozeItem.company + '\n\nHas Been Updated!!\n\n Both Locally and on the Server!');
 
             var newUrl;
             if (boozeObjectNew.type !== 'beer') {
