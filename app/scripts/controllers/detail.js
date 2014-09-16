@@ -10,9 +10,9 @@
 
 angular
     .module('boozeApp')
-    .controller('DetailCtrl', function ($scope, $routeParams, $location, $window, storageFactory, listdataFilter) {
+    .controller('DetailCtrl', function ($scope, $routeParams, $location, $window, storageFactory, listdataFilter, storagekey) {
 
-        $scope.boozeItem = listdataFilter.singleBooze(storageFactory.getBoozeData('booze-data-cache'), $routeParams.id); //aka: (input, arg)
+        $scope.boozeItem = listdataFilter.singleBooze(storageFactory.getBoozeData(storagekey), $routeParams.id); //aka: (input, arg)
 
         $scope.boozeItem.upDate = function () {
 
@@ -27,8 +27,8 @@ angular
                 status: $scope.boozeItem.status
             };
 
-            storageFactory.updateBoozeLocal('booze-data-cache', storageFactory.getBoozeData('booze-data-cache'), boozeObjectNew); //aka: (key, originalCloset, newObject)
-            storageFactory.storeBoozeRemote('booze-data-cache', storageFactory.getBoozeData('booze-data-cache')); //aka (key, data)
+            storageFactory.updateBoozeLocal(storagekey, storageFactory.getBoozeData(storagekey), boozeObjectNew); //aka: (key, originalCloset, newObject)
+            storageFactory.storeBoozeRemote(storagekey, storageFactory.getBoozeData(storagekey)); //aka (key, data)
 
             $window.alert('Your New Booze:  ' + $scope.boozeItem.name + '\n\nFrom:  ' + $scope.boozeItem.company + '\n\nHas Been Updated!!\n\n Both Locally and on the Server!');
 

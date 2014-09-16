@@ -10,8 +10,8 @@
 
 angular
     .module('boozeApp')
-    .controller('WhiskeyCtrl', function ($scope, listdataFilter, storageFactory, whiskeykey) {
+    .controller('WhiskeyCtrl', function ($scope, listdataFilter, storageFactory, whiskeykey, storagekey) {
 
-        $scope.whiskeyList = listdataFilter.beer(storageFactory.getBoozeData('booze-data-cache'), whiskeykey);
+        $scope.whiskeyList = listdataFilter.beer(storageFactory.getBoozeData(storagekey), whiskeykey);
 
   });
