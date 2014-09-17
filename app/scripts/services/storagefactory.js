@@ -38,6 +38,14 @@ angular.module('boozeApp')
                         sessionStorage.setItem(key, angular.toJson(originalCloset));
                     }
                 }
+            },
+            removeBoozeItem: function (key, originalCloset, boozeObject) {
+                for (var i = 0; i < originalCloset.length; i++) {
+                    if (boozeObject.id === originalCloset[i].id) {
+                        originalCloset.splice(i, 1);
+                        sessionStorage.setItem(key, angular.toJson(originalCloset));
+                    }
+                };
             }
             //Leaving these here just in case.......
             // removeBooze: function (key) {

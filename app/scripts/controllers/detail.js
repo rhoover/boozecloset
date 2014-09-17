@@ -13,6 +13,7 @@ angular
     .controller('DetailCtrl', function ($scope, $routeParams, $location, $window, storageFactory, listdataFilter, storagekey) {
 
         $scope.boozeItem = listdataFilter.singleBooze(storageFactory.getBoozeData(storagekey), $routeParams.id); //aka: (input, arg)
+        var boozeItem = $scope.boozeItem;
 
         $scope.boozeItem.upDate = function () {
 
@@ -41,5 +42,19 @@ angular
             $location.path(newUrl);
 
         }; // end upDate
+
+        $scope.removeItem = function () {
+            storageFactory.removeBoozeItem(storagekey, storageFactory.getBoozeData(storagekey), boozeItem);//aka: (key, originalCloset, newObject)
+            storageFactory.storeBoozeRemote(storagekey, storageFactory.getBoozeData(storagekey)); //aka (key, data)
+            $window.alert('Your New Booze:  ' + $scope.boozeItem.name + '\n\nFrom:  ' + $scope.boozeItem.company + '\n\nHas Been Updated!!\n\n Both Locally and on the Server!');
+
+            var newUrl;
+            if (boozeItem.type !== 'beer') {
+                newUrl = '/' + boozeItem.type;
+            } else {
+                newUrl = '/';
+            }
+            $location.path(newUrl);
+        }; //end removeItem
 
     });
