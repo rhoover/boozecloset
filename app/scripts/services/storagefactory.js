@@ -18,8 +18,9 @@ angular.module('boozeApp')
             storeGetBoozeData: function (key, retrievedData) {
                 sessionStorage.setItem(key, angular.toJson(retrievedData));
             },
-            storeBoozeLocal: function (key, oldData, newData) {
-                sessionStorage.setItem(key, angular.toJson(oldData.concat(newData)));
+            addToBoozeLocal: function (key, oldData, newData) {
+                oldData.push(newData);
+                sessionStorage.setItem(key, angular.toJson(oldData));
             },
             storeBoozeRemote: function (key, data) {
                 $http.post('jsonsave.php', sessionStorage.getItem(key))
@@ -45,7 +46,7 @@ angular.module('boozeApp')
                         originalCloset.splice(i, 1);
                         sessionStorage.setItem(key, angular.toJson(originalCloset));
                     }
-                };
+                }
             }
             //Leaving these here just in case.......
             // removeBooze: function (key) {

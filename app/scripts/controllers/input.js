@@ -33,7 +33,7 @@ angular
 
             // var randomId = randomnumber.randomid();
 
-            var boozeDataNew = [
+            var boozeDataNew = //[
                 {
                     // id: randomId,
                     id: randomnumber.randomid(),
@@ -44,10 +44,10 @@ angular
                     name: $scope.boozeForm.name,
                     company: $scope.boozeForm.company,
                     status: $scope.boozeForm.status
-                }
-            ];
+                };
+           // ];
 
-            storageFactory.storeBoozeLocal(storagekey, storageFactory.getBoozeData(storagekey), boozeDataNew); //aka: (key, oldData, NewData)
+            storageFactory.addToBoozeLocal(storagekey, storageFactory.getBoozeData(storagekey), boozeDataNew); //aka: (key, oldData, NewData)
             storageFactory.storeBoozeRemote(storagekey, storageFactory.getBoozeData(storagekey)); //aka (key, data)
 
             $window.alert('Your New Booze:  ' + $scope.boozeForm.name + '\n\nFrom:  ' + $scope.boozeForm.company + '\n\nHas Been Added!!\n\n Locally and to the Server');

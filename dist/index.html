@@ -70,7 +70,7 @@
 
     <script src="scripts/vendor.4112c6b3.js"></script>
 
-    <script src="scripts/scripts.06590977.js"></script>
+    <script src="scripts/scripts.76b4bee7.js"></script>
 </body>
 
 <!-- Begin Templates -->
@@ -133,8 +133,8 @@
 
 <script type="text/ng-template" id="views/details.html">
 <section class="input-choose">
-    <button class="input-choose-beer">Edit Booze Item</button>
-    <button class="input-choose-whiskey">Delete Booze Item</button>
+    <button class="input-choose-beer">Edit Item</button>
+    <button class="input-choose-whiskey" ng-click="removeItem()">Delete Item</button>
 </section>
 <form name="boozeEdit" class="input" ng-submit="boozeItem.upDate()" novalidate>
 

@@ -10,17 +10,17 @@
 
 angular
     .module('boozeApp')
-    .factory('resolveFactory', function ($window, storageFactory, getBoozeFactory) {
+    .factory('resolveFactory', function ($window, storageFactory, getBoozeFactory, storagekey) {
 
         return {
 
             boozeResolve: function () {
-                if (storageFactory.getBoozeData('booze-data-cache') !== null) {
+                if (storageFactory.getBoozeData(storagekey) !== null) {
                     return;
                 } else {
                     var elseReturn = getBoozeFactory.getBoozeData()
                         .then(function (data) {
-                            storageFactory.storeGetBoozeData('booze-data-cache', data);
+                            storageFactory.storeGetBoozeData(storagekey, data);
                         },
                         function () {
                             $window.alert('They Peed on Your Fucking Rug Dude');
