@@ -31,7 +31,6 @@ angular
 
         $scope.boozeForm.saveBooze = function () {
 
-
             var boozeDataNew = {
                     id: randomnumber.randomid(),
                     type: $scope.boozeForm.type,
