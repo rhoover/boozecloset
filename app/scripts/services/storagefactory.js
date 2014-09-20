@@ -19,7 +19,7 @@ angular.module('boozeApp')
                 sessionStorage.setItem(key, angular.toJson(retrievedData));
             },
             addToBoozeLocal: function (key, oldData, newData) {
-                oldData.push(newData);
+                oldData.push(newData); // necessary because push() returns the new array length, but we want instead the new array
                 sessionStorage.setItem(key, angular.toJson(oldData));
             },
             storeBoozeRemote: function (key, data) {

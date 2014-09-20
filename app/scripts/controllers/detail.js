@@ -10,7 +10,7 @@
 
 angular
     .module('boozeApp')
-    .controller('DetailCtrl', function ($scope, $routeParams, $location, $window, storageFactory, listdataFilter, storagekey) {
+    .controller('DetailCtrl', function ($scope, $routeParams, $location, $window, storageFactory, listdataFilter, newUrlFactory, alertFactory, storagekey) {
 
         $scope.boozeItem = listdataFilter.singleBooze(storageFactory.getBoozeData(storagekey), $routeParams.id); //aka: (input, arg)
         var boozeItem = $scope.boozeItem;
@@ -31,30 +31,20 @@ angular
             storageFactory.updateBoozeLocal(storagekey, storageFactory.getBoozeData(storagekey), boozeObjectNew); //aka: (key, originalCloset, newObject)
             storageFactory.storeBoozeRemote(storagekey, storageFactory.getBoozeData(storagekey)); //aka (key, data)
 
-            $window.alert('Your New Booze:  ' + $scope.boozeItem.name + '\n\nFrom:  ' + $scope.boozeItem.company + '\n\nHas Been Updated!!\n\n Both Locally and on the Server!');
+            alertFactory.updateAlert($scope.boozeItem.name, $scope.boozeItem.company);
 
-            var newUrl;
-            if (boozeObjectNew.type !== 'beer') {
-                newUrl = '/' + boozeObjectNew.type;
-            } else {
-                newUrl = '/';
-            }
-            $location.path(newUrl);
+            newUrlFactory.newUrl(boozeItem.type);
 
         }; // end upDate
 
         $scope.removeItem = function () {
             storageFactory.removeBoozeItem(storagekey, storageFactory.getBoozeData(storagekey), boozeItem);//aka: (key, originalCloset, newObject)
             storageFactory.storeBoozeRemote(storagekey, storageFactory.getBoozeData(storagekey)); //aka (key, data)
-            $window.alert('Your New Booze:  ' + $scope.boozeItem.name + '\n\nFrom:  ' + $scope.boozeItem.company + '\n\nHas Been Updated!!\n\n Both Locally and on the Server!');
 
-            var newUrl;
-            if (boozeItem.type !== 'beer') {
-                newUrl = '/' + boozeItem.type;
-            } else {
-                newUrl = '/';
-            }
-            $location.path(newUrl);
+            alertFactory.removeAlert($scope.boozeItem.name, $scope.boozeItem.company);
+
+            newUrlFactory.newUrl(boozeItem.type);
+
         }; //end removeItem
 
     });

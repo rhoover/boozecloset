@@ -10,7 +10,7 @@
 
 angular
     .module('boozeApp')
-    .controller('InputCtrl', function ($scope, $location, $window, beerkey, whiskeykey, storagekey, randomnumber, storageFactory) {
+    .controller('InputCtrl', function ($scope, $location, $window, beerkey, whiskeykey, storagekey, randomnumber, storageFactory, alertFactory, newUrlFactory) {
 
         $scope.boozeForm = [];
 
@@ -31,11 +31,8 @@ angular
 
         $scope.boozeForm.saveBooze = function () {
 
-            // var randomId = randomnumber.randomid();
 
-            var boozeDataNew = //[
-                {
-                    // id: randomId,
+            var boozeDataNew = {
                     id: randomnumber.randomid(),
                     type: $scope.boozeForm.type,
                     purchasedfrom: $scope.boozeForm.purchasedfrom,
@@ -45,20 +42,13 @@ angular
                     company: $scope.boozeForm.company,
                     status: $scope.boozeForm.status
                 };
-           // ];
 
             storageFactory.addToBoozeLocal(storagekey, storageFactory.getBoozeData(storagekey), boozeDataNew); //aka: (key, oldData, NewData)
             storageFactory.storeBoozeRemote(storagekey, storageFactory.getBoozeData(storagekey)); //aka (key, data)
 
-            $window.alert('Your New Booze:  ' + $scope.boozeForm.name + '\n\nFrom:  ' + $scope.boozeForm.company + '\n\nHas Been Added!!\n\n Locally and to the Server');
+            alertFactory.addAlert($scope.boozeForm.name, $scope.boozeForm.company);
 
-            var newUrl;
-            if (boozeDataNew.type !== 'beer') {
-                newUrl = '/' + boozeDataNew[0].type;
-            } else {
-                newUrl = '/';
-            }
-            $location.path(newUrl);
+            newUrlFactory.newUrl($scope.boozeForm.type);
 
         }; //end saveBooze
   });
