@@ -29,6 +29,13 @@
         @include span(5 of 12 no-gutters);
         padding: rhythm(.5, 16px) 0;
         @extend %small-font;
+        &-radio {
+            position: relative;
+            cursor: pointer;
+            display: inline-block;
+            padding-left: gutters(6);
+            margin-right: gutters(6);
+        }
     }
     &-type {
         &-text {
@@ -44,8 +51,7 @@
             }
         }
         &-radio {
-            // @extend %small-font;
-            @include span(6.5 of 12 no-gutters);
+            @include span(12 of 12 no-gutters);
             padding: rhythm(.25, 16px) 0 rhythm(.25, 16px) .375em;
             margin-bottom: rhythm(1, 16px);
             color: $black;;
