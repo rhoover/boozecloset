@@ -43,15 +43,12 @@
                 @include box-shadow(0 0 .7em rgba($cyan, .6));
             }
         }
-        &-select {
-            @extend %small-font;
+        &-radio {
+            // @extend %small-font;
             @include span(6.5 of 12 no-gutters);
             padding: rhythm(.25, 16px) 0 rhythm(.25, 16px) .375em;
             margin-bottom: rhythm(1, 16px);
-            border: .1em solid $cyan;
-            border-radius: .25em;
-            color: $black;
-            background-color: white;
+            color: $black;;
             & select {
                 width: 110%;
                 overflow: hidden;
