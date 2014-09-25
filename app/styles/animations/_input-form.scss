@@ -4,13 +4,14 @@
 }
 .input-animate.ng-enter {
     @include transition-property(all);
+    @include transition-delay(.75s);
     opacity: 0;
 }
 .input-animate.ng-enter.ng-enter-active {
     opacity: 1;
 }
 .input-animate.ng-leave {
-    opacity: 1
+    opacity: 1;
 }
 .input-animate.ng-leave-active {
     opacity: 0;

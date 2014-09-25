@@ -34,7 +34,7 @@
             cursor: pointer;
             display: inline-block;
             padding-left: gutters(6);
-            margin-right: gutters(6);
+            margin-right: 0;
         }
     }
     &-type {
@@ -89,4 +89,8 @@
 
 .typeActive {
     background-color: $yellow;
+}
+
+input[type=radio] {
+    margin: rhythm(.55, 16px) 0;
 }
