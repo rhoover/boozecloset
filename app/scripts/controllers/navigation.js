@@ -7,6 +7,7 @@
  * # NavigationCtrl
  * Controller of the boozeApp
  */
+
 angular
     .module('boozeApp')
     .controller('NavCtrl', function ($scope, $location) {

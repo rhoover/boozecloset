@@ -7,7 +7,8 @@
  * # whiskeyinput
  */
 
-angular.module('boozeApp')
+angular
+    .module('boozeApp')
     .directive('whiskeyInput', function () {
         return {
             templateUrl: 'views/whiskeyinputform.html',

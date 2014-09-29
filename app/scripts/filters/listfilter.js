@@ -8,7 +8,8 @@
  * # listfilter
  * Filter in the boozeApp.
  */
-angular.module('boozeApp')
+angular
+    .module('boozeApp')
     .filter('listdata', function () {
 
         return {

@@ -7,7 +7,8 @@
  * # beerinput
  */
 
-angular.module('boozeApp')
+angular
+    .module('boozeApp')
     .directive('beerInput', function () {
         return {
             templateUrl: 'views/beerinputform.html',

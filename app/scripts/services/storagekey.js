@@ -8,5 +8,6 @@
  * Constant in the boozeApp.
  */
 
-angular.module('boozeApp')
+angular
+    .module('boozeApp')
     .constant('storagekey', 'booze-data-cache');

@@ -8,7 +8,8 @@
  * Factory in the boozeApp.
  */
 
-angular.module('boozeApp')
+angular
+    .module('boozeApp')
     .factory('storageFactory', function ($http) {
 
         return {

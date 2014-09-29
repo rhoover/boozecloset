@@ -8,5 +8,6 @@
  * Constant in the boozeApp.
  */
 
-angular.module('boozeApp')
-  .constant('whiskeykey', 'whiskey');
+angular
+    .module('boozeApp')
+    .constant('whiskeykey', 'whiskey');
