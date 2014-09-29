@@ -52,7 +52,7 @@
     <link rel="apple-touch-icon" href="images/apple-touch-icon-57x57.png">
 
 
-    <link rel="stylesheet" href="styles/main.dc037097.css">
+    <link rel="stylesheet" href="styles/main.03892aa5.css">
   </head>
   <body ng-app="boozeApp">
 
@@ -70,7 +70,7 @@
 
     <script src="scripts/vendor.4112c6b3.js"></script>
 
-    <script src="scripts/scripts.99b0e003.js"></script>
+    <script src="scripts/scripts.b8a57756.js"></script>
 </body>
 
 <!-- Begin Templates -->
@@ -133,16 +133,16 @@
 
 <script type="text/ng-template" id="views/details.html">
 <section class="input-choose">
-    <button class="input-choose-beer">Edit Item</button>
+    <button class="input-choose-beer" ng-click="editValue=!editValue" ng-class="{'typeActive': !editValue, 'typeActive': editValue}">Edit Item</button>
     <button class="input-choose-whiskey" ng-click="removeItem()">Delete Item</button>
 </section>
-<form name="boozeEdit" class="input" ng-submit="boozeItem.upDate()" novalidate>
+<form name="boozeEdit" class="input" ng-submit="boozeItem.upDate()" ng-if="editValue" novalidate>
 
     <div class="input-type-radio">
     <label class="input-label">Booze Type:</label>
-        <input type="radio" ng-model="boozeItem.type" value="beer" id="beer">
+        <input type="radio" ng-model="boozeItem.type" value="beer" id="beer" name="beer">
         <label for="beer" class="input-label-radio">Beer</label>
-        <input type="radio" ng-model="boozeItem.type" value="whiskey" id="whiskey">
+        <input type="radio" ng-model="boozeItem.type" value="whiskey" id="whiskey" name="whiskey">
         <label for="whiskey" class="input-label-radio">Whiskey</label>
     </div>
 
