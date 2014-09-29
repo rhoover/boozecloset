@@ -17,7 +17,4 @@ Tools
 
 ToDo
 -------------
-* Search Function
-* Data Persistence
-* Firefox, why you no like gradient for text ellipsis?
-* Chrome desktop, wtf with animations?
+* Get Mike Up Off His Arse
