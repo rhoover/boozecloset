@@ -1,9 +1,10 @@
 .input {
-        @include span(12 of 12 no-gutters);
-        @include translateZ(50); //hack to create composite layer
-        margin-bottom: rhythm(.5, 16px);
-        padding: rhythm(1, 16px) span(1 of 12) rhythm(.5, 16px) span(1 of 12);
-        color: $black;
+    @include span(12 of 12 no-gutters);
+    @include translateZ(50); //hack to create composite layer
+    margin-bottom: rhythm(.5, 16px);
+    padding: rhythm(1, 16px) span(1 of 12) rhythm(.5, 16px) span(1 of 12);
+    color: $black;
+
     &-choose {
         border-radius: .25em;
         margin-top: rhythm(6, 16px);
@@ -25,6 +26,7 @@
             border-radius: 0 .25em .25em 0;
         }
     }
+
     &-label {
         @include span(5 of 12 no-gutters);
         padding: rhythm(.5, 16px) 0;
@@ -33,18 +35,22 @@
             position: relative;
             cursor: pointer;
             display: inline-block;
-            padding-left: gutters(6);
+            // padding-left: gutters(12);
             margin-right: 0;
         }
     }
+
     &-type {
         &-text {
             @extend %small-font;
             width: 55%;
             padding: rhythm(.25, 16px) 0 rhythm(.25, 16px) .375em;
             margin-bottom: rhythm(1, 16px);
-            border: .1em solid $cyan;
-            border-radius: .25em;
+            border-top: transparent;
+            border-right: transparent;
+            border-left: transparent;
+            border-bottom: .1em solid $cyan;
+            background-color: transparent;
             color: $black;
             &:focus {
                 @include box-shadow(0 0 .7em rgba($cyan, .6));
@@ -54,15 +60,9 @@
             @include span(12 of 12 no-gutters);
             padding: rhythm(.25, 16px) 0 rhythm(.25, 16px) .375em;
             margin-bottom: rhythm(1, 16px);
-            color: $black;;
-            & select {
-                width: 110%;
-                overflow: hidden;
-                background: transparent;
-                border: 0;
-            }
         }
     }
+
     &-preview {
         color: $black;
         &-header {
@@ -75,6 +75,7 @@
             margin: rhythm(.25, 16px) 0;
         }
     }
+
     &-submit {
         @include span(12 of 12 no-gutters);
         @extend %base-font;
@@ -93,4 +94,7 @@
 
 input[type=radio] {
     margin: rhythm(.55, 16px) 0;
+    &:last-of-type {
+        margin-left: gutters(4);
+    }
 }

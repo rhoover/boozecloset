@@ -14,6 +14,8 @@ angular
 
         $scope.boozeItem = listdataFilter.singleBooze(storageFactory.getBoozeData(storagekey), $routeParams.id); //aka: (input, arg)
 
+        $scope.editValue = false;
+
         $scope.boozeItem.upDate = function () {
 
             var boozeObjectNew = {
@@ -37,7 +39,8 @@ angular
         }; // end upDate
 
         $scope.removeItem = function () {
-            storageFactory.removeBoozeItem(storagekey, storageFactory.getBoozeData(storagekey), boozeItem);//aka: (key, originalCloset, newObject)
+
+            storageFactory.removeBoozeItem(storagekey, storageFactory.getBoozeData(storagekey), $scope.boozeItem);//aka: (key, originalCloset, newObject)
             storageFactory.storeBoozeRemote(storagekey, storageFactory.getBoozeData(storagekey)); //aka (key, data)
 
             alertFactory.removeAlert($scope.boozeItem.name, $scope.boozeItem.company);

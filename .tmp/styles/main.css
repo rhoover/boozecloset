@@ -245,13 +245,13 @@ body::after {
   padding: 1.5em 8.3333333333% 0.75em 8.3333333333%;
   color: #4b4b4b;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/components\/_input\.scss}line{font-family:\000037}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/components\/_input\.scss}line{font-family:\000038}}
 .input-choose {
   border-radius: .25em;
   margin-top: 9em;
   padding: 0 8.3333333333%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/components\/_input\.scss}line{font-family:\0000311}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/components\/_input\.scss}line{font-family:\0000312}}
 .input-choose-beer, .input-choose-whiskey {
   width: 50%;
   float: left;
@@ -263,54 +263,48 @@ body::after {
   border-radius: .25em 0 0 .25em;
   background-color: #fdfdfd;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/components\/_input\.scss}line{font-family:\0000322}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/components\/_input\.scss}line{font-family:\0000323}}
 .input-choose-whiskey {
   border-right: 0.1em solid #527692;
   border-radius: 0 .25em .25em 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/components\/_input\.scss}line{font-family:\0000328}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/components\/_input\.scss}line{font-family:\0000330}}
 .input-label {
   width: 41.6666666667%;
   float: left;
   padding: 0.75em 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/components\/_input\.scss}line{font-family:\0000332}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/components\/_input\.scss}line{font-family:\0000334}}
 .input-label-radio {
   position: relative;
   cursor: pointer;
   display: inline-block;
-  padding-left: 1.9280040994%;
   margin-right: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/components\/_input\.scss}line{font-family:\0000341}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/components\/_input\.scss}line{font-family:\0000344}}
 .input-type-text {
   width: 55%;
   padding: 0.375em 0 0.375em 0.375em;
   margin-bottom: 1.5em;
-  border: 0.1em solid #527692;
-  border-radius: .25em;
+  border-top: transparent;
+  border-right: transparent;
+  border-left: transparent;
+  border-bottom: 0.1em solid #527692;
+  background-color: transparent;
   color: #4b4b4b;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/components\/_input\.scss}line{font-family:\0000349}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/components\/_input\.scss}line{font-family:\0000355}}
 .input-type-text:focus {
   -moz-box-shadow: 0 0 0.7em rgba(82, 118, 146, 0.6);
   -webkit-box-shadow: 0 0 0.7em rgba(82, 118, 146, 0.6);
   box-shadow: 0 0 0.7em rgba(82, 118, 146, 0.6);
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/components\/_input\.scss}line{font-family:\0000353}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/components\/_input\.scss}line{font-family:\0000359}}
 .input-type-radio {
   width: 100%;
   float: left;
   padding: 0.375em 0 0.375em 0.375em;
   margin-bottom: 1.5em;
-  color: #4b4b4b;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/components\/_input\.scss}line{font-family:\0000358}}
-.input-type-radio select {
-  width: 110%;
-  overflow: hidden;
-  background: transparent;
-  border: 0;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/components\/_input\.scss}line{font-family:\0000366}}
 .input-preview {
@@ -326,7 +320,7 @@ body::after {
 .input-preview-item {
   margin: 0.375em 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/components\/_input\.scss}line{font-family:\0000378}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/components\/_input\.scss}line{font-family:\0000379}}
 .input-submit {
   width: 100%;
   float: left;
@@ -338,14 +332,18 @@ body::after {
   border-radius: .25em;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/components\/_input\.scss}line{font-family:\0000390}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/components\/_input\.scss}line{font-family:\0000391}}
 .typeActive {
   background-color: #e3c979;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/components\/_input\.scss}line{font-family:\0000394}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/components\/_input\.scss}line{font-family:\0000395}}
 input[type=radio] {
   margin: 0.825em 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/components\/_input\.scss}line{font-family:\0000397}}
+input[type=radio]:last-of-type {
+  margin-left: 2.8920061491%;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/animations\/_content\.scss}line{font-family:\000031}}

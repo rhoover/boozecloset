@@ -20,7 +20,7 @@ angular
                 if (boozeType !== 'beer') {
                     newUrl = '/' + boozeType;
                 } else{
-                    newUrl = '/'
+                    newUrl = '/';
                 }
 
                 $location.path(newUrl);
