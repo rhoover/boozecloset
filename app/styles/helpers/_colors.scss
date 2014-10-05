@@ -6,3 +6,15 @@
     $white: rgb(240, 240, 240);
 
     $gradient-fade: linear-gradient(right, $white 0%, transparent 25%);
+
+
+//Courtesy: http://sassmeister.com/gist/d1b14280c6160f91f295
+@function lighten-new($color, $amount: 0%) {
+    @if $amount == 0 {$amount: 0%;}
+    @return lighten($color, ($amount/100%) * (100% - lightness($color)));
+}
+
+@function darken-new($color, $amount: 0%) {
+    @if $amount == 0 {$amount: 0%;}
+    @return darken($color, ($amount/100%) * (lightness($color)));
+}

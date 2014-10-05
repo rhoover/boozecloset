@@ -62,7 +62,9 @@
   <body ng-app="boozeApp">
 
         <header class="header">
+            <span back-button class="header-back-button"></span>
             <h1 class="header-title">Booze Closet</h1>
+            <span home-button="/" class="header-home-button"></span>
         </header><!-- end .header -->
 
         <nav class="nav" ng-controller="NavCtrl">
@@ -105,6 +107,8 @@
     <script src="scripts/services/storagekey.js"></script>
     <script src="scripts/services/returnnewurl.js"></script>
     <script src="scripts/services/alertfactory.js"></script>
+    <script src="scripts/directives/back-button.js"></script>
+    <script src="scripts/directives/home-button.js"></script>
     <!-- endbuild -->
 </body>
 </html>

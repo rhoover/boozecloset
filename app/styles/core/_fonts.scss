@@ -4,3 +4,10 @@
     'merriweathersans-light.svg', svg),
     'merriweathersans-light.eot');
     $MerriweatherSans: 'MerriweatherSans', helvetica, arial, sans-serif;
+
+@include font-face('BeerTrail', font-files(
+    'BeerTrail.woff',woff,
+    'BeerTrail.ttf', ttf,
+    'BeerTrail.svg', svg),
+    'BeerTrail.eot');
+    $BeerTrail: 'BeerTrail', arial, sans-serif;
