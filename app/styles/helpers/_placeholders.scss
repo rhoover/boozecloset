@@ -20,7 +20,7 @@
 }
 
 %lists-left {
-    color: rgba($black, .65);
+    color: $black-lite;
 }
 %search {
     @extend %base-font;
@@ -57,8 +57,8 @@
     text-align: center;
     @include adjust-font-size-to(28px);
     text-decoration: none;
-    color: lighten-new($cyan, 55%);
-    text-shadow: 0 0 1px $black;
+    color: $cyan-lite;
+    text-shadow: 0 0 2px $black-dark;
     &:active {
         text-shadow: 0 0 1em $white;
     }

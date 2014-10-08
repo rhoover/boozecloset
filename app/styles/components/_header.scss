@@ -7,6 +7,7 @@
     text-align: center;
     background-color: $cyan;
     color: $white;
+    border-bottom: .1em solid $purple;
     &-title {
         @include span(8 of 12);
         margin: 0;

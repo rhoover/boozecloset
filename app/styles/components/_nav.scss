@@ -1,6 +1,6 @@
 .nav {
     position: fixed;
-    top: rhythm(2.64, 16px);
+    top: rhythm(2.65, 16px);
     @include span(12 of 12 no-gutters);
     @include clearfix;
     z-index: 100;
