@@ -8,11 +8,14 @@
     opacity: 0;
 }
 .input-animate.ng-enter.ng-enter-active {
+    @include transition-property(all);
     opacity: 1;
 }
 .input-animate.ng-leave {
+    @include transition-property(all);
     opacity: 1;
 }
 .input-animate.ng-leave-active {
+    @include transition-property(all);
     opacity: 0;
 }

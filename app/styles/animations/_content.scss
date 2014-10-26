@@ -4,8 +4,8 @@
 }
 .content.ng-enter {
   @include transition-property(all);
-  @include translate3d(-100%, 0, 0);
   @include transition-delay(.75s);
+  @include translate3d(-100%, 0, 0);
 }
 .content.ng-enter.ng-enter-active {
   @include transition-property(all);
