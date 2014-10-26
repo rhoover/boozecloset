@@ -10,23 +10,12 @@
 
 angular
     .module('boozeApp')
-    .controller('InputCtrl', function ($scope, $location, $window, beerkey, whiskeykey, storagekey, randomnumber, storageFactory, alertFactory, newUrlFactory) {
+    .controller('InputCtrl', function ($scope, $location, $window, storagekey, randomnumber, storageFactory, alertFactory, newUrlFactory) {
 
         $scope.boozeForm = [];
 
-        $scope.beerVisible = false;
-        $scope.whiskeyVisible = false;
-
-        $scope.beerToggle = function () {
-            $scope.beerVisible = true;
-            $scope.whiskeyVisible = false;
-            $scope.boozeForm.type = beerkey;
-        };
-
-        $scope.whiskeyToggle = function () {
-            $scope.beerVisible = false;
-            $scope.whiskeyVisible = true;
-            $scope.boozeForm.type = whiskeykey;
+        $scope.boozeType = function (key) {
+            $scope.boozeForm.type = key;
         };
 
         $scope.boozeForm.saveBooze = function () {

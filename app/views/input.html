@@ -1,7 +1,9 @@
     <section class="input-choose">
-        <button class="input-choose-beer"  ng-model="boozeform.type" name="type" ng-click="beerToggle()" ng-class="{'typeActive': !beerVisible, 'typeActive': beerVisible}">Beer</button>
-        <button class="input-choose-whiskey" ng-model="boozeform.type" name="type" ng-click="whiskeyToggle()" ng-class="{'typeActive': !whiskeyVisible, 'typeActive': whiskeyVisible}">Whiskey</button>
+        <button class="input-choose-beer"  ng-model="boozeform.type" name="type" ng-click="activeForm = 'beerForm'; boozeType('beer') " ng-class="{'typeActive': activeForm === 'beerForm'}">Beer</button>
+        <button class="input-choose-whiskey"  ng-model="boozeform.type" name="type" ng-click="activeForm = 'whiskeyForm'; boozeType('whiskey') " ng-class="{'typeActive': activeForm === 'whiskeyForm'}">Whiskey</button>
     </section>
 
-    <section beer-input ng-if="beerVisible"></section>
-    <section whiskey-input ng-if="whiskeyVisible"></section>
+    <section ng-switch="activeForm">
+        <section beer-input ng-switch-when="beerForm"></section>
+        <section whiskey-input ng-switch-when="whiskeyForm"></section>
+    </section>
