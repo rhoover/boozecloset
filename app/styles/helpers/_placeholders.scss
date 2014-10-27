@@ -40,17 +40,6 @@
     }
 }
 
-%closet {
-    margin: 0 span(.5) rhythm(.5, 16px) span(.5);
-    padding: rhythm(.25, 16px) span(.25);
-    text-align: center;
-    color: $black;
-    border: .1em solid $purple;
-    border-radius: .25em;
-    background-color: rgba($yellow, .25);
-}
-
-
 %nav-buttons {
     @include span(2 of 12);
     padding-top: rhythm(.25, 16px);

@@ -12,11 +12,3 @@
         }
     }
 }
-
-.closet-summary {
-    @extend %closet;
-    &-color {
-        color: $purple;
-        font-weight: 700;
-    }
-}

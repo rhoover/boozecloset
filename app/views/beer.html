@@ -1,7 +1,7 @@
     <section class="search">
-        <input type="text" placeholder="Instant Beer Search" ng-model="beerSearch.$" class="search-beers">
+        <input type="text" placeholder="Search All {{beerList.length}} Beers In Your Closet" ng-model="beerSearch.$" class="search-beers">
     </section>
-    <p class="closet-summary">You have <span class="closet-summary-color">{{beerList.length}}</span> beers in your closet.</p>
+    <!-- <p class="closet-summary">You have <span class="closet-summary-color">{{beerList.length}}</span> beers in your closet.</p> -->
     <section class="list">
         <a ng-href="#/beer/{{beer.id}}"ng-repeat="beer in beerList | filter:beerSearch:strict track by $index" class="list-item">
             <p class="list-item-detail"><span class="list-item-detail-left">Brew:</span>  <span class="list-item-detail-right">{{beer.name}}</span></p>
