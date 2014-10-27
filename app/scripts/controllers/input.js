@@ -34,7 +34,7 @@ angular
             storageFactory.addToBoozeLocal(storagekey, storageFactory.getBoozeData(storagekey), boozeDataNew); //aka: (key, oldData, NewData)
             storageFactory.storeBoozeRemote(storagekey, storageFactory.getBoozeData(storagekey)); //aka (key, data)
 
-            alertFactory.addAlert($scope.boozeForm.name, $scope.boozeForm.company);
+            alertFactory.addAlert($scope.boozeForm.type, $scope.boozeForm.name, $scope.boozeForm.company);
 
             newUrlFactory.newUrl($scope.boozeForm.type);
 

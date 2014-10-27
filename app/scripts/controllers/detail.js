@@ -32,7 +32,7 @@ angular
             storageFactory.updateBoozeLocal(storagekey, storageFactory.getBoozeData(storagekey), boozeObjectNew); //aka: (key, originalCloset, newObject)
             storageFactory.storeBoozeRemote(storagekey, storageFactory.getBoozeData(storagekey)); //aka (key, data)
 
-            alertFactory.updateAlert($scope.boozeItem.name, $scope.boozeItem.company);
+            alertFactory.updateAlert($scope.boozeItem.type, $scope.boozeItem.name, $scope.boozeItem.company);
 
             newUrlFactory.newUrl($scope.boozeItem.type);
 
@@ -43,7 +43,7 @@ angular
             storageFactory.removeBoozeItem(storagekey, storageFactory.getBoozeData(storagekey), $scope.boozeItem);//aka: (key, originalCloset, newObject)
             storageFactory.storeBoozeRemote(storagekey, storageFactory.getBoozeData(storagekey)); //aka (key, data)
 
-            alertFactory.removeAlert($scope.boozeItem.name, $scope.boozeItem.company);
+            alertFactory.removeAlert($scope.boozeItem.type, $scope.boozeItem.name, $scope.boozeItem.company);
 
             newUrlFactory.newUrl($scope.boozeItem.type);
 

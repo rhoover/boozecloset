@@ -14,19 +14,19 @@ angular
 
         return {
 
-            updateAlert: function (name, company) {
+            updateAlert: function (type, name, company) {
 
-                $window.alert('Your Precious Booze:  ' + name + '\n\nFrom:  ' + company + '\n\nHas Been Updated!!\n\nBoth Locally and on the Server!');
-
-            },
-            removeAlert: function (name, company) {
-
-                $window.alert('Your No-Longer Precious Booze:  ' + name + '\n\nFrom:  ' + company + '\n\nHas Been Removed!!\n\nBoth Locally and on the Server!');
+                $window.alert('Your precious ' + type + ':  ' + name + '\n\nFrom:  ' + company + '\n\nHas Been Updated!!\n\nBoth Locally and on the Server!');
 
             },
-            addAlert: function (name, company) {
+            removeAlert: function (type, name, company) {
 
-                $window.alert('Another Precious Booze:  ' + name + '\n\nFrom:  ' + company + '\n\nHas Been Added!!\n\nBoth Locally and on the Server!');
+                $window.alert('Your no longer precious ' + type + ':  ' + name + '\n\nFrom:  ' + company + '\n\nHas Been Removed!!\n\nBoth Locally and on the Server!');
+
+            },
+            addAlert: function (type, name, company) {
+
+                $window.alert('Your precious ' + type + ':  ' + name + '\n\nFrom:  ' + company + '\n\nHas Been Added!!\n\nBoth Locally and on the Server!');
 
             }
 
