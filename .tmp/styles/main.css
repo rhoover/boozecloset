@@ -128,9 +128,10 @@ html {
   line-height: 1.2857142857em;
   text-decoration: none;
   color: #d2dde6;
-  text-shadow: 0 0 2px #262626;
+  text-shadow: 0 0 1px black;
+  cursor: pointer;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/helpers\/_placeholders\.scss}line{font-family:\0000349}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/helpers\/_placeholders\.scss}line{font-family:\0000350}}
 .header-back-button:active, .header-home-button:active {
   text-shadow: 0 0 1em #f0f0f0;
 }
@@ -176,10 +177,6 @@ body::after {
   margin: 0;
   padding: 0.375em 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/components\/_header\.scss}line{font-family:\0000317}}
-.header-back-button {
-  cursor: pointer;
-}
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/helpers\/_font-icons\.scss}line{font-family:\0000323}}
 .header-back-button:before {
   content: "\e003";
@@ -193,10 +190,6 @@ body::after {
   -moz-osx-font-smoothing: grayscale;
   text-transform: none;
   speak: none;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/components\/_header\.scss}line{font-family:\0000322}}
-.header-home-button {
-  cursor: pointer;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/helpers\/_font-icons\.scss}line{font-family:\0000323}}
 .header-home-button:before {
@@ -265,7 +258,7 @@ body::after {
   float: left;
   padding: 7.125em 0 1.5em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/helpers\/_placeholders\.scss}line{font-family:\0000355}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/helpers\/_placeholders\.scss}line{font-family:\0000356}}
 .content > * + * {
   margin-top: 1.5em;
 }
@@ -284,7 +277,7 @@ body::after {
   margin-top: 1.5em;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/helpers\/_placeholders\.scss}line{font-family:\0000355}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/helpers\/_placeholders\.scss}line{font-family:\0000356}}
 .list > * + * {
   margin-top: 1.5em;
 }

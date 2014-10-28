@@ -17,12 +17,10 @@
     &-back-button {
         @extend %nav-buttons;
         @include icon('before', true, 'back');
-        cursor: pointer;
     }
     &-home-button {
         @extend %nav-buttons;
         @include icon('before', true, 'home');
-        cursor: pointer;
     }
     @include susy-breakpoint($bp-large, $columns-large) {
         @include span(24 of 24 no-gutters);

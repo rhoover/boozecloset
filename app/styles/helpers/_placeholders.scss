@@ -45,7 +45,8 @@
     @include adjust-font-size-to(28px);
     text-decoration: none;
     color: $cyan-lite;
-    text-shadow: 0 0 2px $black-dark;
+    text-shadow: 0 0 1px black;
+    cursor: pointer;
     &:active {
         text-shadow: 0 0 1em $white;
     }
