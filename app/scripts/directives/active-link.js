@@ -18,9 +18,9 @@ angular
             link: function (scope, element, attrs) {
                 scope.$on('$locationChangeSuccess', function () {
                     if ($location.path() === scope.path) {
-                        element.addClass('navActive');
+                        element.addClass('nav-active');
                     } else {
-                        element.removeClass('navActive');
+                        element.removeClass('nav-active');
                     }
                 });
             }

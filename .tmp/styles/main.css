@@ -19,7 +19,7 @@ html {
   font-size: 0.75em;
   line-height: 1.5em;
 }
-@media (min-width: 37.5em) and (max-width: 64em) {
+@media (min-width: 37.5em) {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/helpers\/_typography\.scss}line{font-family:\0000364}}
   .input-label, .input-type-text {
     font-size: 0.75em;
@@ -32,7 +32,7 @@ html {
   font-size: 1em;
   line-height: 1.5em;
 }
-@media (min-width: 37.5em) and (max-width: 64em) {
+@media (min-width: 37.5em) {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/helpers\/_typography\.scss}line{font-family:\0000367}}
   .search-beers, .search-whiskey, .nav-item, .input-choose-beer, .input-choose-whiskey, .input-submit {
     font-size: 1em;
@@ -45,7 +45,7 @@ html {
   font-size: 1.75em;
   line-height: 1.5231428571em;
 }
-@media (min-width: 37.5em) and (max-width: 64em) {
+@media (min-width: 37.5em) {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/helpers\/_typography\.scss}line{font-family:\0000376}}
   .header-title {
     font-size: 2.375em;
@@ -69,14 +69,13 @@ html {
 .list-item {
   width: 100%;
   float: left;
-  margin-bottom: 0.75em;
-  padding: 0 8.3333333333% 0.75em 8.3333333333%;
+  padding: 0 8.3333333333% 1.5em 8.3333333333%;
   border-bottom: 0.1em solid #527692;
   color: #4b4b4b;
   text-decoration: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/helpers\/_placeholders\.scss}line{font-family:\000039}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/helpers\/_placeholders\.scss}line{font-family:\000038}}
 .list-item-detail {
   position: relative;
   width: 100%;
@@ -87,38 +86,37 @@ html {
   overflow: hidden;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/helpers\/_placeholders\.scss}line{font-family:\0000318}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/helpers\/_placeholders\.scss}line{font-family:\0000317}}
 .list-item-detail-right {
   font-size: 0.875em;
   line-height: 1.7142857143em;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/helpers\/_placeholders\.scss}line{font-family:\0000322}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/helpers\/_placeholders\.scss}line{font-family:\0000321}}
 .list-item-detail-left {
   color: #9c9c9c;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/helpers\/_placeholders\.scss}line{font-family:\0000325}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/helpers\/_placeholders\.scss}line{font-family:\0000324}}
 .search-beers, .search-whiskey {
   width: 100%;
   height: 3em;
   padding-left: 8.3333333333%;
-  margin-bottom: 0.75em;
   background: #fdfdfd;
   border-style: solid;
   border-color: #527692;
   border-width: 0.1em 0 .1em 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/helpers\/_placeholders\.scss}line{font-family:\0000335}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/helpers\/_placeholders\.scss}line{font-family:\0000333}}
 .search-beers:active, .search-whiskey:active {
   border-width: 0.15em 0 0.15em 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/helpers\/_placeholders\.scss}line{font-family:\0000338}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/helpers\/_placeholders\.scss}line{font-family:\0000336}}
 .search-beers:focus, .search-whiskey:focus {
   border-width: 0.15em 0 0.15em 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/helpers\/_placeholders\.scss}line{font-family:\0000343}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/helpers\/_placeholders\.scss}line{font-family:\0000341}}
 .header-back-button, .header-home-button {
   width: 16.6666666667%;
   float: left;
@@ -132,7 +130,7 @@ html {
   color: #d2dde6;
   text-shadow: 0 0 2px #262626;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/helpers\/_placeholders\.scss}line{font-family:\0000351}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/helpers\/_placeholders\.scss}line{font-family:\0000349}}
 .header-back-button:active, .header-home-button:active {
   text-shadow: 0 0 1em #f0f0f0;
 }
@@ -253,7 +251,7 @@ body::after {
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/components\/_nav\.scss}line{font-family:\0000325}}
-.navActive {
+.nav-active {
   outline: none;
   background-color: rgba(227, 201, 121, 0.9);
   -moz-box-shadow: inset 0 -0.3em 0 0 rgba(82, 118, 146, 0.6);
@@ -261,16 +259,15 @@ body::after {
   box-shadow: inset 0 -0.3em 0 0 rgba(82, 118, 146, 0.6);
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/components\/_search\.scss}line{font-family:\000031}}
-.search {
-  padding-top: 7.5em;
-}
-
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/components\/_content\.scss}line{font-family:\000031}}
 .content {
   width: 100%;
   float: left;
-  padding: 0 0 1.5em;
+  padding: 7.125em 0 1.5em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/helpers\/_placeholders\.scss}line{font-family:\0000355}}
+.content > * + * {
+  margin-top: 1.5em;
 }
 @media (min-width: 64em) {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/components\/_content\.scss}line{font-family:\000031}}
@@ -280,6 +277,16 @@ body::after {
     padding-left: 25.4820010249%;
     padding-right: 25.4820010249%;
   }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/components\/_search\.scss}line{font-family:\000031}}
+.search {
+  margin-top: 1.5em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/helpers\/_placeholders\.scss}line{font-family:\0000355}}
+.list > * + * {
+  margin-top: 1.5em;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/components\/_input\.scss}line{font-family:\000031}}
@@ -296,7 +303,7 @@ body::after {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/components\/_input\.scss}line{font-family:\000038}}
 .input-choose {
   border-radius: .25em;
-  margin-top: 9em;
+  margin-top: 1.5em;
   padding: 0 8.3333333333%;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/components\/_input\.scss}line{font-family:\0000312}}

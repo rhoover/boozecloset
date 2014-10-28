@@ -1,5 +1,5 @@
 .search {
-    padding-top: rhythm(5, 16px);
+    margin-top: rhythm(1, 16px);
     &-beers {
         @extend %search;
     }

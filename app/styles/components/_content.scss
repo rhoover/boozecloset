@@ -1,6 +1,7 @@
 .content {
     @include span(12 of 12 no-gutters);
-    padding: 0 0 rhythm(1, 16px);
+    padding: rhythm(4.75, 16px) 0 rhythm(1, 16px);
+    @include lob-owl();
     @include susy-breakpoint($bp-large, $columns-large) {
         @include span(24 of 24 no-gutters);
         @include pad(6, 6);

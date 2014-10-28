@@ -1,4 +1,5 @@
 .list {
+    @include lob-owl();
     &-item {
         @extend %lists-item;
         &-detail {

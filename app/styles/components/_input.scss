@@ -7,7 +7,7 @@
 
     &-choose {
         border-radius: .25em;
-        margin-top: rhythm(6, 16px);
+        margin-top: rhythm(1, 16px);
         padding: 0 span(1 of 12);
         &-beer {
             @include span(6 of 12 no-gutters);
