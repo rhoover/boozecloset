@@ -67,10 +67,10 @@
             <span home-button="/" class="header-home-button"></span>
         </header><!-- end .header -->
 
-        <nav class="nav" ng-controller="NavCtrl">
-          <a ng-href="#/" class="nav-item" ng-class="{navActive: isActive('/')}">Beer</a>
-          <a ng-href="#/whiskey" class="nav-item" ng-class="{navActive: isActive('/whiskey')}">Whiskey</a>
-          <a ng-href="#/input" class="nav-item" ng-class="{navActive: isActive('/input')}">Add New</a>
+        <nav class="nav">
+          <a ng-href="#/" class="nav-item" active-link="/">Beer</a>
+          <a ng-href="#/whiskey" class="nav-item"active-link="/whiskey">Whiskey</a>
+          <a ng-href="#/input" class="nav-item"active-link="/input">Add New</a>
         </nav><!-- end .nav -->
 
         <main ng-view="" class="content"></main><!-- end .content -->
@@ -96,7 +96,6 @@
 
     <script src="scripts/controllers/beer.js"></script>
     <script src="scripts/controllers/input.js"></script>
-    <script src="scripts/controllers/navigation.js"></script>
     <script src="scripts/controllers/whiskey.js"></script>
 
     <script src="scripts/filters/listfilter.js"></script>
@@ -109,6 +108,7 @@
     <script src="scripts/services/alertfactory.js"></script>
     <script src="scripts/directives/back-button.js"></script>
     <script src="scripts/directives/home-button.js"></script>
+    <script src="scripts/directives/active-link.js"></script>
     <!-- endbuild -->
 </body>
 </html>
