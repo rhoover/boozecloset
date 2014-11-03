@@ -52,27 +52,30 @@
     <link rel="apple-touch-icon" href="images/apple-touch-icon-57x57.png">
 
 
-    <link rel="stylesheet" href="styles/main.b22f263f.css">
+    <link rel="stylesheet" href="styles/main.f91c34f8.css">
   </head>
   <body ng-app="boozeApp">
 
         <header class="header">
-            <span back-button="" class="header-back-button"></span>
+            <nav back-button="" class="header-back-button"></nav>
+            <nav active-tab="" nav-button="/" class="header-beer-button"></nav>
+            <nav active-tab="" nav-button="/whiskey" class="header-whiskey-button"></nav>
+            <nav active-tab="" nav-button="/input" class="header-add-button"></nav>
             <h1 class="header-title">Booze Closet</h1>
-            <span home-button="/" class="header-home-button"></span>
+            <nav nav-button="/" class="header-home-button"></nav>
         </header><!-- end .header -->
 
-        <nav class="nav">
+        <section class="nav">
           <a ng-href="#/" class="nav-item" active-link="/">Beer</a>
           <a ng-href="#/whiskey" class="nav-item" active-link="/whiskey">Whiskey</a>
           <a ng-href="#/input" class="nav-item" active-link="/input">Add New</a>
-        </nav><!-- end .nav -->
+        </section><!-- end .nav -->
 
         <main ng-view="" class="content"></main><!-- end .content -->
 
     <script src="scripts/vendor.d9543390.js"></script>
 
-    <script src="scripts/scripts.b24d931e.js"></script>
+    <script src="scripts/scripts.42a65cd7.js"></script>
 </body>
 
 <!-- Begin Templates -->
@@ -82,12 +85,12 @@
     </section>
     <section class="list">
         <a ng-href="#/beer/{{beer.id}}"ng-repeat="beer in beerList | filter:beerSearch:strict track by $index" class="list-item">
-            <p class="list-item-detail"><span class="list-item-detail-left">Brew:</span>  <span class="list-item-detail-right">{{beer.name}}</span></p>
-            <p class="list-item-detail"><span class="list-item-detail-left">Brewer:</span>  <span class="list-item-detail-right">{{beer.company}}</span></p>
-            <p class="list-item-detail"><span class="list-item-detail-left">Purchased From:</span>  <span class="list-item-detail-right">{{beer.purchasedfrom}}</span></p>
-            <p class="list-item-detail"><span class="list-item-detail-left">Purchase Price:</span> <span class="list-item-detail-right">${{beer.price}}</span></p>
-            <p class="list-item-detail"><span class="list-item-detail-left">Purchase Date:</span> <span class="list-item-detail-right">{{beer.purchasedon | date: MM-dd-yyyy}}</span></p>
-            <p class="list-item-detail"><span class="list-item-detail-left">Status:</span> <span class="list-item-detail-right">{{beer.status}}</span></p>
+            <p class="list-item-detail"><span class="list-item-detail-left">Brew:</span>  <span class="list-item-detail-right" ng-bind="beer.name"></span></p>
+            <p class="list-item-detail"><span class="list-item-detail-left">Brewer:</span>  <span class="list-item-detail-right"ng-bind="beer.company"></span></p>
+            <p class="list-item-detail"><span class="list-item-detail-left">Purchased From:</span>  <span class="list-item-detail-right"ng-bind="beer.purchasedfrom"></span></p>
+            <p class="list-item-detail"><span class="list-item-detail-left">Purchase Price:</span> <span>$</span><span class="list-item-detail-right"ng-bind="beer.price"></span></p>
+            <p class="list-item-detail"><span class="list-item-detail-left">Purchase Date:</span> <span class="list-item-detail-right"ng-bind="beer.purchasedon | date: MM-dd-yyyy"></span></p>
+            <p class="list-item-detail"><span class="list-item-detail-left">Status:</span> <span class="list-item-detail-right"ng-bind="beer.status"></span></p>
         </a>
     </section>
 </script>
@@ -188,12 +191,12 @@
     </section>
     <section class="list">
         <a ng-href="#/whiskey/{{whiskey.id}}"ng-repeat="whiskey in whiskeyList | filter:whiskeySearch:strict track by $index" class="list-item">
-            <p class="list-item-detail"><span class="list-item-detail-left">Whiskey:</span>  <span class="list-item-detail-right">{{whiskey.name}}</span></p>
-            <p class="list-item-detail"><span class="list-item-detail-left">Distiller:</span>  <span class="list-item-detail-right">{{whiskey.company}}</span></p>
-            <p class="list-item-detail"><span class="list-item-detail-left">Purchased From:</span>  <span class="list-item-detail-right">{{whiskey.purchasedfrom}}</span></p>
-            <p class="list-item-detail"><span class="list-item-detail-left">Purchase Price:</span> <span class="list-item-detail-right">${{whiskey.price}}</span></p>
-            <p class="list-item-detail"><span class="list-item-detail-left">Purchase Date:</span> <span class="list-item-detail-right">{{whiskey.purchasedon | date: MM-dd-yyyy}}</span></p>
-            <p class="list-item-detail"><span class="list-item-detail-left">Status:</span> <span class="list-item-detail-right">{{whiskey.status}}</span></p>
+            <p class="list-item-detail"><span class="list-item-detail-left">Whiskey:</span>  <span class="list-item-detail-right" ng-bind="whiskey.name"></span></p>
+            <p class="list-item-detail"><span class="list-item-detail-left">Distiller:</span>  <span class="list-item-detail-right" ng-bind="whiskey.company"></span></p>
+            <p class="list-item-detail"><span class="list-item-detail-left">Purchased From:</span>  <span class="list-item-detail-right" ng-bind="whiskey.purchasedfrom"></span></p>
+            <p class="list-item-detail"><span class="list-item-detail-left">Purchase Price:</span> <span>$</span><span class="list-item-detail-right" ng-bind="whiskey.price"></span></p>
+            <p class="list-item-detail"><span class="list-item-detail-left">Purchase Date:</span> <span class="list-item-detail-right" ng-bind="whiskey.purchasedon | date: MM-dd-yyyy"></span></p>
+            <p class="list-item-detail"><span class="list-item-detail-left">Status:</span> <span class="list-item-detail-right" ng-bind="whiskey.status"></span></p>
         </a>
     </section>
 
