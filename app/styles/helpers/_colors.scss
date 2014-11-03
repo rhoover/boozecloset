@@ -13,6 +13,7 @@ $blue: rgb(96, 96, 159);
 $purple: rgb(117, 88, 154);
 $cyan: rgb(82, 118, 146);
 $cyan-lite: lighten-new($cyan, 75%);
+$cyan-dark: darken-new($cyan, 45%);
 $yellow: rgb(227, 201, 121);
 $black: rgb(75, 75, 75);
 $black-dark: darken-new($black, 50%);

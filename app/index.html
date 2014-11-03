@@ -62,16 +62,19 @@
   <body ng-app="boozeApp">
 
         <header class="header">
-            <span back-button class="header-back-button"></span>
+            <nav back-button class="header-back-button"></nav>
+            <nav active-tab nav-button="/" class="header-beer-button"></nav>
+            <nav active-tab nav-button="/whiskey" class="header-whiskey-button"></nav>
+            <nav active-tab nav-button="/input" class="header-add-button"></nav>
             <h1 class="header-title">Booze Closet</h1>
-            <span home-button="/" class="header-home-button"></span>
+            <nav nav-button="/" class="header-home-button"></nav>
         </header><!-- end .header -->
 
-        <nav class="nav">
+        <section class="nav">
           <a ng-href="#/" class="nav-item" active-link="/">Beer</a>
           <a ng-href="#/whiskey" class="nav-item"active-link="/whiskey">Whiskey</a>
           <a ng-href="#/input" class="nav-item"active-link="/input">Add New</a>
-        </nav><!-- end .nav -->
+        </section><!-- end .nav -->
 
         <main ng-view="" class="content"></main><!-- end .content -->
 
@@ -107,8 +110,9 @@
     <script src="scripts/services/returnnewurl.js"></script>
     <script src="scripts/services/alertfactory.js"></script>
     <script src="scripts/directives/back-button.js"></script>
-    <script src="scripts/directives/home-button.js"></script>
     <script src="scripts/directives/active-link.js"></script>
+    <script src="scripts/directives/nav-button.js"></script>
+    <script src="scripts/directives/active-tab.js"></script>
     <!-- endbuild -->
 </body>
 </html>

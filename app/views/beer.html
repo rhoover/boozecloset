@@ -3,11 +3,11 @@
     </section>
     <section class="list">
         <a ng-href="#/beer/{{beer.id}}"ng-repeat="beer in beerList | filter:beerSearch:strict track by $index" class="list-item">
-            <p class="list-item-detail"><span class="list-item-detail-left">Brew:</span>  <span class="list-item-detail-right">{{beer.name}}</span></p>
-            <p class="list-item-detail"><span class="list-item-detail-left">Brewer:</span>  <span class="list-item-detail-right">{{beer.company}}</span></p>
-            <p class="list-item-detail"><span class="list-item-detail-left">Purchased From:</span>  <span class="list-item-detail-right">{{beer.purchasedfrom}}</span></p>
-            <p class="list-item-detail"><span class="list-item-detail-left">Purchase Price:</span> <span class="list-item-detail-right">${{beer.price}}</span></p>
-            <p class="list-item-detail"><span class="list-item-detail-left">Purchase Date:</span> <span class="list-item-detail-right">{{beer.purchasedon | date: MM-dd-yyyy}}</span></p>
-            <p class="list-item-detail"><span class="list-item-detail-left">Status:</span> <span class="list-item-detail-right">{{beer.status}}</span></p>
+            <p class="list-item-detail"><span class="list-item-detail-left">Brew:</span>  <span class="list-item-detail-right" ng-bind="beer.name"></span></p>
+            <p class="list-item-detail"><span class="list-item-detail-left">Brewer:</span>  <span class="list-item-detail-right"ng-bind="beer.company"></span></p>
+            <p class="list-item-detail"><span class="list-item-detail-left">Purchased From:</span>  <span class="list-item-detail-right"ng-bind="beer.purchasedfrom"></span></p>
+            <p class="list-item-detail"><span class="list-item-detail-left">Purchase Price:</span> <span>$</span><span class="list-item-detail-right"ng-bind="beer.price"></span></p>
+            <p class="list-item-detail"><span class="list-item-detail-left">Purchase Date:</span> <span class="list-item-detail-right"ng-bind="beer.purchasedon | date: MM-dd-yyyy"></span></p>
+            <p class="list-item-detail"><span class="list-item-detail-left">Status:</span> <span class="list-item-detail-right"ng-bind="beer.status"></span></p>
         </a>
     </section>

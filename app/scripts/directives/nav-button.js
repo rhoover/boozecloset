@@ -2,20 +2,20 @@
 
 /**
  * @ngdoc directive
- * @name boozeApp.directive:homeButton
+ * @name boozeApp.directive:navButton
  * @description
- * # homeButton
+ * # navButton
  */
 
 angular
     .module('boozeApp')
-    .directive('homeButton', function ($location) {
+    .directive('navButton', function ($location) {
         return {
             restrict: 'A',
             link: function (scope, element, attrs) {
                 element.on('click', function () {
                     scope.$apply(function () {
-                        $location.path(attrs.homeButton);
+                        $location.path(attrs.navButton);
                     });
                 });
             }

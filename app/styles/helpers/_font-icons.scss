@@ -1,13 +1,20 @@
 // Courtesy: http://jaydenseric.com/blog/fun-with-sass-and-font-icons
+// $icons: (
+//     'home' '\e000',
+//     'phone' '\e001',
+//     'map' '\e002',
+//     'back' '\e003',
+//     'weather' '\e005',
+//     'shopping' '\e008',
+//     'dining' '\e009'
+// );
 $icons: (
-    'home' '\e000',
-    'phone' '\e001',
-    'map' '\e002',
-    'back' '\e003',
-    'weather' '\e005',
-    'shopping' '\e008',
-    'dining' '\e009'
-);
+    'whiskey' '\e600',
+    'beer' '\e601',
+    'add' '\e602',
+    'back' '\e603',
+    'home' '\e604'
+    );
 @function match($haystack, $needle) {
     @each $item in $haystack {
         $index: index($item, $needle);
@@ -31,9 +38,10 @@ $icons: (
                 style: normal;
                 variant: normal;
                 weight: normal;
-                family: $BeerTrail;
+                // family: $BeerTrail;
+                family: $BoozeCloset;
             }
-            @include adjust-font-size-to(20px);
+            // @include adjust-font-size-to(20px);
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
             text-transform: none;

@@ -3,11 +3,11 @@
     </section>
     <section class="list">
         <a ng-href="#/whiskey/{{whiskey.id}}"ng-repeat="whiskey in whiskeyList | filter:whiskeySearch:strict track by $index" class="list-item">
-            <p class="list-item-detail"><span class="list-item-detail-left">Whiskey:</span>  <span class="list-item-detail-right">{{whiskey.name}}</span></p>
-            <p class="list-item-detail"><span class="list-item-detail-left">Distiller:</span>  <span class="list-item-detail-right">{{whiskey.company}}</span></p>
-            <p class="list-item-detail"><span class="list-item-detail-left">Purchased From:</span>  <span class="list-item-detail-right">{{whiskey.purchasedfrom}}</span></p>
-            <p class="list-item-detail"><span class="list-item-detail-left">Purchase Price:</span> <span class="list-item-detail-right">${{whiskey.price}}</span></p>
-            <p class="list-item-detail"><span class="list-item-detail-left">Purchase Date:</span> <span class="list-item-detail-right">{{whiskey.purchasedon | date: MM-dd-yyyy}}</span></p>
-            <p class="list-item-detail"><span class="list-item-detail-left">Status:</span> <span class="list-item-detail-right">{{whiskey.status}}</span></p>
+            <p class="list-item-detail"><span class="list-item-detail-left">Whiskey:</span>  <span class="list-item-detail-right" ng-bind="whiskey.name"></span></p>
+            <p class="list-item-detail"><span class="list-item-detail-left">Distiller:</span>  <span class="list-item-detail-right" ng-bind="whiskey.company"></span></p>
+            <p class="list-item-detail"><span class="list-item-detail-left">Purchased From:</span>  <span class="list-item-detail-right" ng-bind="whiskey.purchasedfrom"></span></p>
+            <p class="list-item-detail"><span class="list-item-detail-left">Purchase Price:</span> <span>$</span><span class="list-item-detail-right" ng-bind="whiskey.price"></span></p>
+            <p class="list-item-detail"><span class="list-item-detail-left">Purchase Date:</span> <span class="list-item-detail-right" ng-bind="whiskey.purchasedon | date: MM-dd-yyyy"></span></p>
+            <p class="list-item-detail"><span class="list-item-detail-left">Status:</span> <span class="list-item-detail-right" ng-bind="whiskey.status"></span></p>
         </a>
     </section>

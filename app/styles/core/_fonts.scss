@@ -11,3 +11,10 @@
     'BeerTrail.svg', svg),
     'BeerTrail.eot');
     $BeerTrail: 'BeerTrail', arial, sans-serif;
+
+    @include font-face('BoozeCloset', font-files(
+    'BoozeCloset.woff',woff,
+    'BoozeCloset.ttf', ttf,
+    'BoozeCloset.svg', svg),
+    'BoozeCloset.eot');
+    $BoozeCloset: 'BoozeCloset', arial, sans-serif;

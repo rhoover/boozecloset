@@ -1,6 +1,7 @@
 .nav {
+    display: none;
     position: fixed;
-    top: rhythm(2.65, 16px);
+    top: 0;
     @include span(12 of 12 no-gutters);
     @include clearfix;
     z-index: 100;
@@ -19,6 +20,10 @@
         &:first-of-type {
             border-left: .1em solid $purple;
         }
+    }
+    @include susy-breakpoint($bp-large, $columns-large) {
+        display: block;
+        top: rhythm(2.6, 16px);
     }
 }
 
