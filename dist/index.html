@@ -51,31 +51,37 @@
     <!-- icon actually for android -->
     <link rel="apple-touch-icon" href="images/apple-touch-icon-57x57.png">
 
-
-    <link rel="stylesheet" href="styles/main.f91c34f8.css">
+    <link rel="stylesheet" href="styles/main.c5e51bf1.css">
   </head>
   <body ng-app="boozeApp">
 
-        <header class="header">
-            <nav back-button="" class="header-back-button"></nav>
-            <nav active-tab="" nav-button="/" class="header-beer-button"></nav>
-            <nav active-tab="" nav-button="/whiskey" class="header-whiskey-button"></nav>
-            <nav active-tab="" nav-button="/input" class="header-add-button"></nav>
-            <h1 class="header-title">Booze Closet</h1>
-            <nav nav-button="/" class="header-home-button"></nav>
-        </header><!-- end .header -->
+    <header class="header">
+        <h1 class="header-title">Booze Closet</h1>
+    </header><!-- end .header -->
 
-        <section class="nav">
-          <a ng-href="#/" class="nav-item" active-link="/">Beer</a>
-          <a ng-href="#/whiskey" class="nav-item" active-link="/whiskey">Whiskey</a>
-          <a ng-href="#/input" class="nav-item" active-link="/input">Add New</a>
-        </section><!-- end .nav -->
+    <section class="tabs">
+        <nav class="tabs-button-back" back-button="">
+            <p class="tabs-button-text">Back</p>
+        </nav>
+        <nav class="tabs-button-beer" active-tab="" nav-button="/beer">
+            <p class="tabs-button-text">Beer</p>
+        </nav>
+        <nav class="tabs-button-whiskey" active-tab="" nav-button="/whiskey">
+            <p class="tabs-button-text">Whiskey</p>
+        </nav>
+        <nav class="tabs-button-add" active-tab="" nav-button="/input">
+            <p class="tabs-button-text">Add</p>
+        </nav>
+        <nav class="tabs-button-home" active-tab="" nav-button="/">
+            <p class="tabs-button-text">Home</p>
+        </nav>
+    </section><!-- end .tabs -->
 
-        <main ng-view="" class="content"></main><!-- end .content -->
+    <main ng-view="" class="content"></main><!-- end .content -->
 
-    <script src="scripts/vendor.d9543390.js"></script>
+    <script src="scripts/angular-all-min.d449fb55.js"></script>
 
-    <script src="scripts/scripts.42a65cd7.js"></script>
+    <script src="scripts/booze-closet.6117f9d6.js"></script>
 </body>
 
 <!-- Begin Templates -->
@@ -171,6 +177,15 @@
     <input type="submit" name="submit" value="Save Updated Booze" class="input-submit"  ng-disabled="boozeEdit.$invalid" />
 </form>
 
+</script>
+
+<script type="text/ng-template" id="views/home.html">
+<p class="home-text">This is simply amazing.</p>
+<p class="home-text">It wouldn't be immodest to point out that across the width and breadth of human existence and accomplishment, there's nothing like this that has ever been seen or experienced.</p>
+<p class="home-text">So go ahead, pick your poison:</p>
+<p class="home-button" nav-button="/beer">Beer List</p>
+<p class="home-button" nav-button="/whiskey">Whiskey List</p>
+<p class="home-button" nav-button="/input" home-data-fetch>Add New Purchase</p>
 </script>
 
 <script type="text/ng-template" id="views/input.html">
