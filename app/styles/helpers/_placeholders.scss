@@ -39,20 +39,18 @@
     }
 }
 
-%nav-buttons {
+%tabs-buttons {
+    position: relative;
     @include span(2 of 12 no-gutters);
     @include squish(.2, .2);
+    height: inherit;
     text-align: center;
     @extend %xlarge-font;
     text-decoration: none;
-    color: $cyan-lite;
-    text-shadow: 0 0 1px black;
+    color: $cyan;
     cursor: pointer;
-    &:active {
-        text-shadow: 0 0 1em $white;
-    }
     @include susy-breakpoint($bp-large, $columns-large) {
-        @include span(2 of 24);
+        @include span(4 of 24);
     }
 }
 

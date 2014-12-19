@@ -1,0 +1,18 @@
+.home {
+    &-text {
+        padding: 0 span(1 of 12);
+        margin: rhythm(1, 16px) 0 0;
+        text-align: center;
+        color: $black;
+    }
+    &-button {
+        padding: rhythm(.5, 16px) 0;
+        margin: rhythm(1, 16px) span(2 of 12) 0 span(2 of 12);
+        text-align: center;
+        color: $black;
+        border-radius: .25em;
+        border: .1em solid $cyan;
+        background-color: lighten($white, 5%);
+        cursor: pointer;
+    }
+}

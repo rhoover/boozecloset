@@ -1,0 +1,51 @@
+.tabs {
+    position: fixed;
+    z-index: 100;
+    top: rhythm(1.39, 16px);
+    width: 100%;
+    height: rhythm(2.5, 16px);
+    background: $cyan-lite;
+    border-bottom: .1em solid $cyan;
+    @include susy-breakpoint($bp-large, $columns-large) {
+        top: rhythm(1.87, 16px);
+        height: rhythm(3.4, 16px);
+    }
+    &-button {
+        &-back {
+            @extend %tabs-buttons;
+            @include icon('before', true, 'back');
+        }
+        &-beer {
+            @extend %tabs-buttons;
+            @include icon('before', true, 'beer');
+        }
+        &-whiskey {
+            @extend %tabs-buttons;
+            @include icon('before', true, 'whiskey');
+        }
+        &-add {
+            @extend %tabs-buttons;
+            @include icon('before', true, 'add');
+        }
+        &-home {
+            @extend %tabs-buttons;
+            @include icon('before', true, 'home');
+        }
+        &-text {
+            font-size: 11px;
+            line-height: .75em;
+            text-shadow: none;
+            margin: 0px;
+        }
+    }
+}
+
+.tab-active {
+    font-weight: bold;
+    color: $cyan-dark;
+    background: rgba($cyan, .25);
+    @include box-shadow(inset 0 -.1em 0 0 rgba($cyan-dark, .9));
+    border-left: .05em solid rgba($cyan-dark, .5);
+    border-right: .05em solid rgba($cyan-dark, .5);
+    @include transition(border-left 0.3s ease-in, border-right 0.3s ease-in, background 0.3s ease-in, box-shadow 0.3s ease-in);
+}

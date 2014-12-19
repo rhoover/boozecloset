@@ -61,22 +61,29 @@
   </head>
   <body ng-app="boozeApp">
 
-        <header class="header">
-            <nav back-button class="header-back-button"></nav>
-            <nav active-tab nav-button="/" class="header-beer-button"></nav>
-            <nav active-tab nav-button="/whiskey" class="header-whiskey-button"></nav>
-            <nav active-tab nav-button="/input" class="header-add-button"></nav>
-            <h1 class="header-title">Booze Closet</h1>
-            <nav nav-button="/" class="header-home-button"></nav>
-        </header><!-- end .header -->
+    <header class="header">
+        <h1 class="header-title">Booze Closet</h1>
+    </header><!-- end .header -->
 
-        <section class="nav">
-          <a ng-href="#/" class="nav-item" active-link="/">Beer</a>
-          <a ng-href="#/whiskey" class="nav-item"active-link="/whiskey">Whiskey</a>
-          <a ng-href="#/input" class="nav-item"active-link="/input">Add New</a>
-        </section><!-- end .nav -->
+    <section class="tabs">
+        <nav class="tabs-button-back" back-button>
+            <p class="tabs-button-text">Back</p>
+        </nav>
+        <nav class="tabs-button-beer" active-tab nav-button="/beer">
+            <p class="tabs-button-text">Beer</p>
+        </nav>
+        <nav class="tabs-button-whiskey" active-tab nav-button="/whiskey">
+            <p class="tabs-button-text">Whiskey</p>
+        </nav>
+        <nav class="tabs-button-add" active-tab nav-button="/input">
+            <p class="tabs-button-text">Add</p>
+        </nav>
+        <nav class="tabs-button-home" active-tab nav-button="/">
+            <p class="tabs-button-text">Home</p>
+        </nav>
+    </section><!-- end .tabs -->
 
-        <main ng-view="" class="content"></main><!-- end .content -->
+    <main ng-view="" class="content"></main><!-- end .content -->
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- not-bower:js -->
