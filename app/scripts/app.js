@@ -31,10 +31,10 @@ angular.module('boozeApp', ['ngAnimate',  'ngRoute', 'ngTouch'])
         //normal stuff
         $routeProvider
             .when('/', {
-                templateUrl: 'views/home.html',
-                resolve: {
-                    boozejson: booze
-                }
+                templateUrl: 'views/home.html'
+                // resolve: {
+                //     boozejson: booze
+                // }
             })
             .when('/beer', {
                 templateUrl: 'views/beer.html',

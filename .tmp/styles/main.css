@@ -202,17 +202,6 @@ body::after {
   text-align: center;
   color: #f0f0f0;
 }
-@media (min-width: 64em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/components\/_header\.scss}line{font-family:\000031}}
-  .header {
-    width: 100%;
-    float: left;
-    position: fixed;
-    bottom: auto;
-    top: 0px;
-    border-bottom: 0.1em solid #75589a;
-  }
-}
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/components\/_tabs\.scss}line{font-family:\000031}}
 .tabs {
