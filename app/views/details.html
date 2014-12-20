@@ -1,34 +1,34 @@
 <section class="input-choose">
-    <button class="input-choose-beer" ng-click="editValue=!editValue" ng-class="{'typeActive': !editValue, 'typeActive': editValue}">Edit Item</button>
+    <button class="input-choose-beer" ng-click="dC.editValue=!dC.editValue" ng-class="{'typeActive': !dC.editValue, 'typeActive': dC.editValue}">Edit Item</button>
     <button class="input-choose-whiskey" ng-click="removeItem()">Delete Item</button>
 </section>
-<form name="boozeEdit" class="input" ng-submit="boozeItem.upDate()" ng-if="editValue" novalidate>
+<form name="boozeEdit" class="input" ng-submit="dC.boozeItem.upDate()" ng-if="dC.editValue" novalidate>
 
     <div class="input-type-radio">
         <label class="input-label">Booze Type:</label>
-        <input type="radio" ng-model="boozeItem.type" value="beer" id="beer" name="beer">
+        <input type="radio" ng-model="dC.boozeItem.type" value="beer" id="beer" name="beer">
         <label for="beer" class="input-label-radio">Beer</label>
-        <input type="radio" ng-model="boozeItem.type" value="whiskey" id="whiskey" name="whiskey">
+        <input type="radio" ng-model="dC.boozeItem.type" value="whiskey" id="whiskey" name="whiskey">
         <label for="whiskey" class="input-label-radio">Whiskey</label>
     </div>
 
     <label class="input-label">Company:</label>
-    <input type="text" name="company" ng-model="boozeItem.company" class="input-type-text">
+    <input type="text" name="company" ng-model="dC.boozeItem.company" class="input-type-text">
 
     <label class="input-label">Name:</label>
-    <input type="text" name="name" ng-model="boozeItem.name" class="input-type-text">
+    <input type="text" name="name" ng-model="dC.boozeItem.name" class="input-type-text">
 
     <label for="purchasedfrom" class="input-label">Purchased From:</label>
-    <input type="text" name="purchasedfrom" ng-model="boozeItem.purchasedfrom" class="input-type-text">
+    <input type="text" name="purchasedfrom" ng-model="dC.boozeItem.purchasedfrom" class="input-type-text">
 
     <label for="date" class="input-label">Purchased On:</label>
-    <input type="date" name="purchasedon" ng-model="boozeItem.purchasedon" class="input-type-text">
+    <input type="date" name="purchasedon" ng-model="dC.boozeItem.purchasedon" class="input-type-text">
 
     <label for="purchased-amount" class="input-label">Purchase Amount:</label>
-    <input type="number" step="any" name="price" ng-model="boozeItem.price" class="input-type-text">
+    <input type="number" step="any" name="price" ng-model="dC.boozeItem.price" class="input-type-text">
 
     <label for="status" class="input-label">Comments:</label>
-    <input type="textarea" name="status" ng-model="boozeItem.status" class="input-type-text">
+    <input type="textarea" name="status" ng-model="dC.boozeItem.status" class="input-type-text">
 
     <input type="submit" name="submit" value="Save Updated Booze" class="input-submit"  ng-disabled="boozeEdit.$invalid" />
 </form>

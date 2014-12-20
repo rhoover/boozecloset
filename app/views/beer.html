@@ -1,8 +1,8 @@
     <section class="search">
-        <input type="text" placeholder="Search All {{beerList.length}} Beers In Your Closet" ng-model="beerSearch.$" class="search-beers">
+        <input type="text" placeholder="Search All {{bC.beerList.length}} Beers In Your Closet" ng-model="beerSearch.$" class="search-beers">
     </section>
     <section class="list">
-        <a ng-href="#/beer/{{beer.id}}"ng-repeat="beer in beerList | filter:beerSearch:strict track by $index" class="list-item">
+        <a ng-href="#/beer/{{beer.id}}"ng-repeat="beer in bC.beerList | filter:beerSearch:strict track by $index" class="list-item">
             <p class="list-item-detail"><span class="list-item-detail-left">Brew:</span>  <span class="list-item-detail-right" ng-bind="beer.name"></span></p>
             <p class="list-item-detail"><span class="list-item-detail-left">Brewer:</span>  <span class="list-item-detail-right"ng-bind="beer.company"></span></p>
             <p class="list-item-detail"><span class="list-item-detail-left">Purchased From:</span>  <span class="list-item-detail-right"ng-bind="beer.purchasedfrom"></span></p>

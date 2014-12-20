@@ -10,42 +10,53 @@
 
 angular
     .module('boozeApp')
-    .controller('DetailCtrl', function ($scope, $routeParams, $location, $window, storageFactory, listdataFilter, newUrlFactory, alertFactory, storagekey) {
+    .controller('DetailCtrl', function ($routeParams, $location, $window, $filter, storageFactory, listdataFilter, newUrlFactory, alertFactory, storagekey) {
 
-        $scope.boozeItem = listdataFilter.singleBooze(storageFactory.getBoozeData(storagekey), $routeParams.id); //aka: (input, arg)
+        var dC = this;
 
-        $scope.editValue = false;
+        dC.boozeItem = listdataFilter.singleBooze(storageFactory.getBoozeData(storagekey), $routeParams.id); //aka: (input, arg)
 
-        $scope.boozeItem.upDate = function () {
+        dC.editValue = false;
+
+        if (dC.boozeItem.purchasedon === ' ') {
+            // dC.boozeItem.purchasedon = new Date('March 13, 2000');
+            dC.boozeItem.purchasedon = $filter('date')(new Date(), 'yyyy-MM-dd');
+            // console.log(new Date().setHours(0,0,0,0));
+            // var test = $filter('date')(new Date(), 'yyyy-MM-dd');
+            console.log(dC.boozeItem.purchasedon);
+            // console.log(test);
+        }
+
+        dC.boozeItem.upDate = function () {
 
             var boozeObjectNew = {
-                id: $scope.boozeItem.id,
-                type: $scope.boozeItem.type,
-                purchasedfrom: $scope.boozeItem.purchasedfrom,
-                purchasedon: $scope.boozeItem.purchasedon,
-                price: $scope.boozeItem.price,
-                name: $scope.boozeItem.name,
-                company: $scope.boozeItem.company,
-                status: $scope.boozeItem.status
+                id: dC.boozeItem.id,
+                type: dC.boozeItem.type,
+                purchasedfrom: dC.boozeItem.purchasedfrom,
+                purchasedon: dC.boozeItem.purchasedon,
+                price: dC.boozeItem.price,
+                name: dC.boozeItem.name,
+                company: dC.boozeItem.company,
+                status: dC.boozeItem.status
             };
 
             storageFactory.updateBoozeLocal(storagekey, storageFactory.getBoozeData(storagekey), boozeObjectNew); //aka: (key, originalCloset, newObject)
-            storageFactory.storeBoozeRemote(storagekey, storageFactory.getBoozeData(storagekey)); //aka (key, data)
+            // storageFactory.storeBoozeRemote(storagekey, storageFactory.getBoozeData(storagekey)); //aka (key, data)
 
-            alertFactory.updateAlert($scope.boozeItem.type, $scope.boozeItem.name, $scope.boozeItem.company);
+            alertFactory.updateAlert(dC.boozeItem.type, dC.boozeItem.name, dC.boozeItem.company);
 
-            newUrlFactory.newUrl($scope.boozeItem.type);
+            newUrlFactory.newUrl(dC.boozeItem.type);
 
         }; // end upDate
 
-        $scope.removeItem = function () {
+        dC.removeItem = function () {
 
-            storageFactory.removeBoozeItem(storagekey, storageFactory.getBoozeData(storagekey), $scope.boozeItem);//aka: (key, originalCloset, newObject)
+            storageFactory.removeBoozeItem(storagekey, storageFactory.getBoozeData(storagekey), dC.boozeItem);//aka: (key, originalCloset, newObject)
             storageFactory.storeBoozeRemote(storagekey, storageFactory.getBoozeData(storagekey)); //aka (key, data)
 
-            alertFactory.removeAlert($scope.boozeItem.type, $scope.boozeItem.name, $scope.boozeItem.company);
+            alertFactory.removeAlert(dC.boozeItem.type, dC.boozeItem.name, dC.boozeItem.company);
 
-            newUrlFactory.newUrl($scope.boozeItem.type);
+            newUrlFactory.newUrl(dC.boozeItem.type);
 
         }; //end removeItem
 

@@ -32,13 +32,11 @@ angular.module('boozeApp', ['ngAnimate',  'ngRoute', 'ngTouch'])
         $routeProvider
             .when('/', {
                 templateUrl: 'views/home.html'
-                // resolve: {
-                //     boozejson: booze
-                // }
             })
             .when('/beer', {
                 templateUrl: 'views/beer.html',
                 controller: 'BeerCtrl',
+                controllerAs: 'bC',
                 resolve: {
                     boozejson: booze
                 }
@@ -46,6 +44,7 @@ angular.module('boozeApp', ['ngAnimate',  'ngRoute', 'ngTouch'])
             .when('/whiskey', {
                 templateUrl: 'views/whiskey.html',
                 controller: 'WhiskeyCtrl',
+                controllerAs: 'wC',
                 resolve: {
                     boozejson: booze
                 }
@@ -60,6 +59,7 @@ angular.module('boozeApp', ['ngAnimate',  'ngRoute', 'ngTouch'])
             .when('/beer/:id', {
                 templateUrl: 'views/details.html',
                 controller: 'DetailCtrl',
+                controllerAs: 'dC',
                 resolve: {
                     boozejson: booze
                 }
