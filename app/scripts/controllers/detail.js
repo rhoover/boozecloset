@@ -10,7 +10,7 @@
 
 angular
     .module('boozeApp')
-    .controller('DetailCtrl', function ($routeParams, $location, $window, $filter, storageFactory, listdataFilter, newUrlFactory, alertFactory, storagekey) {
+    .controller('DetailCtrl', function ($routeParams, $location, $window, storageFactory, listdataFilter, newUrlFactory, alertFactory, storagekey) {
 
         var dC = this;
 
@@ -18,14 +18,14 @@ angular
 
         dC.editValue = false;
 
-        if (dC.boozeItem.purchasedon === ' ') {
-            // dC.boozeItem.purchasedon = new Date('March 13, 2000');
-            dC.boozeItem.purchasedon = $filter('date')(new Date(), 'yyyy-MM-dd');
-            // console.log(new Date().setHours(0,0,0,0));
-            // var test = $filter('date')(new Date(), 'yyyy-MM-dd');
-            console.log(dC.boozeItem.purchasedon);
-            // console.log(test);
-        }
+        // We'll leave this here for reference purposes, but it is replaced by the ternary statment below!
+        // if (dC.boozeItem.purchasedon === ' ') {
+        //     dC.boozeItem.purchasedon = new Date();
+        // } else {
+        //     dC.boozeItem.purchasedon = new Date(dC.boozeItem.purchasedon);
+        // }
+
+        dC.boozeItem.purchasedon === ' ' ?  dC.boozeItem.purchasedon = new Date() : dC.boozeItem.purchasedon = new Date(dC.boozeItem.purchasedon);
 
         dC.boozeItem.upDate = function () {
 

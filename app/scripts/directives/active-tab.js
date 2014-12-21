@@ -12,8 +12,8 @@ angular
     .directive('activeTab', function ($location) {
         return {
             restrict: 'A',
-            scope: {path: "@navButton"},
-            link: function (scope, element, attrs) {
+            scope: {path: '@navButton'},
+            link: function (scope, element) {
                 scope.$on('$locationChangeSuccess', function () {
                     if ($location.path() === scope.path) {
                         element.addClass('tab-active');

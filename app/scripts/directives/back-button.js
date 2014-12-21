@@ -12,7 +12,7 @@ angular
     .directive('backButton', function () {
         return {
             restrict: 'A',
-            link: function (scope, element, attrs) {
+            link: function (scope, element) {
                 function goBack() {
                     history.back();
                     scope.$apply();

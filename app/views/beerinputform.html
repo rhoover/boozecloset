@@ -1,33 +1,33 @@
-<form name= "beerInput" class="input" ng-submit= "boozeForm.saveBooze()" novalidate>
+<form name= "beerInput" class="input" ng-submit= "iC.boozeForm.saveBooze()" novalidate>
 
     <label for="brewer" class="input-label">Brewer:</label>
-    <input type="text" name="company" ng-model="boozeForm.company" placeholder="Tap Me" class="input-type-text">
+    <input type="text" name="company" ng-model="iC.boozeForm.company" placeholder="Tap Me" class="input-type-text">
 
     <label for="booze-name" class="input-label">Beer Name:</label>
-    <input type="text" name="name" ng-model="boozeForm.name" placeholder="Tap Me" class="input-type-text">
+    <input type="text" name="name" ng-model="iC.boozeForm.name" placeholder="Tap Me" class="input-type-text">
 
     <label for="purchasedfrom" class="input-label">Purchased From:</label>
-    <input type="text" name="purchasedfrom" ng-model="boozeForm.purchasedfrom" placeholder="Tap Me" class="input-type-text">
+    <input type="text" name="purchasedfrom" ng-model="iC.boozeForm.purchasedfrom" placeholder="Tap Me" class="input-type-text">
 
     <label for="date" class="input-label">Purchased On:</label>
-    <input type="date" name="purchasedon" ng-model="boozeForm.purchasedon" class="input-type-text" value={{boozeForm.purchasedon}>
+    <input type="date" name="purchasedon" ng-model="iC.boozeForm.purchasedon" class="input-type-text" value={{iC.boozeForm.purchasedon}}>
 
     <label for="purchased-amount" class="input-label">Purchase Amount:</label>
-    <input type="number" step="any" name="price" ng-model="boozeForm.price" placeholder="Tap Me" class="input-type-text">
+    <input type="number" step="any" name="price" ng-model="iC.boozeForm.price" placeholder="Tap Me" class="input-type-text">
 
     <label for="status" class="input-label">Comments:</label>
-    <input type="textarea" name="status" ng-model="boozeForm.status" placeholder="Tap Me" class="input-type-text">
+    <input type="textarea" name="status" ng-model="iC.boozeForm.status" placeholder="Tap Me" class="input-type-text">
 
 
     <div class="input-preview">
         <h2 class="input-preview-header">Preview:</h2>
-        <p class="input-preview-item">Beer Name: {{boozeForm.name}}</p>
-        <p class="input-preview-item">Brewer: {{boozeForm.company}}</p>
-        <p class="input-preview-item">Purchased From: {{boozeForm.purchasedfrom}}</p>
-        <p class="input-preview-item">Purchased On: {{boozeForm.purchasedon | date: MM-dd-yyyy}}</p>
-        <p class="input-preview-item">Purchase Amount: ${{boozeForm.price}}</p>
-        <p class="input-preview-item">Type: {{boozeForm.type}}</p>
-        <p class="input-preview-item">Comments: {{boozeForm.status}}</p>
+        <p class="input-preview-item">Beer Name: {{iC.boozeForm.name}}</p>
+        <p class="input-preview-item">Brewer: {{iC.boozeForm.company}}</p>
+        <p class="input-preview-item">Purchased From: {{iC.boozeForm.purchasedfrom}}</p>
+        <p class="input-preview-item">Purchased On: {{iC.boozeForm.purchasedon | date: MM-dd-yyyy}}</p>
+        <p class="input-preview-item">Purchase Amount: ${{iC.boozeForm.price}}</p>
+        <p class="input-preview-item">Type: {{iC.boozeForm.type}}</p>
+        <p class="input-preview-item">Comments: {{iC.boozeForm.status}}</p>
     </div>
 
     <input type="submit" name="submit" value="Save New Booze" class="input-submit"  ng-disabled="beerInput.$invalid" />

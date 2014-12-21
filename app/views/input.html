@@ -1,6 +1,6 @@
     <section class="input-choose">
-        <button class="input-choose-beer"  ng-model="boozeform.type" name="type" ng-click="activeForm = 'beerForm'; boozeType('beer') " ng-class="{'typeActive': activeForm === 'beerForm'}">Beer</button>
-        <button class="input-choose-whiskey"  ng-model="boozeform.type" name="type" ng-click="activeForm = 'whiskeyForm'; boozeType('whiskey') " ng-class="{'typeActive': activeForm === 'whiskeyForm'}">Whiskey</button>
+        <button class="input-choose-beer"  ng-model="iC.boozeform.type" name="type" ng-click="activeForm = 'beerForm'; iC.boozeType('beer') " ng-class="{'typeActive': activeForm === 'beerForm'}">Beer</button>
+        <button class="input-choose-whiskey"  ng-model="iC.boozeform.type" name="type" ng-click="activeForm = 'whiskeyForm'; iC.boozeType('whiskey') " ng-class="{'typeActive': activeForm === 'whiskeyForm'}">Whiskey</button>
     </section>
 
     <section ng-switch="activeForm">

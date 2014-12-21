@@ -10,33 +10,37 @@
 
 angular
     .module('boozeApp')
-    .controller('InputCtrl', function ($scope, $location, $window, storagekey, randomnumber, storageFactory, alertFactory, newUrlFactory) {
+    .controller('InputCtrl', function ($location, $window, $filter, storagekey, randomnumber, storageFactory, alertFactory, newUrlFactory) {
 
-        $scope.boozeForm = [];
+        var iC = this;
 
-        $scope.boozeType = function (key) {
-            $scope.boozeForm.type = key;
+        iC.boozeForm = [];
+
+        iC.boozeForm.purchasedon = new Date();
+
+        iC.boozeType = function (key) {
+            iC.boozeForm.type = key;
         };
 
-        $scope.boozeForm.saveBooze = function () {
+        iC.boozeForm.saveBooze = function () {
 
             var boozeDataNew = {
                     id: randomnumber.randomid(),
-                    type: $scope.boozeForm.type,
-                    purchasedfrom: $scope.boozeForm.purchasedfrom,
-                    purchasedon: $scope.boozeForm.purchasedon,
-                    price: $scope.boozeForm.price,
-                    name: $scope.boozeForm.name,
-                    company: $scope.boozeForm.company,
-                    status: $scope.boozeForm.status
+                    type: iC.boozeForm.type,
+                    purchasedfrom: iC.boozeForm.purchasedfrom,
+                    purchasedon: iC.boozeForm.purchasedon,
+                    price: iC.boozeForm.price,
+                    name: iC.boozeForm.name,
+                    company: iC.boozeForm.company,
+                    status: iC.boozeForm.status
                 };
 
             storageFactory.addToBoozeLocal(storagekey, storageFactory.getBoozeData(storagekey), boozeDataNew); //aka: (key, oldData, NewData)
-            storageFactory.storeBoozeRemote(storagekey, storageFactory.getBoozeData(storagekey)); //aka (key, data)
+            // storageFactory.storeBoozeRemote(storagekey, storageFactory.getBoozeData(storagekey)); //aka (key, data)
 
-            alertFactory.addAlert($scope.boozeForm.type, $scope.boozeForm.name, $scope.boozeForm.company);
+            alertFactory.addAlert(iC.boozeForm.type, iC.boozeForm.name, iC.boozeForm.company);
 
-            newUrlFactory.newUrl($scope.boozeForm.type);
+            newUrlFactory.newUrl(iC.boozeForm.type);
 
         }; //end saveBooze
   });

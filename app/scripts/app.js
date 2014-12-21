@@ -52,6 +52,7 @@ angular.module('boozeApp', ['ngAnimate',  'ngRoute', 'ngTouch'])
             .when('/input', {
                 templateUrl: 'views/input.html',
                 controller: 'InputCtrl',
+                controllerAs: 'iC',
                 resolve: {
                     boozejson: booze
                 }
@@ -67,6 +68,7 @@ angular.module('boozeApp', ['ngAnimate',  'ngRoute', 'ngTouch'])
             .when('/whiskey/:id', {
                 templateUrl: 'views/details.html',
                 controller: 'DetailCtrl',
+                controllerAs: 'dC',
                 resolve: {
                     boozejson: booze
                 }
