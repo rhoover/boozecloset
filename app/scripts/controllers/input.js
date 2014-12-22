@@ -36,7 +36,7 @@ angular
                 };
 
             storageFactory.addToBoozeLocal(storagekey, storageFactory.getBoozeData(storagekey), boozeDataNew); //aka: (key, oldData, NewData)
-            // storageFactory.storeBoozeRemote(storagekey, storageFactory.getBoozeData(storagekey)); //aka (key, data)
+            storageFactory.storeBoozeRemote(storagekey, storageFactory.getBoozeData(storagekey)); //aka (key, data)
 
             alertFactory.addAlert(iC.boozeForm.type, iC.boozeForm.name, iC.boozeForm.company);
 

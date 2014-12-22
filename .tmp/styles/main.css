@@ -442,15 +442,24 @@ body::after {
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/components\/_input\.scss}line{font-family:\0000361}}
 .input-preview-header {
-  padding: 0.375em 0;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  margin-right: -9.297335383%;
+  margin-left: -9.297335383%;
+  padding-right: 10.2613374327%;
+  padding-left: 10.2613374327%;
+  padding-top: 0.375em;
+  padding-bottom: 0.375em;
   border-top: 0.05em solid #607d8b;
   border-bottom: 0.05em solid #607d8b;
+  background: rgba(207, 216, 220, 0.25);
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/components\/_input\.scss}line{font-family:\0000367}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/components\/_input\.scss}line{font-family:\0000371}}
 .input-preview-item {
   margin: 0.375em 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/components\/_input\.scss}line{font-family:\0000372}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/components\/_input\.scss}line{font-family:\0000376}}
 .input-submit {
   width: 100%;
   float: left;
@@ -462,16 +471,16 @@ body::after {
   border-radius: .25em;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/components\/_input\.scss}line{font-family:\0000384}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/components\/_input\.scss}line{font-family:\0000388}}
 .typeActive {
-  background-color: rgba(227, 201, 121, 0.65);
+  background-color: #cfd8dc;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/components\/_input\.scss}line{font-family:\0000388}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/components\/_input\.scss}line{font-family:\0000392}}
 input[type=radio] {
   margin: 0.825em 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/components\/_input\.scss}line{font-family:\0000390}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/robin\/Sites\/Mobile\/BoozeClosetv2\/app\/styles\/components\/_input\.scss}line{font-family:\0000394}}
 input[type=radio]:last-of-type {
   margin-left: 2.8920061491%;
 }

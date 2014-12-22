@@ -59,10 +59,14 @@
     &-preview {
         color: $black;
         &-header {
-            padding: rhythm(.25, 16px) 0;
+            $bleed-width: span(1 of 12)+gutters(12);
+            @include bleed-x($bleed-width $bleed-width);
+            padding-top: rhythm(.25, 16px);
+            padding-bottom: rhythm(.25, 16px);
             border-top: .05em solid $blue-grey-half-dark;
             border-bottom: .05em solid $blue-grey-half-dark;
             @extend %weight-regular;
+            background: rgba($blue-grey-almost-white, .25);
         }
         &-item {
             margin: rhythm(.25, 16px) 0;
@@ -82,7 +86,7 @@
 }
 
 .typeActive {
-    background-color: rgba($yellow, .65);
+    background-color: $blue-grey-almost-white;
 }
 
 input[type=radio] {

@@ -41,7 +41,7 @@ angular
             };
 
             storageFactory.updateBoozeLocal(storagekey, storageFactory.getBoozeData(storagekey), boozeObjectNew); //aka: (key, originalCloset, newObject)
-            // storageFactory.storeBoozeRemote(storagekey, storageFactory.getBoozeData(storagekey)); //aka (key, data)
+            storageFactory.storeBoozeRemote(storagekey, storageFactory.getBoozeData(storagekey)); //aka (key, data)
 
             alertFactory.updateAlert(dC.boozeItem.type, dC.boozeItem.name, dC.boozeItem.company);
 
