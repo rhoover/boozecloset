@@ -10,22 +10,14 @@
         margin-top: rhythm(1, 16px);
         padding: 0 span(1 of 12);
         &-beer {
-            @include span(6 of 12 no-gutters);
-            text-align: center;
-            @extend %base-font;
-            padding: rhythm(.25, 16px) 0;
-            margin-top: 0;
-            border: .1em solid $cyan;
+            @extend %chooser-button;
             border-right: none;
             border-radius: .25em 0 0 .25em;
-            background-color: lighten($white, 5%);
-            cursor: pointer;
         }
         &-whiskey {
-            @extend .input-choose-beer;
-            border-right: .1em solid $cyan;
+            @extend %chooser-button;
+            border-right: .1em solid $blue-grey-half-dark;
             border-radius: 0 .25em .25em 0;
-            cursor: pointer;
         }
     }
 
@@ -37,7 +29,6 @@
             position: relative;
             cursor: pointer;
             display: inline-block;
-            // padding-left: gutters(12);
             margin-right: 0;
         }
     }
@@ -51,11 +42,11 @@
             border-top: transparent;
             border-right: transparent;
             border-left: transparent;
-            border-bottom: .1em solid $cyan;
+            border-bottom: .1em solid $blue-grey-half-dark;
             background-color: transparent;
             color: $black;
             &:focus {
-                @include box-shadow(0 0 .7em rgba($cyan, .6));
+                @include box-shadow(0 0 .7em rgba($blue-grey-half-dark, .6));
             }
         }
         &-radio {
@@ -69,8 +60,8 @@
         color: $black;
         &-header {
             padding: rhythm(.25, 16px) 0;
-            border-top: .05em solid $cyan;
-            border-bottom: .05em solid $cyan;
+            border-top: .05em solid $blue-grey-half-dark;
+            border-bottom: .05em solid $blue-grey-half-dark;
             @extend %weight-regular;
         }
         &-item {
@@ -84,14 +75,14 @@
         color: $black;
         padding: rhythm(.5, 16px);
         text-align: center;
-        background-color: $yellow;
-        border: .1em solid $cyan;
+        background-color: rgba($yellow, .65);
+        border: .1em solid $blue-grey-half-dark;
         border-radius: .25em;
     }
 }
 
 .typeActive {
-    background-color: $yellow;
+    background-color: rgba($yellow, .65);
 }
 
 input[type=radio] {

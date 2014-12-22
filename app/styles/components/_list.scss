@@ -1,5 +1,7 @@
 .list {
-    @include lob-owl();
+    & > * + * {
+        margin-top: rhythm(1, 16px);
+    }
     &-item {
         @extend %lists-item;
         &-detail {

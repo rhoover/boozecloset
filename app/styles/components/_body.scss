@@ -3,6 +3,6 @@ body {
     margin: 0;
     height: 100%;
     font-family: $MerriweatherSans;
-    @extent %weight-ultralight;
-    background-color: $white;
+    @extend %weight-ultralight;
+    background-color: $blue-grey-white;
 }

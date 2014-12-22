@@ -2,7 +2,7 @@
     @include span(12 of 12 no-gutters);
     @include pad(1,1);
     padding-bottom: rhythm(1, 16px);
-    border-bottom: .1em solid $cyan;
+    border-bottom: .1em solid $blue-grey-half-dark;
     color: $black;
     text-decoration: none;
 }
@@ -27,9 +27,9 @@
     width: 100%;
     height: rhythm(2, 16px);
     padding-left: span(1);
-    background: lighten($white, 5%);
+    background: lighten($blue-grey-white, 2.5%);
     border-style: solid;
-    border-color: $cyan;
+    border-color: $blue-grey-half-dark;
     border-width: .1em 0 .1em 0;
     &:active {
         border-width: .15em 0 .15em 0;
@@ -47,15 +47,20 @@
     text-align: center;
     @extend %xlarge-font;
     text-decoration: none;
-    color: $cyan;
+    color: darken-new($blue-grey-half-dark, 15%);
     cursor: pointer;
     @include susy-breakpoint($bp-large, $columns-large) {
         @include span(4 of 24);
     }
 }
 
-@mixin lob-owl {
-    > * + * {
-        margin-top: rhythm(1, 16px);
-    }
+%chooser-button {
+    @include span(6 of 12 no-gutters);
+    text-align: center;
+    @extend %base-font;
+    padding: rhythm(.25, 16px) 0;
+    margin-top: 0;
+    border: .1em solid $blue-grey-half-dark;
+    background-color: lighten($blue-grey-white, 2.5%);
+    cursor: pointer;
 }

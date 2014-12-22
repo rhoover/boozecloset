@@ -3,9 +3,9 @@
     top: 0px;
     @include span(12 of 12 no-gutters);
     z-index: 100;
-    background-color: $cyan;
-    border-top: .1em solid $cyan-dark;
-    border-bottom: .1em solid $purple;
+    background-color: $blue-grey;
+    border-top: .1em solid $blue-grey-darkest;
+    border-bottom: .1em solid $blue-grey-darkest;
     @include susy-breakpoint($bp-large, $columns-large) {
         display: block;
         @include span(24 of 24 no-gutters);
@@ -15,7 +15,7 @@
         margin: 0;
         @extend %large-font;
         text-align: center;
-        color: $white;
+        color: $blue-grey-white;
     }
 
 }

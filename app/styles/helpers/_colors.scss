@@ -9,17 +9,11 @@
     @return darken($color, ($amount/100%) * (lightness($color)));
 }
 
-$blue: rgb(96, 96, 159);
-$purple: rgb(117, 88, 154);
-$cyan: rgb(82, 118, 146);
-$cyan-lite: lighten-new($cyan, 75%);
-$cyan-dark: darken-new($cyan, 45%);
+$blue-grey-white: rgb(236,239,241);
+$blue-grey-almost-white: rgb(207,216,220);
+$blue-grey: rgb(96,125,139);
+$blue-grey-half-dark: rgb(96,125,139);
+$blue-grey-darkest: rgb(38,50,56);
 $yellow: rgb(227, 201, 121);
 $black: rgb(75, 75, 75);
-$black-dark: darken-new($black, 50%);
 $black-lite: lighten-new($black, 45%);
-$white: rgb(240, 240, 240);
-
-// $gradient-fade: linear-gradient(right, $white 0%, transparent 25%);
-
-
